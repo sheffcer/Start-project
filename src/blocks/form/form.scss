@@ -2,6 +2,7 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, $media-условий...
 // Не пишите здесь другие селекторы.
 
+@use 'sass:math';
 $font-family--headings:       -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif !default;
 
 $font-size--h3:               1.5em !default;
@@ -34,6 +35,6 @@ $line-height:                 1.375em !default;
     line-height: $line-height;
     color: currentColor;
     margin-top: $line-height;
-    margin-bottom: ($line-height / 2);
+    margin-bottom: math.div($line-height, 2);
   }
 }

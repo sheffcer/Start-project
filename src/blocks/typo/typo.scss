@@ -1,6 +1,7 @@
 // Этот блок ответственнен за типографику проекта.
 // Не пишите тут какую-либо стороннюю стилизацию.
 
+@use 'sass:math';
 $gray:                        hsl(0, 0%, 50%) !default;
 $gray-lighter:                hsl(0, 0%, 80%) !default;
 $gray-lightest:               hsl(0, 0%, 90%) !default;
@@ -102,7 +103,7 @@ h1,
 h2,
 h3 {
   margin-top: $line-height;
-  margin-bottom: ($line-height / 2);
+  margin-bottom: math.div($line-height,  2);
 }
 
 // .h4,
@@ -111,8 +112,8 @@ h3 {
 h4,
 h5,
 h6 {
-  margin-top: ($line-height / 2);
-  margin-bottom: ($line-height / 2);
+  margin-top: math.div($line-height,  2);
+  margin-bottom: math.div($line-height, 2);
 }
 
 // .p,
@@ -124,8 +125,8 @@ blockquote,
 pre,
 address,
 figure {
-  margin-top: ($line-height / 2);
-  margin-bottom: ($line-height / 2);
+  margin-top: math.div($line-height, 2);
+  margin-bottom: math.div($line-height,  2);
 }
 
 address {
@@ -161,7 +162,7 @@ dd {
   }
 
   & + dt {
-    margin-top: ($line-height / 2);
+    margin-top: ($line-height,  2);
   }
 }
 

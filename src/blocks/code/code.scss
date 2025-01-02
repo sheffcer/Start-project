@@ -2,6 +2,7 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Не пишите здесь другие селекторы.
 
+@use 'sass:math';
 $gray-lighter:                hsl(0, 0%, 80%) !default;
 $gray-lightest:               hsl(0, 0%, 90%) !default;
 
@@ -14,7 +15,7 @@ $border-radius:               3px !default;
   width: 100%;
   max-height: 50rem;
   padding: 1em;
-  margin-bottom: ($line-height / 2);
+  margin-bottom: math.div($line-height, 2);
   overflow-x: auto;
   background-color: $gray-lightest;
   border-radius: $border-radius;

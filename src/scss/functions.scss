@@ -8,5 +8,9 @@
  */
 
 @function px-to-em($px, $font-size: $font-size) {
-  @return (($px * 100 / ($font-size / 1px)) / 100) * 1em;
+  @return calc(($px * 100 / ($font-size / 1px)) / 100) * 1em;
 }
+
+// @function px-to-em($px, $font-size: 16px) {
+//   @return $px / $font-size * 1em;
+// }

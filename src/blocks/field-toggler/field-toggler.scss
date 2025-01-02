@@ -2,6 +2,7 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, $media-условий...
 // Не пишите здесь другие селекторы.
 
+@use 'sass:math';
 $gray-lightest:               hsl(0, 0%, 90%);
 $border-color:                hsl(0, 0%, 60%) !default;
 
@@ -9,7 +10,7 @@ $line-height:                 1.375em !default;
 
 .field-toggler {
   display: block;
-  margin-bottom: ($line-height / 2);
+  margin-bottom: math.div($line-height, 2);
 
   &__title {
     display: block;
@@ -21,7 +22,7 @@ $line-height:                 1.375em !default;
   &__input-wrap {
 
     & + & {
-      margin-top: ($line-height / 2);
+      margin-top: math.div($line-height, 2);
     }
   }
 
@@ -68,6 +69,9 @@ $line-height:                 1.375em !default;
     @at-root input:checked ~ &:after {
       transform: translate(px-to-em(17), -50%);
     }
+    // @at-root input:checked ~ &:after {
+    //   transform: translate(px-to-em(17), -50%);
+    // }
   }
 
   &__input {

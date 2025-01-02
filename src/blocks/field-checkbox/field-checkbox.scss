@@ -1,12 +1,12 @@
 // В этом файле должны быть стили только для БЭМ-блока field-checkbox, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, $media-условий...
 // Не пишите здесь другие селекторы.
-
+@use 'sass:math';
 $line-height:                 1.375em !default;
 
 .field-checkbox {
   display: block;
-  margin-bottom: ($line-height / 2);
+  margin-bottom: math.div($line-height, 2);
 
   &__title {
     display: block;
@@ -18,7 +18,7 @@ $line-height:                 1.375em !default;
   &__input-wrap {
 
     & + & {
-      margin-top: ($line-height / 2);
+      margin-top: math.div($line-height, 2);
     }
   }
 

@@ -2,6 +2,7 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, $media-условий...
 // Не пишите здесь другие селекторы.
 
+@use 'sass:math';
 $gray-lightest:               hsl(0, 0%, 90%);
 $border-color:                hsl(0, 0%, 60%) !default;
 
@@ -11,7 +12,7 @@ $border-radius:               3px !default;
 
 .field-select {
   display: block;
-  margin-bottom: ($line-height / 2);
+  margin-bottom: math.div($line-height, 2);
 
   &__name {
     font-weight: 700;

@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $screen-xs:                   0 !default;
 $screen-sm:                   480px !default;
 $screen-md:                   768px !default;
@@ -34,16 +36,16 @@ $grid-gutter-width:           30px !default;
   margin-right: auto;
 
   @if ($xs-grid-gutter != 0) {
-    padding-left: ($xs-grid-gutter / 2);
-    padding-right: ($xs-grid-gutter / 2);
+    padding-left: calc($xs-grid-gutter / 2);
+    padding-right: calc($xs-grid-gutter / 2);
   }
 
   @media (min-width: $screen-sm) {
     width: $container-sm;
 
     @if ($sm-grid-gutter != $xs-grid-gutter) {
-      padding-left: ($sm-grid-gutter / 2);
-      padding-right: ($sm-grid-gutter / 2);
+      padding-left: calc($sm-grid-gutter / 2);
+      padding-right: calc($sm-grid-gutter / 2);
     }
   }
 
@@ -51,8 +53,8 @@ $grid-gutter-width:           30px !default;
     width: $container-md;
 
     @if ($md-grid-gutter != $sm-grid-gutter) {
-      padding-left: ($md-grid-gutter / 2);
-      padding-right: ($md-grid-gutter / 2);
+      padding-left: calc($md-grid-gutter / 2);
+      padding-right: calc($md-grid-gutter / 2);
     }
   }
 
@@ -60,8 +62,8 @@ $grid-gutter-width:           30px !default;
     width: $container-lg;
 
     @if ($lg-grid-gutter != $md-grid-gutter) {
-      padding-left: ($lg-grid-gutter / 2);
-      padding-right: ($lg-grid-gutter / 2);
+      padding-left: calc($lg-grid-gutter / 2);
+      padding-right: calc($lg-grid-gutter / 2);
     }
   }
 
@@ -69,8 +71,8 @@ $grid-gutter-width:           30px !default;
     width: $container-xl;
 
     @if ($xl-grid-gutter != $lg-grid-gutter) {
-      padding-left: ($xl-grid-gutter / 2);
-      padding-right: ($xl-grid-gutter / 2);
+      padding-left: calc($xl-grid-gutter / 2);
+      padding-right: calc($xl-grid-gutter / 2);
     }
   }
 
@@ -78,8 +80,8 @@ $grid-gutter-width:           30px !default;
     width: $container-xxl;
 
     @if ($xxl-grid-gutter != $xl-grid-gutter) {
-      padding-left: ($xxl-grid-gutter / 2);
-      padding-right: ($xxl-grid-gutter / 2);
+      padding-left: calc($xxl-grid-gutter / 2);
+      padding-right: calc($xxl-grid-gutter / 2);
     }
   }
 }
@@ -128,47 +130,47 @@ $grid-gutter-width:           30px !default;
   }
 
   @if ($xs-grid-gutter != 0) {
-    margin-left: ($xs-grid-gutter / -2);
-    margin-right: ($xs-grid-gutter / -2);
+    margin-left: calc($xs-grid-gutter / -2);
+    margin-right: calc($xs-grid-gutter / -2);
   }
 
   @if ($sm-grid-gutter != $xs-grid-gutter) {
 
     @media (min-width: $screen-sm) {
-      margin-left: ($sm-grid-gutter / -2);
-      margin-right: ($sm-grid-gutter / -2);
+      margin-left: calc($sm-grid-gutter / -2);
+      margin-right: calc($sm-grid-gutter / -2);
     }
   }
 
   @if ($md-grid-gutter != $sm-grid-gutter) {
 
     @media (min-width: $screen-md) {
-      margin-left: ($md-grid-gutter / -2);
-      margin-right: ($md-grid-gutter / -2);
+      margin-left: calc($md-grid-gutter / -2);
+      margin-right: calc($md-grid-gutter / -2);
     }
   }
 
   @if ($lg-grid-gutter != $md-grid-gutter) {
 
     @media (min-width: $screen-lg) {
-      margin-left: ($lg-grid-gutter / -2);
-      margin-right: ($lg-grid-gutter / -2);
+      margin-left: calc($lg-grid-gutter / -2);
+      margin-right: calc($lg-grid-gutter / -2);
     }
   }
 
   @if ($xl-grid-gutter != $lg-grid-gutter) {
 
     @media (min-width: $screen-xl) {
-      margin-left: ($xl-grid-gutter / -2);
-      margin-right: ($xl-grid-gutter / -2);
+      margin-left: calc($xl-grid-gutter / -2);
+      margin-right: calc($xl-grid-gutter / -2);
     }
   }
 
   @if ($xxl-grid-gutter != $xl-grid-gutter) {
 
     @media (min-width: $screen-xxl) {
-      margin-left: ($xxl-grid-gutter / -2);
-      margin-right: ($xxl-grid-gutter / -2);
+      margin-left: calc($xxl-grid-gutter / -2);
+      margin-right: calc($xxl-grid-gutter / -2);
     }
   }
 }
@@ -212,8 +214,8 @@ $grid-gutter-width:           30px !default;
   // ВНИМАНИЕ!
   // если $gutter == false, в CSS не попадут правила padding-left и padding-right
   @if ($gutter != false) {
-    padding-left: ($gutter / 2);
-    padding-right: ($gutter / 2);
+    padding-left: calc($gutter / 2);
+    padding-right: calc($gutter / 2);
   }
 }
 

@@ -2,6 +2,7 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Не пишите здесь другие селекторы.
 
+@use 'sass:math';
 $font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif !default;
 $font-family--headings:       $font-family !default;
 
@@ -71,8 +72,8 @@ $z-index-modal:               100 !default;
   }
 
   &__title {
-    margin-top: ($line-height / 2);
-    margin-bottom: ($line-height / 2);
+    margin-top: math.div($line-height, 2);
+    margin-bottom: math.div($line-height, 2);
     font-size: $font-size--h4;
     line-height: 1.4;
     font-weight: 700;
