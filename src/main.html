@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>NTH start project</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+    <div class="page__content">
+        <header class="page-header container" role="banner">
+            <div class="burger"><span></span></div>
+            <div class="logo'">logo</div>
+            <button class="btn">Каталог</button>
+            <label class="field-text">
+                <span class="field-text__name">Текстовое поле</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="search" placeholder="пошук товара">
+                  </span>
+            </label>
+            <div class="field-toggler">
+                <!-- <div class="field-toggler__title">Переключатель-флажок</div> -->
+                <div class="field-toggler__input-wrap">
+                  <label class="field-toggler__name">
+                    <input class="field-toggler__input" type="checkbox">
+                    <span class="field-toggler__name-text">Темна тема</span>
+                  </label>
+                </div>
+            </div>
+            <label class="field-select">
+                <div class="field-select__name">Регіон</div>
+                <div class="field-select__select-wrap">
+                  <select class="field-select__select">
+                     <option>UA</option>
+                     <option>EU</option>
+                  </select>
+                </div>
+              </label>
+              <label class="field-select">
+                <div class="field-select__name">Мова</div>
+                <div class="field-select__select-wrap">
+                  <select class="field-select__select">
+                     <option>Укр</option>
+                     <option>Рус</option>
+                     <option>Eng</option>
+                  </select>
+                </div>
+              </label>
+              <div class="user-block">
+                Вася
+                <img src="" alt="" class="user-blcok__img">
+              </div>
+              <div class="cart">
+                Кошик
+                <img src="" alt="" class="cart__img">
+              </div>
+          </header>
+      <main role="main">
+        <h1>Nproject</h1>
+        <p><a href="blocks-demo.html">Страница с демкой компонентов</a></p>
+        
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+        <footer class="page-footer" role="contentinfo">
+            Футер
+        </footer>
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

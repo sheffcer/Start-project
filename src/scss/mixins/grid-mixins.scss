@@ -7,11 +7,13 @@ $screen-lg:                   992px !default;
 $screen-xl:                   1200px !default;
 $screen-xxl:                  1400px !default;
 
-$container-sm:                100% !default;
-$container-md:                100% !default;
+$container-sm:                ($screen-sm - 50) !default;
+// $container-sm:                100% !default;
+// $container-md:                100% !default;
+$container-md:                ($screen-md - 78) !default;
 $container-lg:                ($screen-lg - 30) !default;
 $container-xl:                ($screen-xl - 30) !default;
-$container-xxl:               ($screen-xxl - 30) !default;
+$container-xxl:               ($screen-xxl - 144) !default;
 
 $grid-columns:                12 !default;
 $grid-gutter-width:           30px !default;
@@ -34,18 +36,19 @@ $grid-gutter-width:           30px !default;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  outline: 2px dashed green;
 
   @if ($xs-grid-gutter != 0) {
-    padding-left: calc($xs-grid-gutter / 2);
-    padding-right: calc($xs-grid-gutter / 2);
+    padding-left: math.div($xs-grid-gutter, 2);
+    padding-right: math.div($xs-grid-gutter, 2);
   }
 
   @media (min-width: $screen-sm) {
     width: $container-sm;
 
     @if ($sm-grid-gutter != $xs-grid-gutter) {
-      padding-left: calc($sm-grid-gutter / 2);
-      padding-right: calc($sm-grid-gutter / 2);
+      padding-left: math.div($sm-grid-gutter, 2);
+      padding-right: math.div($sm-grid-gutter, 2);
     }
   }
 
@@ -53,8 +56,8 @@ $grid-gutter-width:           30px !default;
     width: $container-md;
 
     @if ($md-grid-gutter != $sm-grid-gutter) {
-      padding-left: calc($md-grid-gutter / 2);
-      padding-right: calc($md-grid-gutter / 2);
+      padding-left: math.div($md-grid-gutter, 2);
+      padding-right: math.div($md-grid-gutter, 2);
     }
   }
 
@@ -62,8 +65,8 @@ $grid-gutter-width:           30px !default;
     width: $container-lg;
 
     @if ($lg-grid-gutter != $md-grid-gutter) {
-      padding-left: calc($lg-grid-gutter / 2);
-      padding-right: calc($lg-grid-gutter / 2);
+      padding-left: math.div($lg-grid-gutter, 2);
+      padding-right: math.div($lg-grid-gutter, 2);
     }
   }
 
@@ -71,8 +74,8 @@ $grid-gutter-width:           30px !default;
     width: $container-xl;
 
     @if ($xl-grid-gutter != $lg-grid-gutter) {
-      padding-left: calc($xl-grid-gutter / 2);
-      padding-right: calc($xl-grid-gutter / 2);
+      padding-left: math.div($xl-grid-gutter, 2);
+      padding-right: math.div($xl-grid-gutter, 2);
     }
   }
 
@@ -80,8 +83,8 @@ $grid-gutter-width:           30px !default;
     width: $container-xxl;
 
     @if ($xxl-grid-gutter != $xl-grid-gutter) {
-      padding-left: calc($xxl-grid-gutter / 2);
-      padding-right: calc($xxl-grid-gutter / 2);
+      padding-left: math.div($xxl-grid-gutter, 2);
+      padding-right: math.div($xxl-grid-gutter, 2);
     }
   }
 }
@@ -130,47 +133,47 @@ $grid-gutter-width:           30px !default;
   }
 
   @if ($xs-grid-gutter != 0) {
-    margin-left: calc($xs-grid-gutter / -2);
-    margin-right: calc($xs-grid-gutter / -2);
+    margin-left: math.div($xs-grid-gutter, -2);
+    margin-right: math.div($xs-grid-gutter,-2);
   }
 
   @if ($sm-grid-gutter != $xs-grid-gutter) {
 
     @media (min-width: $screen-sm) {
-      margin-left: calc($sm-grid-gutter / -2);
-      margin-right: calc($sm-grid-gutter / -2);
+      margin-left: math.div($sm-grid-gutter, -2);
+      margin-right: math.div($sm-grid-gutter,-2);
     }
   }
 
   @if ($md-grid-gutter != $sm-grid-gutter) {
 
     @media (min-width: $screen-md) {
-      margin-left: calc($md-grid-gutter / -2);
-      margin-right: calc($md-grid-gutter / -2);
+      margin-left: math.div($md-grid-gutter / -2);
+      margin-right: math.div($md-grid-gutter / -2);
     }
   }
 
   @if ($lg-grid-gutter != $md-grid-gutter) {
 
     @media (min-width: $screen-lg) {
-      margin-left: calc($lg-grid-gutter / -2);
-      margin-right: calc($lg-grid-gutter / -2);
+      margin-left: math.div($lg-grid-gutter, -2);
+      margin-right: math.div($lg-grid-gutter,-2);
     }
   }
 
   @if ($xl-grid-gutter != $lg-grid-gutter) {
 
     @media (min-width: $screen-xl) {
-      margin-left: calc($xl-grid-gutter / -2);
-      margin-right: calc($xl-grid-gutter / -2);
+      margin-left: math.div($xl-grid-gutter,  -2);
+      margin-right: math.div($xl-grid-gutter, -2);
     }
   }
 
   @if ($xxl-grid-gutter != $xl-grid-gutter) {
 
     @media (min-width: $screen-xxl) {
-      margin-left: calc($xxl-grid-gutter / -2);
-      margin-right: calc($xxl-grid-gutter / -2);
+      margin-left: math.div($xxl-grid-gutter, -2);
+      margin-right: math.div($xxl-grid-gutter,-2);
     }
   }
 }
@@ -214,8 +217,8 @@ $grid-gutter-width:           30px !default;
   // ВНИМАНИЕ!
   // если $gutter == false, в CSS не попадут правила padding-left и padding-right
   @if ($gutter != false) {
-    padding-left: calc($gutter / 2);
-    padding-right: calc($gutter / 2);
+    padding-left: math.div($gutter, 2);
+    padding-right: math.div($gutter, 2);
   }
 }
 
