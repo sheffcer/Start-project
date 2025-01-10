@@ -167,7 +167,8 @@ gulp.task('watch', () => {
 
  // Task for watching files for live changes
  gulp.task('liveWatch', () => {
-    gulp.watch('src/**/*.html', gulp.series('html', browserSync.reload));
+    // gulp.watch('src/**/*.html', gulp.series('html', browserSync.reload));
+    gulp.watch('src/**/*.html', gulp.series('html', 'reloadHtml'));
     gulp.watch('src/js/**/*.js', gulp.series('scripts', 'reloadJS'));
     gulp.watch(['src/scss/**/*.scss', 'src/blocks/**/*.scss'], gulp.series('styles'));
   });
@@ -266,9 +267,12 @@ gulp.task('cleanDist', () => {
   gulp.task('reloadJS', () => {
     browserSync.reload('dist/js/*.js');
   });
+
+  gulp.task('reloadHtml', () => {
+    browserSync.reload('dist/*.html');
+  });
   
- 
-  
+   
   // Task for handling server errors and preventing server shutdown
   gulp.task('errorPrevent', () => {
     gulp.src('src/js/**/*.js')

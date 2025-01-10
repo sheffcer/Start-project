@@ -15,9 +15,18 @@
         <header class="page-header container" role="banner">
             <div class="burger"><span></span></div>
             <div class="logo'">logo</div>
-            <button class="btn">Каталог</button>
+            <!-- <button class="btn">Каталог</button> -->
+            <div class="dropdown">
+                <a id="dropdown-demo-1" href="#" class="btn dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Каталог</a>
+                <ul class="dropdown__menu  menu" aria-labelledby="dropdown-demo-1">
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка (выпадает <code>ul</code>)</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка, после которого следует разделитель</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт меню весьма длинный, такой, что прямо адски длинный, очень много, реально много слов!</a>
+                </li>
+                </ul>
+            </div>
             <label class="field-text">
-                <span class="field-text__name">Текстовое поле</span>
+                <!-- <span class="field-text__name">Текстовое поле</span> -->
                 <span class="field-text__input-wrap">
                   <input class="field-text__input" type="search" placeholder="пошук товара">
                   </span>
@@ -62,7 +71,7 @@
       <main role="main">
         <h1>Nproject</h1>
         <p><a href="blocks-demo.html">Страница с демкой компонентов</a></p>
-        
+            Mazafaka!cdcdcdcdcd
       </main>
 
     </div>
