@@ -160,7 +160,8 @@ gulp.task('watch', () => {
   gulp.watch(['src/scss/**/*.scss', 'src/blocks/**/*.scss'], gulp.series('styles'));
   gulp.watch(['src/js/**/*.js', 'src/blocks/**/*.js'], gulp.series('scripts'));
   gulp.watch(paths.images.src, gulp.series('images'));
-  gulp.watch(paths.html.src, gulp.series('html'));
+  gulp.watch('src/*.html', gulp.series('html'));
+  // gulp.watch(paths.html.src, gulp.series('html'));
 //   gulp.watch(paths.jquery.src, gulp.series('copyJQuery'));
 //   gulp.watch(paths.jquery.src, gulp.series('copyJQueryMigrate')); //copyJQueryMigrate
 });
