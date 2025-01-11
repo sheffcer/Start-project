@@ -6,20 +6,33 @@
   <title>NTH start project</title>
   <meta name="description" content="">
   @@include('_include/page_head.html')
+  <style>
+
+    .off-canvas__aside {
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+  </style>
+  <script src="/js/"></script>
 </head>
 
 <body>
+  <div class="off-canvas" id="off-canvas">
 
-  <div class="page__inner">
+    <aside class="off-canvas__aside" role="complementary" aria-label="Список компонентов">
+      <ul class="menu" id="off-canvas-menu"></ul>
+    </aside>
+  <div class="page__inner off-canvas__page-content">
     <div class="page__content">
         <header class="page-header container" role="banner">
-            <div class="burger"><span></span></div>
+            <div class="burger" data-toggle="off-canvas"><span></span></div>
             <div class="logo'">logo</div>
             <!-- <button class="btn">Каталог</button> -->
             <div class="dropdown">
                 <a id="dropdown-demo-1" href="#" class="btn dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Каталог</a>
                 <ul class="dropdown__menu  menu" aria-labelledby="dropdown-demo-1">
                   <li class="menu__item"><a class="menu__link" href="#">Лазерні картриджи</a></li>
+                  <li class="menu__item  menu__item--separator"><a class="menu__link" href="#">...</a></li>
                   <li class="menu__item"><a class="menu__link" href="#">Чорнила</a></li>
                   <li class="menu__item"><a class="menu__link" href="#">Фотопапір</a>
                 <li class="menu__item"><a class="menu__link" href="#">Фотопапір</a>
@@ -85,5 +98,6 @@
   </div>
 
   @@include('_include/page_bottom.html')
+  </div>
 </body>
 </html>
