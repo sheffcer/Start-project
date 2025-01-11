@@ -38,7 +38,7 @@ $transition-time:             0.3s !default;
       // открытие/закрытие меню только в случае работающего JS
 
       .js & {
-        overflow: hidden;
+        // overflow: hidden;
         max-height: 0;
         transition: max-height 0.2s;
       }

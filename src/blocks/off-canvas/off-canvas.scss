@@ -24,8 +24,9 @@ $off-canvas-width:            250px !default;
     max-height: 30vh;
     overflow-y: auto;
     backface-visibility: hidden;
-    background-color: $gray-darkest;
-    color: #fff;
+    color: $gray-darkest;
+    background-color: #fff;
+    // color: #fff;
     transition: transform $transition-time ease;
 
     .js & {
@@ -38,7 +39,8 @@ $off-canvas-width:            250px !default;
     }
 
     a {
-      color: #fff;
+      // color: #fff;
+      // color: var(--primary-color);
 
       &:hover,
       &:focus {

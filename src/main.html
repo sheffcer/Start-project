@@ -7,10 +7,12 @@
   <meta name="description" content="">
   @@include('_include/page_head.html')
   <style>
-
     .off-canvas__aside {
       padding-top: 1em;
       padding-bottom: 1em;
+    }
+    main-nav__link a {
+      color: #3498db!important;
     }
   </style>
   <script src="/js/"></script>
@@ -20,13 +22,80 @@
   <div class="off-canvas" id="off-canvas">
 
     <aside class="off-canvas__aside" role="complementary" aria-label="Список компонентов">
-      <ul class="menu" id="off-canvas-menu"></ul>
+      <!-- <ul class="menu" id="off-canvas-menu"></ul> -->
+      <div class="off-canvas__block">
+        <a href="/" class="logo">
+          <img src="img/" alt="logo">
+        </a>
+        <!-- <button class="btn">Каталог</button> -->
+        <div class="dropdown">
+            <a id="dropdown-demo-1" href="#" class="btn dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Каталог</a>
+            <ul class="dropdown__menu  menu" aria-labelledby="dropdown-demo-1">
+              <li class="menu__item"><a class="menu__link" href="#">Лазерні картриджи</a></li>
+              <li class="menu__item  menu__item--separator"><a class="menu__link" href="#">...</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Чорнила</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Фотопапір</a>
+            <li class="menu__item"><a class="menu__link" href="#">Фотопапір</a>
+            </li>
+            </ul>
+        </div>
+      </div> 
+      <nav id="off-canvas-menu" class="main-nav" role="navigation">
+        <!-- <div id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></div> -->
+        <ul class="main-nav__list main-nav__list--aside">
+          <li class="main-nav__item  main-nav__item--active">
+            <a href="" class="main-nav__link">
+              Контакти
+            </a>
+            <div class="main-nav__lvl  main-nav__lvl--2">
+              <ul class="main-nav__list  main-nav__list--lvl-2">
+                <li class="main-nav__item  main-nav__item--lvl-2">
+                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
+                    Підтримка
+                  </a>
+                </li>
+                <li class="main-nav__item  main-nav__item--lvl-2">
+                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
+                    Техпідтримка
+                  </a>
+                  <div class="main-nav__lvl  main-nav__lvl--3">
+                    <ul class="main-nav__list  main-nav__list--lvl-3">
+                      <li class="main-nav__item  main-nav__item--lvl-3">
+                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
+                          Зворотній зв'язок
+                        </a>
+                      </li>
+                      <li class="main-nav__item  main-nav__item--lvl-3">
+                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
+                          Стриптиз
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="main-nav__item">
+            <a href="https://github.com/nicothin/NTH-start-project" class="main-nav__link">
+              Новини
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="http://nicothin.pro/" class="main-nav__link">
+              Про нас
+            </a>
+          </li>
+        </ul>
+      </nav>
     </aside>
   <div class="page__inner off-canvas__page-content">
     <div class="page__content">
         <header class="page-header container" role="banner">
             <div class="burger" data-toggle="off-canvas"><span></span></div>
-            <div class="logo'">logo</div>
+            <a href="/" class="logo">
+              <img src="img/" alt="logo">
+            </a>
             <!-- <button class="btn">Каталог</button> -->
             <div class="dropdown">
                 <a id="dropdown-demo-1" href="#" class="btn dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Каталог</a>
