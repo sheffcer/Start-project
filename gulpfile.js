@@ -146,7 +146,8 @@ gulp.task('html', () => {
       prefix: '@@',        // Указывает на использование @@include
       basepath: '@file'    // Указывает на базовый путь для поиска файлов
     }))
-    .pipe(gulp.dest(paths.html.dest));   // Копирование в папку dist
+    .pipe(gulp.dest(paths.html.dest))  // Копирование в папку dist
+    .pipe(browserSync.stream());  // Автоматическая перезагрузка при изменении HTML
 });
 
 // Watch task: watch for changes in files
