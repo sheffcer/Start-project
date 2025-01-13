@@ -3,5 +3,5 @@
 // Не пишите здесь другие селекторы.
 
 .page-footer {
-  
+    @include container;
 }
