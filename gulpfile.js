@@ -34,6 +34,7 @@ const paths = {
     // swipejs: 'node_modules/swipejs/build/swipe.min.js',
     owl: 'node_modules/owl.carousel//dist/owl.carousel.min.js',
     owlStyle: 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
+    owlStyleDefault: 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css',
     dest: 'dist/js/'
   },
   images: {
@@ -77,7 +78,7 @@ gulp.task('create-css-dir', (done) => {
 
   // Задача для копирования owl.carousel.min.css
 gulp.task('copyVendorsStyles', () => {
-  return gulp.src(paths.vendors.owlStyle)  // указываем путь к owl.carousel.min.css
+  return gulp.src([paths.vendors.owlStyle, paths.vendors.owlStyleDefault])  // указываем путь к owl.carousel.min.css
     .pipe(gulp.dest('dist/css/'));  // копируем файл в папку dist/css/
 });
   
