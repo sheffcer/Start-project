@@ -31,6 +31,9 @@ const paths = {
   vendors: {
     jquery: 'node_modules/jquery/dist/jquery.min.js',
     jqueryMigrate: 'node_modules/jquery-migrate/dist/jquery-migrate.min.js',
+    // swipejs: 'node_modules/swipejs/build/swipe.min.js',
+    owl: 'node_modules/owl.carousel//dist/owl.carousel.min.js',
+    owlStyle: 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
     dest: 'dist/js/'
   },
   images: {
@@ -71,8 +74,14 @@ gulp.task('create-css-dir', (done) => {
     }
     done();
   });
+
+  // Задача для копирования owl.carousel.min.css
+gulp.task('copyVendorsStyles', () => {
+  return gulp.src(paths.vendors.owlStyle)  // указываем путь к owl.carousel.min.css
+    .pipe(gulp.dest('dist/css/'));  // копируем файл в папку dist/css/
+});
   
-  gulp.task('styles', gulp.series('create-css-dir', () => {
+  gulp.task('styles', gulp.series('create-css-dir', 'copyVendorsStyles', () => {
     return gulp.src(paths.styles.src)
       .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
@@ -136,7 +145,7 @@ gulp.task('images', () => {
 // });
 
 gulp.task('copyVendors', () => {
-    return gulp.src([paths.vendors.jquery, paths.vendors.jqueryMigrate])  // указываем путь к файлам
+    return gulp.src([paths.vendors.jquery, paths.vendors.jqueryMigrate, paths.vendors.owl])  // указываем путь к файлам
       .pipe(gulp.dest(paths.vendors.dest));  // указываем папку назначения
   });
 
