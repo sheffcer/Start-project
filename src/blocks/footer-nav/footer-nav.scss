@@ -1,4 +1,4 @@
-// В этом файле должны быть стили только для БЭМ-блока main-nav, его элементов,
+// В этом файле должны быть стили только для БЭМ-блока footer-nav, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Не пишите здесь другие селекторы.
 
@@ -17,7 +17,13 @@ $toggler-part-bg-color:       #000 !default;
 
 $transition-time:             0.3s !default;
 
-.main-nav {
+
+.footer-nav__list  .footer-nav__list--lvl-2 {
+  display: flex;
+  flex-direction: column;
+}   
+
+.footer-nav {
 
   $block-name:                &;
 
@@ -32,27 +38,29 @@ $transition-time:             0.3s !default;
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
 
-    @media (max-width: ($menu-desktop-width - 1)) {
+    // @media (max-width: ($menu-desktop-width - 1)) {
 
-      // открытие/закрытие меню только в случае работающего JS
+    //   // открытие/закрытие меню только в случае работающего JS
 
-      .js & {
-        // overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.2s;
-      }
+    //   .js & {
+    //     // overflow: hidden;
+    //     max-height: 0;
+    //     transition: max-height 0.2s;
+    //   }
 
-      .js #{$block-name}--open & {
-        max-height: 100vh;
-        transition: max-height 0.6s;
-      }
-    }
+    //   .js #{$block-name}--open & {
+    //     max-height: 100vh;
+    //     transition: max-height 0.6s;
+    //   }
+    // }
 
-    @media (min-width: $menu-desktop-width) {
-      display: flex;
-      flex-wrap: wrap;
-    }
+    // @media (min-width: $menu-desktop-width) {
+    //   display: flex;
+    //   flex-wrap: wrap;
+    // }
   }
 
   &__item {
@@ -92,23 +100,23 @@ $transition-time:             0.3s !default;
 
     &--2 {
 
-      @media (min-width: $menu-desktop-width) {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        transition: opacity $transition-time;
+    //   @media (min-width: $menu-desktop-width) {
+    //     position: absolute;
+    //     top: 100%;
+    //     left: 0;
+    //     z-index: 1;
+    //     opacity: 0;
+    //     height: 0;
+    //     overflow: hidden;
+    //     transition: opacity $transition-time;
 
-        #{$block-name}__item--show-child > &,
-        #{$block-name}__item:hover & {
-          opacity: 1;
-          height: auto;
-          overflow: visible;
-        }
-      }
+    //     #{$block-name}__item--show-child > &,
+    //     #{$block-name}__item:hover & {
+    //       opacity: 1;
+    //       height: auto;
+    //       overflow: visible;
+    //     }
+    //   }
     }
 
     &--3 {
