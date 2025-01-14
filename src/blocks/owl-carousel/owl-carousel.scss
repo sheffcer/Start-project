@@ -2,4 +2,78 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Не пишите здесь другие селекторы.
 
-.owl-carousel {}
+.owl-carousel {
+    height: 128px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+
+.owl-carousel__item {
+    width: 90px;
+}
+
+.owl-carousel__title {
+    font-family: $font-family;
+    font-weight: 700;
+    color: $black;
+    font-size: 10px;
+    text-align: center;
+}
+
+.owl-carousel__link {
+    height: 126px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+
+    
+}
+
+.owl-carousel__img {
+    // width: 90px!important;
+    height: 90px;
+    background-color: #E9FBE5!important;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.custom-nav {
+    display: flex;
+    // justify-content: space-between;
+    position: absolute;
+    // top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+  
+  .custom-prev, .custom-next {
+    background-color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .custom-prev:hover, .custom-next:hover {
+    background-color: #ddd;
+  }
+
+  .owl-prev {
+    position: absolute;
+    width: 14px;
+    height: 90px;
+    top: -125px;
+    left: -30px;
+  } 
+
+  .owl-next {
+    position: absolute;
+    width: 14px;
+    height: 90px;
+    top: -125px;
+    left: 1355px;
+  } 
