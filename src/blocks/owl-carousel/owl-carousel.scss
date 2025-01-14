@@ -64,16 +64,32 @@
 
   .owl-prev {
     position: absolute;
+    cursor: pointer;
+    color: #8A8A8A;
+    border: none;
     width: 14px;
     height: 90px;
     top: -125px;
-    left: -30px;
+    left: -25px;
+    background-image: url(../img/prev.png);
+    background-repeat: no-repeat;
+    background-position: center center;
   } 
 
   .owl-next {
     position: absolute;
+    cursor: pointer;
+    color: #8A8A8A;
+    border: none;
     width: 14px;
     height: 90px;
     top: -125px;
-    left: 1355px;
-  } 
+    left: 1350px;
+    background-image: url(../img/next.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+//   .owl-next span {
+//     // visibility: hidden;
+//   }
