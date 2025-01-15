@@ -84,12 +84,45 @@
     width: 14px;
     height: 90px;
     top: -125px;
-    left: 1350px;
+    // left: 1350px;
+    left: 450px;
     background-image: url(../img/next.png);
     background-repeat: no-repeat;
     background-position: center center;
   }
   
-//   .owl-next span {
-//     // visibility: hidden;
-//   }
+ @media (min-width: $screen-xxl) {
+    .owl-next {
+        left: 1350px!important;
+    }
+}
+
+@media (min-width: $screen-xl) {
+    .owl-next {
+        left: 1150px!important;
+    }
+}
+
+@media (min-width: $screen-lg) {
+    .owl-next {
+        left: 990px;
+    }
+}
+
+@media (min-width: $screen-lg) {
+    .owl-next {
+        left: 990px;
+    }
+}
+
+@media (min-width: $screen-md) {
+    .owl-next {
+        left: 700px;
+    }
+}
+
+@media (min-width: $screen-sm) {
+    .owl-next {
+        left: 480px;
+    }
+}
