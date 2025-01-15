@@ -20,6 +20,7 @@
     font-weight: 700;
     color: $black;
     font-size: 10px;
+    line-height: 10px;
     text-align: center;
 }
 
@@ -126,6 +127,7 @@
 
 @media (min-width: $screen-xxl) {
     .owl-next {
-        left: 1350px;
+        // left: 1350px;
+        left: 1235px;
     }
 }
