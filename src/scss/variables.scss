@@ -78,11 +78,17 @@ $screen-lg:                   992px;
 $screen-xl:                   1200px;
 $screen-xxl:                  1400px;
 
-$container-sm:                100%;
-$container-md:                100%;
-$container-lg:                $screen-lg - 30;
-$container-xl:                $screen-xl - 30;
-$container-xxl:               $screen-xxl - 30;
+$container-sm:                ($screen-sm - 50) !default;
+$container-md:                ($screen-md - 78) !default;
+$container-lg:                ($screen-lg - 30) !default;
+$container-xl:                ($screen-xl - 30) !default;
+$container-xxl:               ($screen-xxl - 144) !default;
+
+// $container-sm:                100%;
+// $container-md:                100%;
+// $container-lg:                $screen-lg - 30;
+// $container-xl:                $screen-xl - 30;
+// $container-xxl:               $screen-xxl - 30;
 
 
 

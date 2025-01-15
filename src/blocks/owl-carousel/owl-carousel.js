@@ -20,7 +20,7 @@ $(document).ready(function() {
                 items: 4,
               },
               768 : {
-                items: 7,
+                items: 6,
               },
               992 : {
                 items: 10,
