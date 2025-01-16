@@ -260,26 +260,50 @@
               <button class="custom-next">Next</button> -->
           </div>
         </div>
-        
-        <div class="main-slider">
-          <div class="owl-carousel">
-            <div class="owl__item">
-              <a class="main-slider__link" href="">
-                <img class="main-slider__img" src="/img/main-slider-01.jpg" alt="">
+        <div class="slider__inner">
+          <div class="main-slider">
+            <div class="owl-carousel">
+              <div class="owl-carousel__item">
+                <a class="main-slider__link" href="">
+                  <picture class="main-slider__img">
+                    <source media="(max-width: 480px)" srcset="/img/main-slider-01-mobile.jpg">                 
+                    <source media="(min-width: 768px)" srcset="/img/main-slider-01-tablet.jpg">
+                    <source media="(min-width: 1200px)" srcset="/img/main-slider-01-desktop.jpg">  
+                    <!-- Основное изображение для браузеров, которые не поддерживают <picture> -->
+                    <img src="/img/main-slider-01.jpg" alt="">
+                </picture>
+                  </a>
+              </div>
+              <div class="owl-carousel__item">
+                <a class="main-slider__link" href="">
+                  <picture class="main-slider__img">
+                    <source media="(max-width: 480px)" srcset="/img/main-slider-01-mobile.jpg">                 
+                    <source media="(min-width: 768px)" srcset="/img/main-slider-01-tablet.jpg">
+                    <source media="(min-width: 1200px)" srcset="/img/main-slider-01-desktop.jpg">  
+                    <!-- Основное изображение для браузеров, которые не поддерживают <picture> -->
+                    <img src="/img/main-slider-01.jpg" alt="">
+                </picture>
                 </a>
+              </div>
             </div>
-            <div class="owl__item">
-              <a class="main-slider__link" href="">
-                <img class="main-slider__img" src="/img/main-slider-01.jpg" alt="">
-              </a>
+            <div class="main-nav">
+              <!-- <button class="custom-prev">Prev</button>
+              <button class="custom-next">Next</button> -->
             </div>
           </div>
-          <div class="main-nav">
-            <!-- <button class="custom-prev">Prev</button>
-            <button class="custom-next">Next</button> -->
-        </div>
-        </div>   
-
+          <div class="secondary-slider">
+            <div class="secondary-slider__item">
+              <a class="secondary-slider__link" href="">
+                <img class="secondary-slider__img" src="/img/sub-slider-01.jpg" alt="" width="416">
+              </a>
+            </div>
+            <div class="secondary-slider__item">
+              <a class="secondary-slider__link" href="">
+                <img class="secondary-slider__img" src="/img/sub-slider-02.jpg" alt="" width="416">
+              </a>
+            </div>
+          </div>   
+        </div>  
         <p><a href="blocks-demo.html">Страница с демкой компонентов</a></p>
         </div>
       </div>

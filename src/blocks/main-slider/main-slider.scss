@@ -1,3 +1,43 @@
+.main-slider {
+    width: 856px;
+}
+
+@media (min-width: $screen-sm) {
+    .main-slider {
+        width: 430px;
+    }
+}
+
+@media (min-width: $screen-md) {
+    .main-slider {
+        width: 690px;
+    }
+}    
+
+@media (min-width: $screen-xxl) {
+    .main-slider {
+        width: 856px;
+    }
+}
+
+.secondary-slider {
+    width: 416px;
+}
+
+.slider__inner {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+@media (min-width: $screen-xxl) {
+    .slider__inner  {
+        flex-direction: row;
+    }
+}
+
 .main-slider .owl-carousel {
   height: auto;
 }
