@@ -16,6 +16,9 @@ $(document).ready(function() {
                 loop: true,
                 center: true,
               },
+              320 : {
+                items: 3,
+              },
               480 : {
                 items: 4,
               },
@@ -26,7 +29,7 @@ $(document).ready(function() {
                 items: 10,
               },
               1200 : {
-                items: 13,
+                items: 12,
               },
               1400 : {
                 items: 13,
