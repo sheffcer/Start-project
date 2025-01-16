@@ -1,10 +1,10 @@
 $(document).ready(function() {
-    $('.owl-carousel').owlCarousel({
+    $('.catalog-carousel .owl-carousel').owlCarousel({
       items: 13, // Количество видимых слайдов
       loop: true, // Зацикливать карусель
       margin: 10, // Отступы между слайдами
       autoplay: true, // Автопрокрутка
-      autoplayTimeout: 2000, // Время до следующего слайда (в миллисекундах)
+      autoplayTimeout: 5000, // Время до следующего слайда (в миллисекундах)
       autoplayHoverPause: true, // Пауза автопрокрутки при наведении на слайд
       nav: true,
     //   navText: ['<', '>'], // Стандартный текст для стрелок (можно заменить на что угодно)
@@ -36,7 +36,20 @@ $(document).ready(function() {
               }
             } 
     });
-  });
+
+    $('.main-slider .owl-carousel').owlCarousel({
+      items: 1,
+      loop: true,
+      margin: 10,
+      // autoplay: true,
+      autoplayTimeout: 4000,
+      // autoplayHoverPause: true,
+      dotted: true,
+      nav: true,
+    //   navText: ['<', '>'], // Стандартный текст для стрелок (можно заменить на что угодно)
+      navContainer: '.main-nav', // Указываем кастомный контейнер для навигации
+    });
+});
 
 // $(document).ready(function(){
 
