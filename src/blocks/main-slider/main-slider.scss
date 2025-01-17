@@ -20,11 +20,20 @@
     }
 }
 
-.secondary-slider {
-    width: 416px;
-}
+// .secondary-slider {
+//     width: 416px;
+// }
 
 .slider__inner {
     // margin-top: 20px;
+}
+
+
+@media (min-width: $screen-lg) {
+    .slider__inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 

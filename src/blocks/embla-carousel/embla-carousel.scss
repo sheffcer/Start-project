@@ -19,10 +19,68 @@
 .embla__slide {
     width: 100%;
     flex-shrink: 0;
-    padding: 10px;
-    background-color: lightgray;
+    // padding: 10px;
+    // background-color: lightgray;
     text-align: center;
 }
+
+.embla--second .embla__container {
+    display: none;
+}
+
+@media (min-width: $screen-md) {
+    .embla--second .embla__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .embla--second .embla__slide {
+        // flex: none;  /* Ожидаем, что 2 слайда будут помещаться в одном ряду */
+        box-sizing: border-box;  /* Обеспечиваем корректный расчет размеров */
+        flex-basis: 330px;
+    }
+}
+
+.embla .embla--second {
+    width: 100%;
+}
+
+@media (min-width: $screen-lg) {
+    .embla .embla--second {
+        width: 416px;
+    }
+
+    .embla--second .embla__container {
+        flex-direction: column;
+        width: 416px;
+        height: 398px;
+    }
+
+    .embla--second .embla__slide {
+        flex-basis: 0;
+    }
+}
+
+// @media (min-width: $screen-xl) {
+//     .owl-next {
+//         left: 1150px;
+//     }
+// }
+
+
+.embla--second .embla__slide {
+    flex-shrink: 1;
+}
+
+// .embla--second  {
+//     width: 400px;
+// }
+
+// .ebla--second .embla__viewport {
+//     flex: 0 0 400px;
+//     // min-width: 0;
+// }
 
 .embla__dots {
     display: flex;
@@ -30,8 +88,17 @@
     align-items: center;
     // margin-top: 20px;
   }
-  
-  .embla__dot {
+
+
+// crutch 
+
+  .embla--second  .embla__dots {
+    display: none;
+} 
+
+// crutch
+
+.embla__dot {
     // width: 10px;
     // height: 10px;
     width: 20px;

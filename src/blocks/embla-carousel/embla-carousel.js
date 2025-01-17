@@ -1,52 +1,86 @@
 import EmblaCarousel from 'embla-carousel';
 
-// Grab wrapper nodes
-const rootNode = document.querySelector('.embla');
-const viewportNode = rootNode.querySelector('.embla__viewport');
-const dotsContainer = document.querySelector('.embla__dots');
-const options = { loop: false, speed: 10 };
+// Инициализация для первого слайдера
+const rootNodeFirst = document.querySelector('.embla--first');
+const viewportNodeFirst = rootNodeFirst.querySelector('.embla__viewport');
+const dotsContainerFirst = rootNodeFirst.querySelector('.embla__dots');
+const prevButtonNodeFirst = rootNodeFirst.querySelector('.embla__prev');
+const nextButtonNodeFirst = rootNodeFirst.querySelector('.embla__next');
+const optionsFirst = { loop: true, speed: 5 };
 
-// Initialize the carousel
-const embla = EmblaCarousel(viewportNode, options);
+const emblaFirst = EmblaCarousel(viewportNodeFirst, optionsFirst);
 
-// Grab button nodes
-const prevButtonNode = rootNode.querySelector('.embla__prev');
-const nextButtonNode = rootNode.querySelector('.embla__next');
+// Добавление обработчиков событий для кнопок первого слайдера
+prevButtonNodeFirst.addEventListener('click', () => emblaFirst.scrollPrev(), false);
+nextButtonNodeFirst.addEventListener('click', () => emblaFirst.scrollNext(), false);
 
-// Add click listeners after initializing embla
-prevButtonNode.addEventListener('click', () => embla.scrollPrev(), false);
-nextButtonNode.addEventListener('click', () => embla.scrollNext(), false);
+// Функция для обновления точек первого слайдера
+const updateDotsFirst = () => {
+  const slides = emblaFirst.slideNodes();
+  const selectedIndex = emblaFirst.selectedScrollSnap();
 
-// Функция для обновления точек
-const updateDots = () => {
-  const slides = embla.slideNodes();
-  const selectedIndex = embla.selectedScrollSnap();
-  
   // Очистка старых точек
-  dotsContainer.innerHTML = '';
-  
+  dotsContainerFirst.innerHTML = '';
+
   // Добавление новых точек
   slides.forEach((slide, index) => {
     const dot = document.createElement('button');
     dot.classList.add('embla__dot');
-    
+
     if (index === selectedIndex) {
       dot.classList.add('is-selected'); // Активная точка
     }
 
     dot.addEventListener('click', () => {
-      embla.scrollTo(index); // Прокрутка к выбранному слайду
+      emblaFirst.scrollTo(index); // Прокрутка к выбранному слайду
     });
 
-    dotsContainer.appendChild(dot);
+    dotsContainerFirst.appendChild(dot);
   });
 };
 
-// Инициализация точек
-updateDots();
+// Инициализация точек для первого слайдера
+updateDotsFirst();
 
 // Обновление точек при изменении слайда
-embla.on('select', updateDots);
+emblaFirst.on('select', updateDotsFirst);
 
-// Логирование слайдов (опционально)
-console.log(embla.slideNodes());
+
+// Инициализация для второго слайдера (без кнопок)
+const rootNodeSecond = document.querySelector('.embla--second');
+const viewportNodeSecond = rootNodeSecond.querySelector('.embla__viewport');
+const dotsContainerSecond = rootNodeSecond.querySelector('.embla__dots');
+const optionsSecond = { loop: false, speed: 10,  slidesToScroll: 2, };
+
+const emblaSecond = EmblaCarousel(viewportNodeSecond, optionsSecond);
+
+// Функция для обновления точек второго слайдера
+const updateDotsSecond = () => {
+  const slides = emblaSecond.slideNodes();
+  const selectedIndex = emblaSecond.selectedScrollSnap();
+
+  // Очистка старых точек
+  dotsContainerSecond.innerHTML = '';
+
+  // Добавление новых точек
+  slides.forEach((slide, index) => {
+    const dot = document.createElement('button');
+    dot.classList.add('embla__dot');
+
+    if (index === selectedIndex) {
+      dot.classList.add('is-selected'); // Активная точка
+    }
+
+    dot.addEventListener('click', () => {
+      emblaSecond.scrollTo(index); // Прокрутка к выбранному слайду
+    });
+
+    dotsContainerSecond.appendChild(dot);
+  });
+};
+
+// Инициализация точек для второго слайдера
+updateDotsSecond();
+
+// Обновление точек при изменении слайда
+emblaSecond.on('select', updateDotsSecond);
