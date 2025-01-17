@@ -19,8 +19,6 @@
 .embla__slide {
     width: 100%;
     flex-shrink: 0;
-    // padding: 10px;
-    // background-color: lightgray;
     text-align: center;
 }
 
@@ -36,10 +34,14 @@
     }
 
     .embla--second .embla__slide {
-        // flex: none;  /* Ожидаем, что 2 слайда будут помещаться в одном ряду */
-        box-sizing: border-box;  /* Обеспечиваем корректный расчет размеров */
+        box-sizing: border-box;
         flex-basis: 330px;
+        flex-shrink: 0!important;
     }
+
+    // .embla--second .embla__slide:nth-last-child(odd)   {
+    //    margin-right: 30px; 
+    // }
 }
 
 .embla .embla--second {
@@ -54,7 +56,7 @@
     .embla--second .embla__container {
         flex-direction: column;
         width: 416px;
-        height: 398px;
+        height: auto;
     }
 
     .embla--second .embla__slide {
@@ -62,25 +64,11 @@
     }
 }
 
-// @media (min-width: $screen-xl) {
-//     .owl-next {
-//         left: 1150px;
-//     }
-// }
-
 
 .embla--second .embla__slide {
     flex-shrink: 1;
 }
 
-// .embla--second  {
-//     width: 400px;
-// }
-
-// .ebla--second .embla__viewport {
-//     flex: 0 0 400px;
-//     // min-width: 0;
-// }
 
 .embla__dots {
     display: flex;
@@ -99,15 +87,11 @@
 // crutch
 
 .embla__dot {
-    // width: 10px;
-    // height: 10px;
     width: 20px;
     height: 8px;
     margin: 0 5px;
     border-radius: 20px;
-    // border-radius: 50%;
     background-color: #E2E2E2;
-    // background-color: #ccc;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -116,13 +100,11 @@
   .embla__dot.is-selected {
     width: 42px;
     background-color: #22BC3E;
-    // background-color: #333; /* Цвет активной точки */
   }
   
   .embla__dot:hover {
     background-color: #22BC3E;
     opacity: 0.5;
-    // background-color: #555; /* Цвет при наведении */
   }
 
   .embla__nav {
