@@ -75,6 +75,7 @@
     "yaspeller": "^5.0.1"
   },
   "dependencies": {
+    "embla-carousel": "^8.5.2",
     "gulp-autoprefixer": "^7.0.1",
     "ismobilejs": "^0.4.0",
     "nouislider": "^9.2.0"
