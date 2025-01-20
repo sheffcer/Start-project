@@ -50,19 +50,36 @@ emblaFirst.on('select', updateDotsFirst);
 const rootNodeSecond = document.querySelector('.embla--second');
 const viewportNodeSecond = rootNodeSecond.querySelector('.embla__viewport');
 const dotsContainerSecond = rootNodeSecond.querySelector('.embla__dots');
-const optionsSecond = { loop: false, speed: 10,  slidesToScroll: 2, };
 
-const emblaSecond = EmblaCarousel(viewportNodeSecond, optionsSecond);
+// Функция для получения параметров слайдера
+const getEmblaOptions = () => {
+  if (window.innerWidth >= 992) {
+    return {
+      loop: false,
+      speed: 10,
+      slidesToScroll: 1,
+      axis: 'y', // Вертикальная прокрутка для экранов 992px и больше
+    };
+  } else {
+    return {
+      loop: false,
+      speed: 10,
+      slidesToScroll: 2,
+      axis: 'x', // Горизонтальная прокрутка для меньших экранов
+    };
+  }
+};
 
-// Функция для обновления точек второго слайдера
+// Инициализация слайдера с актуальными настройками
+let emblaSecond = EmblaCarousel(viewportNodeSecond, getEmblaOptions());
+
+// Обновление точек при изменении слайда
 const updateDotsSecond = () => {
   const slides = emblaSecond.slideNodes();
   const selectedIndex = emblaSecond.selectedScrollSnap();
 
-  // Очистка старых точек
   dotsContainerSecond.innerHTML = '';
 
-  // Добавление новых точек
   slides.forEach((slide, index) => {
     const dot = document.createElement('button');
     dot.classList.add('embla__dot');
@@ -72,7 +89,7 @@ const updateDotsSecond = () => {
     }
 
     dot.addEventListener('click', () => {
-      emblaSecond.scrollTo(index); // Прокрутка к выбранному слайду
+      emblaSecond.scrollTo(index);
     });
 
     dotsContainerSecond.appendChild(dot);
@@ -84,3 +101,14 @@ updateDotsSecond();
 
 // Обновление точек при изменении слайда
 emblaSecond.on('select', updateDotsSecond);
+
+// Перерисовываем слайдер при изменении размера окна
+window.addEventListener('resize', () => {
+  const newEmblaOptions = getEmblaOptions();
+  
+  // Если настройки слайдера изменились, уничтожаем старую и инициализируем новый
+  emblaSecond.destroy();  // Уничтожаем старую инициализацию
+  emblaSecond = EmblaCarousel(viewportNodeSecond, newEmblaOptions); // Инициализируем новый слайдер
+  
+  updateDotsSecond(); // Обновляем точки после перерисовки
+});
