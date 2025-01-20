@@ -26,6 +26,36 @@
     display: none;
 }
 
+//*****//
+/* Класс для вертикального слайдера */
+.embla--vertical .embla__viewport {
+    display: flex;
+    flex-direction: column; /* Вертикальная прокрутка */
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .embla--vertical .embla__slide {
+    width: 100%; /* Слайды должны занимать всю ширину */
+    height: 100%; /* Слайды должны занимать всю высоту */
+  }
+  
+  /* Класс для горизонтального слайдера */
+  .embla--horizontal .embla__viewport {
+    display: flex;
+    flex-direction: row; /* Горизонтальная прокрутка */
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .embla--horizontal .embla__slide {
+    width: 100%; /* Слайды должны занимать всю ширину */
+    height: 100%; /* Слайды должны занимать всю высоту */
+  }
+  
+//**////
+
+
 @media (min-width: $screen-md) {
     .embla--second {
         outline: 1px dotted darkviolet;
@@ -61,8 +91,9 @@
     }
 
     .embla--second .embla__container {
-        display: block;
-        // flex-direction: column;
+        // display: block;
+        display: flex;
+        flex-direction: column;
         // width: 416px;
         // height: 398px;
     }
@@ -73,12 +104,26 @@
         // flex: 0 0 100%;
         // padding: 0;
         height: 186px;
+        padding-bottom: 25px;
         
     }
 }
 
 
 @media (min-width: $screen-xxl) {
+    //*****//
+.embla--second-vertical .embla__viewport {
+//     display: flex;
+//     flex-direction: column;
+//   }
+  
+//   /* Для горизонтального слайдера */
+//   .embla--second-horizontal .embla__viewport {
+//     display: flex;
+//     flex-direction: row;
+  }
+//**////
+
     .embla--first .embla__viewport {
         display: block;
         height: 100%;
