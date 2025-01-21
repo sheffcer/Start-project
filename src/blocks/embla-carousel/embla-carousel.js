@@ -1,4 +1,6 @@
 import EmblaCarousel from 'embla-carousel';
+import { addPrevNextBtnsClickHandlers } from './EmblaCarouselArrowButtons';
+import { addDotBtnsAndClickHandlers } from './EmblaCarouselDotButton';
 
 // Инициализация для первого слайдера
 const rootNodeFirst = document.querySelector('.embla--first');
@@ -94,3 +96,31 @@ updateSlider();
 
 // Обновляем слайдер при изменении ширины окна
 window.addEventListener('resize', updateSlider);
+
+
+// Third group slider
+
+const OPTIONS = { align: 'start', slidesToScroll: 2, slide: 2 }
+// const OPTIONS = { align: 'start', slidesToScroll: 1 }
+
+const emblaNode = document.querySelector('.embla--third')
+console.log('Root Node is: ' . emblaNode);
+const viewportNode = emblaNode.querySelector('.embla__viewport')
+const prevBtnNode = emblaNode.querySelector('.embla__button--prev')
+const nextBtnNode = emblaNode.querySelector('.embla__button--next')
+const dotsNode = emblaNode.querySelector('.embla__dots')
+
+const emblaApi = EmblaCarousel(viewportNode, OPTIONS)
+
+const removePrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(
+  emblaApi,
+  prevBtnNode,
+  nextBtnNode
+)
+const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(
+  emblaApi,
+  dotsNode
+)
+
+emblaApi.on('destroy', removePrevNextBtnsClickHandlers)
+emblaApi.on('destroy', removeDotBtnsAndClickHandlers)
