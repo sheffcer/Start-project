@@ -46,7 +46,7 @@
 .custom-nav {
     display: flex;
     // justify-content: space-between;
-    position: absolute;
+    position: relative;
     // top: 50%;
     width: 100%;
     transform: translateY(-50%);
@@ -86,8 +86,7 @@
     width: 14px;
     height: 90px;
     top: -125px;
-    // left: 1350px;
-    left: 450px;
+    right: -15px;
     background-image: url(../img/next.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -95,7 +94,7 @@
 
 @media (min-width: $screen-sm) {
     .owl-next {
-        left: 410px;
+        // left: 410px;
     }
 
     .owl-prev {
@@ -105,7 +104,7 @@
   
 @media (min-width: $screen-md) {
     .owl-next {
-        left: 700px;
+        // left: 700px;
     }
 
     .owl-prev {
@@ -115,19 +114,19 @@
 
 @media (min-width: $screen-lg) {
     .owl-next {
-        left: 940px;
+        // left: 940px;
     }
 }
 
 @media (min-width: $screen-xl) {
     .owl-next {
-        left: 1150px;
+        // left: 1150px;
     }
 }
 
 @media (min-width: $screen-xxl) {
     .owl-next {
         // left: 1350px;
-        left: 1305px;
+        // left: 1305px;
     }
 }
