@@ -99,28 +99,54 @@ window.addEventListener('resize', updateSlider);
 
 
 // Third group slider
+const OPTIONS_THIRD = { align: 'start', slidesToScroll: 2, slide: 2 }
+// const OPTIONS_THIRD = { align: 'start', slidesToScroll: 1 }
 
-const OPTIONS = { align: 'start', slidesToScroll: 2, slide: 2 }
-// const OPTIONS = { align: 'start', slidesToScroll: 1 }
+const emblaNodeThird = document.querySelector('.embla--third')
+console.log('Root Node for Third Slider is: ', emblaNodeThird);
+const viewportNodeThird = emblaNodeThird.querySelector('.embla__viewport')
+const prevBtnNodeThird = emblaNodeThird.querySelector('.embla__button--prev')
+const nextBtnNodeThird = emblaNodeThird.querySelector('.embla__button--next')
+const dotsNodeThird = emblaNodeThird.querySelector('.embla__dots')
 
-const emblaNode = document.querySelector('.embla--third')
-console.log('Root Node is: ' . emblaNode);
-const viewportNode = emblaNode.querySelector('.embla__viewport')
-const prevBtnNode = emblaNode.querySelector('.embla__button--prev')
-const nextBtnNode = emblaNode.querySelector('.embla__button--next')
-const dotsNode = emblaNode.querySelector('.embla__dots')
+const emblaApiThird = EmblaCarousel(viewportNodeThird, OPTIONS_THIRD)
 
-const emblaApi = EmblaCarousel(viewportNode, OPTIONS)
-
-const removePrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(
-  emblaApi,
-  prevBtnNode,
-  nextBtnNode
+const removePrevNextBtnsClickHandlersThird = addPrevNextBtnsClickHandlers(
+  emblaApiThird,
+  prevBtnNodeThird,
+  nextBtnNodeThird
 )
-const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(
-  emblaApi,
-  dotsNode
+const removeDotBtnsAndClickHandlersThird = addDotBtnsAndClickHandlers(
+  emblaApiThird,
+  dotsNodeThird
 )
 
-emblaApi.on('destroy', removePrevNextBtnsClickHandlers)
-emblaApi.on('destroy', removeDotBtnsAndClickHandlers)
+emblaApiThird.on('destroy', removePrevNextBtnsClickHandlersThird)
+emblaApiThird.on('destroy', removeDotBtnsAndClickHandlersThird)
+
+
+// Fourth group slider
+const OPTIONS_FOURTH = { align: 'start', slidesToScroll: 2, slide: 2 }
+// const OPTIONS_FOURTH = { align: 'start', slidesToScroll: 1 }
+
+const emblaNodeFourth = document.querySelector('.embla--fourth')
+console.log('Root Node for Fourth Slider is: ', emblaNodeFourth);
+const viewportNodeFourth = emblaNodeFourth.querySelector('.embla__viewport')
+const prevBtnNodeFourth = emblaNodeFourth.querySelector('.embla__button--prev')
+const nextBtnNodeFourth = emblaNodeFourth.querySelector('.embla__button--next')
+const dotsNodeFourth = emblaNodeFourth.querySelector('.embla__dots')
+
+const emblaApiFourth = EmblaCarousel(viewportNodeFourth, OPTIONS_FOURTH)
+
+const removePrevNextBtnsClickHandlersFourth = addPrevNextBtnsClickHandlers(
+  emblaApiFourth,
+  prevBtnNodeFourth,
+  nextBtnNodeFourth
+)
+const removeDotBtnsAndClickHandlersFourth = addDotBtnsAndClickHandlers(
+  emblaApiFourth,
+  dotsNodeFourth
+)
+
+emblaApiFourth.on('destroy', removePrevNextBtnsClickHandlersFourth)
+emblaApiFourth.on('destroy', removeDotBtnsAndClickHandlersFourth)
