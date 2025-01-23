@@ -21,7 +21,7 @@
     <aside class="off-canvas__aside" role="complementary" aria-label="Список компонентов">
       <div class="off-canvas__block">
         <a href="/" class="logo">
-          <img src="img/" alt="logo">
+          <img src="img/logo.svg" alt="logo">
         </a>
         <div class="dropdown">
             <a id="dropdown-demo-1" href="#" class="btn dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Каталог</a>
@@ -88,7 +88,12 @@
         <header class="page-header container" role="banner">
             <div class="burger" data-toggle="off-canvas"><span></span></div>
             <a href="/" class="logo">
-              <img src="img/" alt="logo">
+              <!-- <img src="img/logo.svg" alt="logo"> -->
+              <picture class="main-slider__img">
+                <source media="(max-width: 767px)" srcset="/img/logo-mobile.svg">                 
+                <source media="(min-width: 768px)" srcset="/img/logo.svg">  
+                <img src="/img/logo.svg" alt="">
+              </picture>
             </a>
             <div class="dropdown">
                 <a id="dropdown-demo-1" href="#" class="btn dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Каталог</a>
@@ -134,17 +139,16 @@
                 </div>
               </label>
               <div class="user-block">
-                Вася
-                <img src="" alt="" class="user-blcok__img">
+                <img src="/img/login.svg" alt="" class="user-blcok__img">
               </div>
               <div class="cart">
-                Кошик
-                <img src="" alt="" class="cart__img">
+                <img src="/img/cart.svg" alt="" class="cart__img">
               </div>
           </header>
       <main class="main-content" role="main">
         <div class="main-content__inner">
         <div class="catalog-carousel">
+          8
           <div class="owl-carousel">
             <div class="owl-carousel__item">
               <a class="owl-carousel__link" href="">
@@ -587,6 +591,7 @@
         </footer>
     </div>
     </div>
+    <div class="off-canvas__overlay" data-toggle="off-canvas"></div>
   </div>
 
   @@include('_include/page_bottom.html')
