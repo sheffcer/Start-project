@@ -4,5 +4,59 @@
 
 .page-header {
     outline: 1px dotted plum;
-    @include container
+    @include container;
+    display: flex;
+    width: 1296px;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+    
 }
+
+.page-header__burger.burger {
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+    outline: 1px solid var(--secondary-color);
+    border-radius: 4px;
+}
+
+.page-header__catalog.dropdown  {
+    display: none;
+}
+
+@media (min-width: $screen-lg) {
+    .page-header__catalog.dropdown  {
+        display: block;
+    }
+}
+
+.page-header__catalog .btn {
+    background-color: var(--secondary-color);
+    min-width: 130px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 13px 15px;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: none;
+}
+
+.page-header__catalog span {
+    color: $white;
+    font-family: $font-family--secondary;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.page-header__lang-inner {
+    width: 146px;
+    display: flex;
+    justify-content: space-around;
+}
+
+

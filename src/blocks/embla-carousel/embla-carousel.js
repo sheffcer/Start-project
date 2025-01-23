@@ -150,3 +150,31 @@ const removeDotBtnsAndClickHandlersFourth = addDotBtnsAndClickHandlers(
 
 emblaApiFourth.on('destroy', removePrevNextBtnsClickHandlersFourth)
 emblaApiFourth.on('destroy', removeDotBtnsAndClickHandlersFourth)
+
+
+// Zero group slider
+
+const OPTIONS_ZERO = { align: 'start', slidesToScroll: 1, slide: 1 }
+// const OPTIONS_ZERO = { align: 'start', slidesToScroll: 1 }
+
+const emblaNodeZero = document.querySelector('.embla--zero')
+console.log('Root Node for Zero Slider is: ', emblaNodeZero);
+const viewportNodeZero = emblaNodeZero.querySelector('.embla__viewport')
+const prevBtnNodeZero = emblaNodeZero.querySelector('.embla__button--prev')
+const nextBtnNodeZero = emblaNodeZero.querySelector('.embla__button--next')
+// const dotsNodeZero = emblaNodeZero.querySelector('.embla__dots')
+
+const emblaApiZero = EmblaCarousel(viewportNodeZero, OPTIONS_ZERO)
+
+const removePrevNextBtnsClickHandlersZero = addPrevNextBtnsClickHandlers(
+  emblaApiZero,
+  prevBtnNodeZero,
+  nextBtnNodeZero
+)
+// const removeDotBtnsAndClickHandlersZero = addDotBtnsAndClickHandlers(
+//   emblaApiZero,
+//   dotsNodeZero
+// )
+
+emblaApiZero.on('destroy', removePrevNextBtnsClickHandlersZero)
+// emblaApiZero.on('destroy', removeDotBtnsAndClickHandlersZero)

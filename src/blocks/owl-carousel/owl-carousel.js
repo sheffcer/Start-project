@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.catalog-carousel .owl-carousel').owlCarousel({
+    $('.catalog-carousel.owl-carousel').owlCarousel({
       items: 13, // Количество видимых слайдов
       loop: true, // Зацикливать карусель
       margin: 10, // Отступы между слайдами
@@ -37,18 +37,18 @@ $(document).ready(function() {
             } 
     });
 
-    $('.main-slider .owl-carousel').owlCarousel({
-      items: 1,
-      loop: true,
-      margin: 10,
-      // autoplay: true,
-      autoplayTimeout: 4000,
-      // autoplayHoverPause: true,
-      dotted: true,
-      nav: true,
-    //   navText: ['<', '>'], // Стандартный текст для стрелок (можно заменить на что угодно)
-      navContainer: '.main-nav', // Указываем кастомный контейнер для навигации
-    });
+    // $('.main-slider .owl-carousel').owlCarousel({
+    //   items: 1,
+    //   loop: true,
+    //   margin: 10,
+    //   // autoplay: true,
+    //   autoplayTimeout: 4000,
+    //   // autoplayHoverPause: true,
+    //   dotted: true,
+    //   nav: true,
+    // //   navText: ['<', '>'], // Стандартный текст для стрелок (можно заменить на что угодно)
+    //   navContainer: '.main-nav', // Указываем кастомный контейнер для навигации
+    // });
 });
 
 // $(document).ready(function(){
