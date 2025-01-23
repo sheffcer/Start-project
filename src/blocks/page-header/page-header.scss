@@ -8,7 +8,8 @@
     display: flex;
     width: 1296px;
     height: 60px;
-    justify-content: space-between;
+    gap: 10px;
+    // justify-content: space-between;
     align-items: center;
     gap: 20px;
     flex-shrink: 0;
@@ -74,4 +75,103 @@
     justify-content: space-around;
 }
 
+.page-header__search {
+    width: 100%;
+    position: relative;
+}
+
+.page-header__search .btn--search {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: translateY(-50%);
+    background-color: var(--secondary-color);
+    color: $white;
+    font-family: $font-family--secondary;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    border: none;
+    // padding: 0.5em 1em;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.page-header__search .field-text__input-wrap {
+
+}
+
+.page-header__search .field-text__input {
+    padding-left: 16px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-radius: 10px;
+    border: none;
+    outline: 1px solid var(--secondary-color);
+    // border: 1px solid var(--secondary-color);
+}
+
+.page-header__search .field-text__input:active {
+    outline: 0;
+    box-shadow: 0 0 0 2px var(--secondary-color);
+    // box-shadow: 0 0 0 2px rgba(2.193, 116.8138, 217.107, .7);
+}
+
+.page-header__search .field-text__input:focus {
+    outline: 0;
+    border: none;
+    box-shadow: 0 0 0 2px var(--secondary-color);
+}
+
+.page-header__search .field-text__input::placeholder{
+    font-family: $font-family;
+    color: var(--light-text-color);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.page-header__search.field-text {
+    margin-bottom: 0;
+}
+
+.page-header__img img {
+    width: auto;
+    height: auto;
+    display: block; /* Убирает пробелы под изображением */
+}
+
+.page-header__logo .logo{
+    width: auto;
+}
+
+@media (max-width: 767px) {
+    .page-header__logo.logo {
+        min-width: 37px;
+    }    
+}
+
+
+@media (min-width: 768px) {
+    .page-header__logo.logo {
+        min-width: 170px;
+    }    
+}
+
+.page-header__toggler .field-toggler__name-text:after {
+    top: -5px;
+}
+
+.page-header__toggler .field-toggler__name-text:before {
+    top: -5px;
+}
 

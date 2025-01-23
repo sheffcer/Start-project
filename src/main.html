@@ -87,7 +87,7 @@
     <div class="page__content">
       <header class="page-header container" role="banner">
             <div class="page-header__burger burger" data-toggle="off-canvas"><span></span></div>
-            <a href="/" class="logo">
+            <a href="/" class="page-header__logo logo">
               <picture class="page-header__img">
                 <source media="(max-width: 767px)" srcset="/img/logo-mobile.svg">                 
                 <source media="(min-width: 768px)" srcset="/img/logo.svg">  
@@ -110,14 +110,15 @@
             </div>
             <label class="page-header__search field-text">
                  <span class="field-text__input-wrap">
-                  <input class="field-text__input" type="search" placeholder="пошук товара">
-                  </span>
+                  <input class="field-text__input" type="search" placeholder="Шукати серед 25 000 товарів">
+                  <button class="btn btn--search"><span>Пошук</span> <img src="/img/search-icon.svg" alt=""></button>
+                  </span>                  
             </label>
             <div class="page-header__toggler field-toggler">
                 <div class="field-toggler__input-wrap">
                   <label class="field-toggler__name">
                     <input class="field-toggler__input" type="checkbox">
-                    <span class="field-toggler__name-text">Темна тема</span>
+                    <span class="field-toggler__name-text"></span>
                   </label>
                 </div>
             </div>
