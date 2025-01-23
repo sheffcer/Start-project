@@ -18,9 +18,24 @@
 .page-header__burger.burger {
     width: 48px;
     height: 48px;
-    padding: 10px;
+    padding: 10px 14px 10px 14px;
     outline: 1px solid var(--secondary-color);
     border-radius: 4px;
+}
+
+.page-header__burger.burger>span {
+    width: 21px;
+    height: 2px;
+}
+
+.page-header__burger.burger>span:before {
+    top: -7px;
+    height: 2px;
+}
+
+.page-header__burger.burger>span:after {
+    top: 7px;
+    height: 2px;
 }
 
 .page-header__catalog.dropdown  {

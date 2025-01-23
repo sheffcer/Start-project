@@ -1,41 +1,41 @@
 $(document).ready(function() {
-    $('.catalog-carousel.owl-carousel').owlCarousel({
-      items: 13, // Количество видимых слайдов
-      loop: true, // Зацикливать карусель
-      margin: 10, // Отступы между слайдами
-      autoplay: true, // Автопрокрутка
-      autoplayTimeout: 5000, // Время до следующего слайда (в миллисекундах)
-      autoplayHoverPause: true, // Пауза автопрокрутки при наведении на слайд
-      nav: true,
-    //   navText: ['<', '>'], // Стандартный текст для стрелок (можно заменить на что угодно)
-      navContainer: '.custom-nav', // Указываем кастомный контейнер для навигации
-      responsive : {
-              0 : {
-                items: 4,
-                // nav: true,
-                loop: true,
-                center: true,
-              },
-              320 : {
-                items: 3,
-              },
-              480 : {
-                items: 4,
-              },
-              768 : {
-                items: 6,
-              },
-              992 : {
-                items: 10,
-              },
-              1200 : {
-                items: 12,
-              },
-              1400 : {
-                items: 13,
-              }
-            } 
-    });
+    // $('.catalog-carousel.owl-carousel').owlCarousel({
+    //   items: 13, // Количество видимых слайдов
+    //   loop: true, // Зацикливать карусель
+    //   margin: 10, // Отступы между слайдами
+    //   autoplay: true, // Автопрокрутка
+    //   autoplayTimeout: 5000, // Время до следующего слайда (в миллисекундах)
+    //   autoplayHoverPause: true, // Пауза автопрокрутки при наведении на слайд
+    //   nav: true,
+    // //   navText: ['<', '>'], // Стандартный текст для стрелок (можно заменить на что угодно)
+    //   navContainer: '.custom-nav', // Указываем кастомный контейнер для навигации
+    //   responsive : {
+    //           0 : {
+    //             items: 4,
+    //             // nav: true,
+    //             loop: true,
+    //             center: true,
+    //           },
+    //           320 : {
+    //             items: 3,
+    //           },
+    //           480 : {
+    //             items: 4,
+    //           },
+    //           768 : {
+    //             items: 6,
+    //           },
+    //           992 : {
+    //             items: 10,
+    //           },
+    //           1200 : {
+    //             items: 12,
+    //           },
+    //           1400 : {
+    //             items: 13,
+    //           }
+    //         } 
+    // });
 
     // $('.main-slider .owl-carousel').owlCarousel({
     //   items: 1,
