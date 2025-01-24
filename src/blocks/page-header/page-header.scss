@@ -167,6 +167,16 @@
     }    
 }
 
+.page-header__toggler.field-toggler {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.page-header__toggler .field-toggler {
+    cursor: pointer;
+}
+
+
 .page-header__toggler .field-toggler__name-text:after {
     top: -5px;
     background-image: url('/img/toggler-light-icon.svg');
@@ -188,7 +198,6 @@
 }
 
 .page-header__toggler .field-toggler__name-text:after {
-    // left: 0;
     width: 21px;
     height: 21px;
     border-radius: 50%;
@@ -242,40 +251,37 @@
     padding-right: 10px;
     padding-top: 6px;
     padding-bottom: 6px;
+    cursor: pointer;
 }
 
-.page-header__lang .field-select__select-wrap {
-    width: 51px;
-    height: 27px;
-}
-
-.page-header__lang .field-select__select {
-    position: relative;
-    width: 51px;
-    font-family: $font-family;
-    color: var(--secondary-color);
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 16px;
-    padding: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-}
-
-// .page-header__lang .field-select__select::after {
-//     position: absolute;
-//     content: '';
-//     top: 0;
-//     right: 0;
-//     width: 11px;
-//     height: 12px;
-//     background: url('/img/arrow-down-icon.svg') no-repeat;
-//     background-size: contain; /* Или 'cover', в зависимости от того, как должно масштабироваться изображение */
-//     transform: translateY(-50%); /* Точное вертикальное выравнивание */
+// .page-header__lang .field-select__select-wrap {
+//     width: 51px;
+//     height: 27px;
 // }
+
+// .page-header__lang .field-select__select {
+//     position: relative;
+//     width: 51px;
+//     font-family: $font-family;
+//     color: var(--secondary-color);
+//     font-size: 12px;
+//     font-style: normal;
+//     font-weight: 700;
+//     line-height: 16px;
+//     padding: 0;
+//     padding-left: 10px;
+//     padding-right: 10px;
+//     padding-top: 6px;
+//     padding-bottom: 6px;
+// }
+
+label.page-header__region.field-select {
+    margin-bottom: 0;
+}
+
+label.page-header__lang.field-select {
+    margin-bottom: 0;
+}
 
 
 /* Обертка для select */
@@ -302,6 +308,7 @@
     -moz-appearance: none; /* Для Firefox */
     appearance: none; /* Для других браузеров */
     z-index: 2; /* Убедитесь, что select выше стрелки */
+    cursor: pointer;
   }
   
   /* Псевдоэлемент для стрелки */
@@ -328,3 +335,37 @@
     transform: rotate(180deg);
   }
   
+
+  .page-header__login img {
+    max-width: none;
+  }
+
+  .page-header__cart img {
+    max-width: none;
+  }
+
+  .page-header__login {
+    cursor: pointer;
+  }
+
+  .page-header__cart {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .page-header__cart .page-header__cart-count {
+    position: absolute;
+    top: 1px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-color: var(--secondary-color);
+    color: $white;
+    font-family: $font-family--secondary;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+  }  
