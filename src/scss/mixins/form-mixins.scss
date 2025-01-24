@@ -14,10 +14,22 @@
 }
 
 
+// @mixin field-focus {
+//   --secondary-rgba-color: rgba(34, 188, 62, 1);
+//   $color-main:               var(--secondary-rgba-color) !default;
+//   // $color-main:                hsl(208, 98%, 43%) !default;
+//   $opacity:                   0.7 !default;
+
+//   outline: 0;
+//   box-shadow: 0 0 0 2px rgba(var(--secondary-rgba-color), $opacity);
+//   // box-shadow: 0 0 0 2px rgba($color-main, $opacity);
+// }
+
+
 @mixin field-focus {
-  $color-main:                hsl(208, 98%, 43%) !default;
-  $opacity:                   0.7 !default;
+  --secondary-rgba-color: 34, 188, 62; /* Цвет без alpha канала */
+  --opacity: 0.7; /* Прозрачность */
 
   outline: 0;
-  box-shadow: 0 0 0 2px rgba($color-main, $opacity);
+  box-shadow: 0 0 0 2px rgba(var(--secondary-rgba-color), var(--opacity)); /* Используем CSS-переменные */
 }
