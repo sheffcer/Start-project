@@ -169,6 +169,10 @@
 
 .page-header__toggler .field-toggler__name-text:after {
     top: -5px;
+    background-image: url('/img/toggler-light-icon.svg');
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
 }
 
 .page-header__toggler .field-toggler__name-text:before {
@@ -192,6 +196,8 @@
 
 .page-header__toggler .field-toggler__input:checked + .field-toggler__name-text::after {
     left: 5px; /* Изменение позиции после активации чекбокса */
+    background-image: url('/img/toggler-dark-icon.svg');
+    background-repeat: no-repeat;
   }
 .page-header__toggler {
     @at-root input:checked ~ &:after {
