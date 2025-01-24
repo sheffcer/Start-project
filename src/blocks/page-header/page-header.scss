@@ -175,3 +175,26 @@
     top: -5px;
 }
 
+.page-header__toggler .field-toggler__name-text:before {
+    width: 45px;
+    height: 24px;
+    border-radius: 12px;
+    background: var(--toggler-light-gray-color);
+}
+
+.page-header__toggler .field-toggler__name-text:after {
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: $white;
+}
+
+.page-header__toggler .field-toggler__input:checked + .field-toggler__name-text::after {
+    left: 5px; /* Изменение позиции после активации чекбокса */
+  }
+.page-header__toggler {
+    @at-root input:checked ~ &:after {
+    transform: translate(px-to-em(34), -50%);
+    }
+}
