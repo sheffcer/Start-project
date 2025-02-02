@@ -98,7 +98,15 @@
   @include col(lg, 12, 12, 30px);
 }
 
+.embla--second {
+  display: none;
+}
 
+@media (min-width: 768px) { 
+  .embla--second {
+    display: block;
+  }
+}
 
 @media (min-width: 992px) {
     .embla--second {
