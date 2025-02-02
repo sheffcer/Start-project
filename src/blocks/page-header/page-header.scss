@@ -55,7 +55,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 13px 15px;
+    padding: 9px 15px;
     gap: 10px;
     flex-shrink: 0;
     border-radius: 10px;
@@ -82,9 +82,11 @@
 
 .page-header__search .btn--search {
     position: absolute;
-    right: 10px;
+    right: 5px;
     top: 50%;
-    display: flex;
+    width: 30px;
+    height: 30px;
+    // display: flex;
     align-items: center;
     gap: 10px;
     transform: translateY(-50%);
@@ -96,14 +98,38 @@
     font-weight: 400;
     line-height: 16px;
     border: none;
+    padding: 0;
     // padding: 0.5em 1em;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    // padding-left: 16px;
+    // padding-right: 16px;
+    // padding-top: 5px;
+    // padding-bottom: 5px;
     cursor: pointer;
     border-radius: 20px;
 }
+
+.btn--search span {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .page-header__search .btn--search { 
+        right: 10px;
+        display: flex;
+        width: auto;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }    
+}
+
+@media (min-width: 768px) {
+    .btn--search span {
+        display: block;
+    }
+}
+
 
 .page-header__search .field-text__input-wrap {
 
@@ -134,10 +160,16 @@
 .page-header__search .field-text__input::placeholder{
     font-family: $font-family;
     color: var(--light-text-color);
-    font-size: 12px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 400;
     line-height: 16px;
+}
+
+@media (min-width: 768px) {
+    .page-header__search .field-text__input::placeholder{
+        font-size: 12px;
+    }
 }
 
 .page-header__search.field-text {
@@ -168,8 +200,15 @@
 }
 
 .page-header__toggler.field-toggler {
+    display: none;
     margin-bottom: 0;
     cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+    .page-header__toggler.field-toggler {
+        display: block;
+    }
 }
 
 .page-header__toggler .field-toggler {
@@ -217,17 +256,16 @@
     }
 }
 
-// .page-header__toggler .field-toggler__input:focus {
-//     outline: 0;
-//     border: none;
-//     box-shadow: 0 0 0 2px var(--secondary-color);
-// }
 
-// .page-header__toggler.field-toggler__input:focus-visible {
-//     outline: 0;
-//     border: none;
-//     box-shadow: 0 0 0 2px var(--secondary-color); /* Замените на ваш цвет */
-// }
+.page-header__region.field-select {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    .page-header__region.field-select {
+        display: block;
+    }
+}
 
 .page-header__region .field-select__select-wrap {
     width: 76px;
@@ -254,26 +292,16 @@
     cursor: pointer;
 }
 
-// .page-header__lang .field-select__select-wrap {
-//     width: 51px;
-//     height: 27px;
-// }
+.page-header__lang.field-select {
+    display: none;
+}
 
-// .page-header__lang .field-select__select {
-//     position: relative;
-//     width: 51px;
-//     font-family: $font-family;
-//     color: var(--secondary-color);
-//     font-size: 12px;
-//     font-style: normal;
-//     font-weight: 700;
-//     line-height: 16px;
-//     padding: 0;
-//     padding-left: 10px;
-//     padding-right: 10px;
-//     padding-top: 6px;
-//     padding-bottom: 6px;
-// }
+@media (min-width: 1200px) {
+    .page-header__lang.field-select {
+        display: block;
+    }
+}
+
 
 label.page-header__region.field-select {
     margin-bottom: 0;
@@ -335,6 +363,17 @@ label.page-header__lang.field-select {
     transform: rotate(180deg);
   }
   
+
+  .page-header__login {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .page-header__login {
+        display: block;
+    }
+}
+
 
   .page-header__login img {
     max-width: none;
