@@ -23,7 +23,7 @@
       align-items: center;
       position: relative;
       width: 100%;
-      margin-bottom: 20px;
+    //   margin-bottom: 20px;
       border: 1px solid #e2e2e2;
       border-radius: 10px;
     }
@@ -32,7 +32,7 @@
       display: block;
       flex-shrink: 0;
       max-width: 173px;
-      margin-top: 20px;
+    //   margin-top: 20px;
       margin-bottom: 20px;
     }
   
@@ -67,6 +67,21 @@
       color: $white;
       background: $color-success;
     //   transform: translateX(-50%) rotate(-10deg);
+    }
+
+    &__top {
+        position: absolute;
+        z-index: 1;
+        top: 5%;
+        left: 15%;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-family: $font-family--secondary;
+        font-size: 12px;
+        line-height: 1;
+        font-weight: 700;
+        color: $white;
+        background: var(--label-top-color);
     }
   
     &__price {
