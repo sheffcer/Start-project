@@ -148,6 +148,12 @@
 
   @media (min-width: 992px) {
     .card {
-      @include col(md, 3, 12, 30px);
+      @include col(lg, 3, 12, 24px);
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .card {
+      @include col(xxl, 2, 10, 24px);
     }
   }
