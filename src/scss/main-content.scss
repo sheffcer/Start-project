@@ -3,3 +3,19 @@
     outline: 1px dotted red;
     @include container;
 }
+
+.new-product__inner {
+    margin-top: 20px;
+    @include row;
+}
+
+.new-product__title, .top-product__title  {
+    text-align: center;
+    font-family: $font-family--secondary;
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
