@@ -90,6 +90,10 @@
     background: var(--background-video-color);
 }
 
+.news {
+    margin-top: 20px;
+}
+
 .news__header {
     display: flex;
     justify-content: space-around;
@@ -123,6 +127,7 @@
 }
 
 .news__title {
+    margin: 0;
     flex-grow: 1;
     color: var(--secondary-color);
     font-family: $font-family--secondary;
