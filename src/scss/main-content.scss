@@ -11,7 +11,24 @@
     margin-right: 0;
 }
 
-.new-product__title, .top-product__title, .top-video__title  {
+.top-product__inner {
+    margin-top: 20px;
+    @include row;
+    margin-left: 0;
+    margin-right: 0;
+    flex-wrap: nowrap!important; // запрет переноса элементов на новую строку
+}
+
+.viewed-product__inner {
+    margin-top: 20px;
+    @include row;
+    margin-left: 0;
+    margin-right: 0;
+    flex-wrap: nowrap!important; // запрет переноса элементов на новую строку
+}
+
+
+.new-product__title, .top-product__title, .top-video__title, .viewed-product__title, .partner-banner__title  {
     text-align: center;
     font-family: $font-family--secondary;
     color: var(--secondary-color);
