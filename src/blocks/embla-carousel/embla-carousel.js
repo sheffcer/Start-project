@@ -126,7 +126,7 @@ emblaApiThird.on('destroy', removeDotBtnsAndClickHandlersThird)
 
 
 // Fourth group slider
-const OPTIONS_FOURTH = { align: 'start', slidesToScroll: 2, slide: 2 }
+const OPTIONS_FOURTH = { align: 'start', slidesToScroll: 2, slide: 4 }
 // const OPTIONS_FOURTH = { align: 'start', slidesToScroll: 1 }
 
 const emblaNodeFourth = document.querySelector('.embla--fourth')
@@ -150,6 +150,34 @@ const removeDotBtnsAndClickHandlersFourth = addDotBtnsAndClickHandlers(
 
 emblaApiFourth.on('destroy', removePrevNextBtnsClickHandlersFourth)
 emblaApiFourth.on('destroy', removeDotBtnsAndClickHandlersFourth)
+
+
+// Five group slider
+
+const OPTIONS_FIVE = { align: 'start', slidesToScroll: 2, slide: 2 }
+// const OPTIONS_FIVE = { align: 'start', slidesToScroll: 1 }
+
+const emblaNodeFive = document.querySelector('.embla--five')
+console.log('Root Node for Five Slider is: ', emblaNodeFive);
+const viewportNodeFive = emblaNodeFive.querySelector('.embla__viewport')
+const prevBtnNodeFive = emblaNodeFive.querySelector('.embla__button--prev')
+const nextBtnNodeFive = emblaNodeFive.querySelector('.embla__button--next')
+const dotsNodeFive = emblaNodeFive.querySelector('.embla__dots')
+
+const emblaApiFive = EmblaCarousel(viewportNodeFive, OPTIONS_FIVE)
+
+const removePrevNextBtnsClickHandlersFive = addPrevNextBtnsClickHandlers(
+  emblaApiFive,
+  prevBtnNodeFive,
+  nextBtnNodeFive
+)
+const removeDotBtnsAndClickHandlersFive = addDotBtnsAndClickHandlers(
+  emblaApiFive,
+  dotsNodeFive
+)
+
+emblaApiFive.on('destroy', removePrevNextBtnsClickHandlersFive)
+emblaApiFive.on('destroy', removeDotBtnsAndClickHandlersFive)
 
 
 // Zero group slider
