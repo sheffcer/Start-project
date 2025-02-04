@@ -89,3 +89,133 @@
     line-height: normal;
     background: var(--background-video-color);
 }
+
+.news__header {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+.news__inner {
+    margin-top: 20px;
+    @include row;
+    flex-wrap: nowrap; // запрет переноса элементов на новую строку
+    overflow: hidden; // скрытие элементов, выходящих за границы контейнера
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.news__inner .card {
+    @include col(2, 4, 20px);
+}
+
+@media (min-width: 768px) {
+    .news__inner .card {
+        @include col(md, 6, 12, 30px);
+    }
+}
+
+@media (min-width: 992px) {
+    .news__inner .card {
+        @include col(md, 3, 12, 24px);
+    }
+}
+
+.news__title {
+    flex-grow: 1;
+    color: var(--secondary-color);
+    font-family: $font-family--secondary;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.news__all {
+    position: relative;
+    // flex-grow: 1;
+    text-align: right;
+    color: $black;
+    font-family: $font-family--secondary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: inline-flex;
+    height: 52px;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    border: 1px solid $black;
+}
+
+.news__all::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 18px;
+    right: 0;
+    width: 13px;
+    height: 15px;
+    background: url('../img/all-arrow-icon.svg') no-repeat;
+    // border-top: 10px solid transparent;
+    // border-bottom: 10px solid transparent;
+    // border-left: 10px solid $black;
+}
+
+.news__inner .card__title {
+    padding-left: 5px;
+    color: $black;
+    font-family: $font-family;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.news__inner .card__descr {
+    padding-left: 5px;
+    color: $black;
+    font-family: $font-family;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.news__inner .card__date {
+    padding-left: 5px;
+    color: var(--light-text-color);
+    font-family: $font-family;
+    text-overflow: ellipsis;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.news__inner .card__img-wrap {
+    max-width: 100%;
+}
+
+.news__inner .card__img img {
+    border-radius: 10px;
+}
+
+.news__inner .card__inner {
+    padding: 0;
+    align-items: baseline;
+}
+
