@@ -56,7 +56,16 @@
     height: 470px;
     background: var(--background-video-color);
     border-radius: 10px;
+    // margin-left: -15px;
+    // margin-right: -15px;
 }
+
+// @media (min-width: 992px) {
+//     .top-video__inner {
+//         margin-left: 15px;
+//         margin-right: 15px;
+//     }
+// }
 
 .top-video__title {
     position: relative; /* кнопка с position: relative */
