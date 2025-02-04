@@ -382,7 +382,9 @@
   // Start fourth new-product slider
 
 .embla--fourth  {
-    outline: 1px dotted red;
+    padding-top: 68px;
+    padding-bottom: 40px;
+    // outline: 1px dotted red;
     // max-width: 70rem;
     margin: auto;
     // background-color: rgb(12, 12, 12);
@@ -401,6 +403,29 @@
     touch-action: pan-y pinch-zoom;
     margin-left: calc(var(--slide-spacing) * -1);
   }
+  
+  .embla--fourth .embla__viewport {
+    position: relative;
+  }
+  
+  // .embla--fourth .embla__controls {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  // }
+  .embla--fourth .embla__button--prev {
+    position: absolute;
+    top: 40%;
+    left: 0;
+  }
+  
+  .embla--fourth .embla__button--next {
+    position: absolute;
+    top: 40%;
+    right: 0;
+  }
+
+
 
   @media (min-width: 768px) {
     .embla--fourth .embla__container {
@@ -430,6 +455,7 @@
       padding-left: var(--slide-spacing-sm);
     }
   }
+
   @media (min-width: 1200px) {
     .embla--fourth .embla__slide {
       flex: 0 0 200px;
@@ -437,6 +463,7 @@
       padding-left: var(--slide-spacing-lg);
     }
   }
+
   .embla--fourth .embla__slide__number {
     // box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
     width: 176px;
@@ -462,14 +489,16 @@
     grid-template-columns: auto 1fr;
     justify-content: space-between;
     gap: 1.2rem;
-    margin-top: 1.8rem;
+    // margin-top: 1.8rem;
   }
+
   .embla--fourth .embla__buttons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.6rem;
     align-items: center;
   }
+
   .embla--fourth .embla__button {
     -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
     -webkit-appearance: none;
@@ -492,20 +521,27 @@
     align-items: center;
     justify-content: center;
   }
+
   .embla__button:disabled {
     color: var(--detail-high-contrast);
   }
+
   .embla--fourth .embla__button__svg {
     width: 35%;
     height: 35%;
   }
+
+  // hidden dots in video's slider
   .embla--fourth .embla__dots {
-    display: flex;
+    // visibility: hidden;
+    display: none;
+    // display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
     margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
   }
+
   .embla--fourth .embla__dot {
     -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
     -webkit-appearance: none;
@@ -548,7 +584,7 @@
   }
 
   .embla--zero  {
-    outline: 1px dotted red;
+    // outline: 1px dotted red;
     // max-width: 70rem;
     margin: auto;
     height: 128px;
