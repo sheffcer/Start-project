@@ -4,8 +4,22 @@
   background: var(--background-video-color);
   min-height: 766px;
 
-    &_inner {
+  @media (min-width: 768px) {
+    min-height: 607px;
+  }
+
+
+    &__inner {
       padding-top: 40px;
+    }
+
+    @media (min-width: 768px) {
+      &__inner {
+          position: relative;
+          @include row();
+          padding-top: 80px;
+          max-height: 607px;
+      }
     }
 
     &__features-wrap {
@@ -31,6 +45,14 @@
               @include col(lg, 2, 8, 24px);
           }
       }
+  }
+
+  @media (min-width: 768px) {
+    &__features-wrap {
+        @include col(md, 7, 12, 30px);
+        padding-left: 0!important;
+        margin-top: 25px;
+    }
   }
 
   &__features-wrap .card__title {
@@ -95,6 +117,15 @@
     line-height: normal;
   }
 
+  @media (min-width: 768px) {
+    &__title {
+        position: relative;
+        display: block;
+        @include col(md, 5, 12, 30px);
+        // outline: 1px dotted red;
+    }
+  }
+
   &__descr {
     margin-top: 20px;
     font-family: $font-family;
@@ -104,7 +135,17 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 18px;
+  }
+
+  @media (min-width: 768px) {
+    &__descr {
+      position: relative;
+      top: -320px;
+      left: 15px;
+      max-width: 40%;
+      line-height: 26px!important;
+    }
   }
 
   &__all {
@@ -131,6 +172,14 @@
     flex-shrink: 0;
     border-radius: 25px;
     border: 1px solid $black;
+  }
+
+  @media (min-width: 768px) {
+    &__all {
+        position: absolute;
+        top: 490px;
+        left: 18px;
+    }
   }
 
   &__all::after {
