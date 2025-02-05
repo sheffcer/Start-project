@@ -1,8 +1,14 @@
 .about-us {
   $block-name: &; // #{$block-name}__element
   margin-top: 20px;
+  background: var(--background-video-color);
+  min-height: 766px;
 
-    &__inner {
+    &_inner {
+      padding-top: 40px;
+    }
+
+    &__features-wrap {
       margin-top: 20px;
       @include row;
       // flex-wrap: nowrap; // запрет переноса элементов на новую строку
@@ -22,15 +28,13 @@
 
       @media (min-width: 992px) {
           .card {
-              @include col(md, 3, 12, 24px);
+              @include col(lg, 2, 8, 24px);
           }
       }
   }
 
-  &__inner .card__title {
-      padding-left: 5px;
-      margin: 0 0 10px;
-      // color: $black;
+  &__features-wrap .card__title {
+      margin: 0;
       font-family: $font-family--secondary;
       color: var(--secondary-color);
       text-align: center;
@@ -40,7 +44,7 @@
       line-height: normal;
   }
 
-  &__inner .card__descr {
+  &__features-wrap .card__descr {
       margin: 0;
       margin-bottom: 20px;
       padding-left: 5px;
@@ -55,28 +59,36 @@
   }
 
 
-  &__inner .card__img-wrap {
+  &__features-wrap .card__img-wrap {
       max-width: 100%;
       max-width: 100%;
       width: 100%;
+      min-height: 89px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // border: 1px solid #e2e2e2;
+      border-radius: 10px;
+      background: $white;
   }
 
-  &__inner .card__img {
+  &__features-wrap .card__img {
       margin: 0 auto;
   }
 
-  &__inner .card__inner {
+  &__features-wrap .card__inner {
       padding: 0;
-      padding-top: 16px;
-      padding-bottom: 16px;
+      // padding-top: 16px;
+      // padding-bottom: 16px;
       align-items: center;
+      border: none;
   }
 
   &__title {
-    text-align: center;
     font-family: $font-family--secondary;
     color: var(--secondary-color);
-    text-align: center;
+    text-align: left;
+    padding-left: 10px;
     font-size: 22px;
     font-style: normal;
     font-weight: 700;
