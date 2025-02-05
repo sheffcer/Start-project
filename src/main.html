@@ -998,105 +998,10 @@
               </div>
             </div>
           </div>
-          <div class="news">
-            <div class="news__header">
-              <h2 class="news__title">Новини</h2>
-              <a class="news__all" href="news">Більше новин</a>
-            </div>  
-              <div class="news__inner">
-                <article class="card card--mod">
-                  <!-- Метка "новинка", если она существует -->
-                  <div class="card__new">Новинка!</div>              
-                  <div class="card__inner">
-                    <a class="card__img-wrap" href="good01">
-                      <picture class="card__img">
-                        <source media="(max-width: 767px)" srcset="/img/news-01-mobile.jpg">                 
-                        <source media="(min-width: 768px) and (max-width: 991px)" srcset="/img/news-01-tablet.jpg">
-                        <source media="(min-width: 992px)" srcset="/img/news-01-desktop.jpg">  
-                        <img src="/img/news-01.jpg" alt="">
-                      </picture>
-                      <!-- <img class="card__img" src="img/CW-TWS1BE.jpg" alt="Товар1"> -->
-                    </a>
-                    <h3 class="card__title">
-                      <a href="good01">Мініатюрні деталі які якісно доповнять ваш користувацький досвід</a>
-                    </h3>
-                    <p class="card__descr">Адаптер перехідник Colorway Type-C до USB-A – це мініатюрний адаптер, який дає можливість заряджати смартфони та планше</p>
-                    <p class="card__date">10.10.2024</p>
-                  </div>
-                
-                  <!-- Кнопка "Купить" -->
-                  <!-- <button class="card__buy">Купить</button> -->
-                </article>
-                
-                <!-- Вторая карточка товара без модификаторов и без метки "новинка" -->
-                <article class="card">
-                  <div class="card__new">Новинка!</div>   
-                  <div class="card__inner">
-                    <span class="card__img-wrap">
-                      <picture class="card__img">
-                        <source media="(max-width: 767px)" srcset="/img/news-02-mobile.jpg">                 
-                        <source media="(min-width: 768px) and (max-width: 991px)" srcset="/img/news-02-tablet.jpg">
-                        <source media="(min-width: 992px)" srcset="/img/news-02-desktop.jpg">  
-                        <img src="/img/news-02.jpg" alt="">
-                      </picture>
-                      <!-- <img class="card__img" src="img/CW-PB800LPA8BK-PDD.jpg" alt="Товар2"> -->
-                    </span>
-                    <h3 class="card__title">Мініатюрні деталі які якісно доповнять ваш користувацький досвід</h3>
-                    <p class="card__descr">Адаптер перехідник Colorway Type-C до USB-A – це мініатюрний адаптер, який дає можливість заряджати смартфони та планше</p>
-                    <p class="card__date">10.10.2024</p>
-                  </div>
-                
-                  <!-- Кнопка "Купить" -->
-                  <!-- <p class="card__date">10.10.2024</p> -->
-                </article>
-                <article class="card card--mod">
-                  <!-- Метка "новинка", если она существует -->
-                  <div class="card__new">Новинка!</div>              
-                  <div class="card__inner">
-                    <a class="card__img-wrap" href="good01">
-                      <picture class="card__img">
-                        <source media="(max-width: 767px)" srcset="/img/news-03-mobile.jpg">                 
-                        <source media="(min-width: 768px) and (max-width: 991px)" srcset="/img/news-03-tablet.jpg">
-                        <source media="(min-width: 992px)" srcset="/img/news-02-desktop.jpg">  
-                        <img src="/img/news-03.jpg" alt="">
-                      </picture>
-                      <!-- <img class="card__img" src="img/CW-TWS1BE.jpg" alt="Товар1"> -->
-                    </a>
-                    <h3 class="card__title">
-                      <a href="good01">Мініатюрні деталі які якісно доповнять ваш користувацький досвід</a>
-                    </h3>
-                    <p class="card__descr">Адаптер перехідник Colorway Type-C до USB-A – це мініатюрний адаптер, який дає можливість заряджати смартфони та планше</p>
-                    <p class="card__date">10.10.2024</p>
-                  </div>
-                
-                  <!-- Кнопка "Купить" -->
-                  <!-- <button class="card__buy">Купить</button> -->
-                </article>
-                
-                <!-- Вторая карточка товара без модификаторов и без метки "новинка" -->
-                <article class="card">
-                  <div class="card__new">Новинка!</div>   
-                  <div class="card__inner">
-                    <span class="card__img-wrap">
-                      <picture class="card__img">
-                        <source media="(max-width: 767px)" srcset="/img/news-04-mobile.jpg">                 
-                        <source media="(min-width: 768px) and (max-width: 991px)" srcset="/img/news-04-tablet.jpg">
-                        <source media="(min-width: 992px)" srcset="/img/news-04-desktop.jpg">  
-                        <img src="/img/news-04.jpg" alt="">
-                      </picture>
-                      <!-- <img class="card__img" src="img/CW-PB800LPA8BK-PDD.jpg" alt="Товар2"> -->
-                    </span>
-                    <h3 class="card__title">Мініатюрні деталі які якісно доповнять ваш користувацький досвід</h3>
-                    <p class="card__descr">Адаптер перехідник Colorway Type-C до USB-A – це мініатюрний адаптер, який дає можливість заряджати смартфони та планше</p>
-                    <p class="card__date">10.10.2024</p>
-                  </div>
-                
-                  <!-- Кнопка "Купить" -->
-                  <!-- <button class="card__buy">Купить</button> -->
-                </article>
-              </div>
-            <!-- </div> -->
-           </div> 
+
+          @@include('blocks/news/news.html')
+          @@include('blocks/about-us/about-us.html')
+
           <div class="viewed-items">
             <h2 class="viewed-items__title">Переглянуті товари</h2>
             <div class="embla embla--sixth">
