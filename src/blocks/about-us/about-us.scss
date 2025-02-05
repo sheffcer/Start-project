@@ -6,6 +6,10 @@
 
   @media (min-width: 768px) {
     min-height: 607px;
+  
+  }
+  @media (min-width: 1400px) {
+    min-height: 462px;
   }
 
 
@@ -19,6 +23,12 @@
           @include row();
           padding-top: 80px;
           max-height: 607px;
+      }
+    }
+    @media (min-width: 1400px) {
+      &__inner {
+          // padding-top: 80px;
+          max-height: 462px;
       }
     }
 
@@ -40,9 +50,19 @@
           }
       }
 
-      @media (min-width: 992px) {
+      @media (min-width: 1200px) {
           .card {
-              @include col(lg, 2, 8, 24px);
+              @include col(xl, 4, 8, 24px);
+              // flex: 0 0 45%;
+              // max-width: 50%;
+          }
+      }
+
+      @media (min-width: 1400px) {
+          .card {
+              @include col(xxl, 2, 8, 24px);
+              // flex: 0 0 45%;
+              // max-width: 50%;
           }
       }
   }
@@ -52,6 +72,12 @@
         @include col(md, 7, 12, 30px);
         padding-left: 0!important;
         margin-top: 25px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &__features-wrap {
+        @include col(lg, 8, 12, 30px);
     }
   }
 
@@ -126,6 +152,15 @@
     }
   }
 
+  @media (min-width: 1200px) {
+    &__title {
+        position: relative;
+        display: block;
+        @include col(lg, 4, 12, 30px);
+        // outline: 1px dotted red;
+    }
+  }
+
   &__descr {
     margin-top: 20px;
     font-family: $font-family;
@@ -145,6 +180,29 @@
       left: 15px;
       max-width: 40%;
       line-height: 26px!important;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    &__descr {
+        top: -20px;
+        left: 420px;
+        max-width: 55%;
+    }
+  }
+ 
+  @media (min-width: 1200px) {
+    &__descr {
+        top: 0;
+        left: 400px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    &__descr {
+        top: 0;
+        left: 455px;
+        max-width: 60%;
     }
   }
 
@@ -177,8 +235,15 @@
   @media (min-width: 768px) {
     &__all {
         position: absolute;
-        top: 490px;
+        top: 500px;
         left: 18px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    &__all {
+        position: absolute;
+        top: 350px;
     }
   }
 
