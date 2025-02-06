@@ -46,6 +46,12 @@ $toggler-part-bg-color:       #000 !default;
 
   &--close {
 
+    width: 48px;
+    height: 48px;
+    padding: 10px 14px 10px 14px;
+    outline: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    
     > span {
       transition: background 0.2s 0s;
       background: transparent;

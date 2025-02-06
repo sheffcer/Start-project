@@ -182,30 +182,30 @@ emblaApiFive.on('destroy', removeDotBtnsAndClickHandlersFive)
 
 // Sixth group slider
 
-const OPTIONS_SIXTH = { align: 'start', slidesToScroll: 2, slide: 2 }
-// const OPTIONS_SIXTH = { align: 'start', slidesToScroll: 1 }
+// const OPTIONS_SIXTH = { align: 'start', slidesToScroll: 2, slide: 2 }
+// // const OPTIONS_SIXTH = { align: 'start', slidesToScroll: 1 }
 
-const emblaNodeSixth = document.querySelector('.embla--sixth')
-console.log('Root Node for Sixth Slider is: ', emblaNodeSixth);
-const viewportNodeSixth = emblaNodeSixth.querySelector('.embla__viewport')
-const prevBtnNodeSixth = emblaNodeSixth.querySelector('.embla__button--prev')
-const nextBtnNodeSixth = emblaNodeSixth.querySelector('.embla__button--next')
-const dotsNodeSixth = emblaNodeSixth.querySelector('.embla__dots')
+// const emblaNodeSixth = document.querySelector('.embla--sixth')
+// console.log('Root Node for Sixth Slider is: ', emblaNodeSixth);
+// const viewportNodeSixth = emblaNodeSixth.querySelector('.embla__viewport')
+// const prevBtnNodeSixth = emblaNodeSixth.querySelector('.embla__button--prev')
+// const nextBtnNodeSixth = emblaNodeSixth.querySelector('.embla__button--next')
+// const dotsNodeSixth = emblaNodeSixth.querySelector('.embla__dots')
 
-const emblaApiSixth = EmblaCarousel(viewportNodeSixth, OPTIONS_SIXTH)
+// const emblaApiSixth = EmblaCarousel(viewportNodeSixth, OPTIONS_SIXTH)
 
-const removePrevNextBtnsClickHandlersSixth = addPrevNextBtnsClickHandlers(
-  emblaApiSixth,
-  prevBtnNodeSixth,
-  nextBtnNodeSixth
-)
-const removeDotBtnsAndClickHandlersSixth = addDotBtnsAndClickHandlers(
-  emblaApiSixth,
-  dotsNodeSixth
-)
+// const removePrevNextBtnsClickHandlersSixth = addPrevNextBtnsClickHandlers(
+//   emblaApiSixth,
+//   prevBtnNodeSixth,
+//   nextBtnNodeSixth
+// )
+// const removeDotBtnsAndClickHandlersSixth = addDotBtnsAndClickHandlers(
+//   emblaApiSixth,
+//   dotsNodeSixth
+// )
 
-emblaApiSixth.on('destroy', removePrevNextBtnsClickHandlersSixth)
-emblaApiSixth.on('destroy', removeDotBtnsAndClickHandlersSixth)
+// emblaApiSixth.on('destroy', removePrevNextBtnsClickHandlersSixth)
+// emblaApiSixth.on('destroy', removeDotBtnsAndClickHandlersSixth)
 
 
 
