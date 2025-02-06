@@ -16,7 +16,41 @@
     
     & .field-toggler {
         display: block!important;
-        margin-top: 10px;
+        margin-top: 39px;
     }
+
+    & .field-select__name {
+        position: relative;
+        text-align: center;
+        margin-bottom: 0.8em;
+    }
+
+    & .field-select__name span {
+        position: relative;
+        padding: 2px 5px;
+        color: var(--light-text-color);
+        text-align: center;
+        font-feature-settings: 'liga' off, 'clig' off;
+        font-family: $font-family;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+        background: var(--arrow-slider-button-color);
+    }
+
+    & .field-select__name span::after {
+        content: '';
+        position: absolute;
+        top: 115%;
+        left: 35%;
+        // right: -5px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid var(--arrow-slider-button-color);
+    }   
 
 }
