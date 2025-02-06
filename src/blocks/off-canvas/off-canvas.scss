@@ -78,8 +78,51 @@ $off-canvas-width:            320px !default;
       border: none;
   }
 
-  & .dropdown {
+  &__dropdown {
     width: 100%;
+    border: none;
+    // outline: 1px dashed palevioletred;
+  }
+
+  &__search {
+    margin-top: 20px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__search .field-text__input {
+    padding-left: 16px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-radius: 10px;
+    border: none;
+    outline: 1px solid var(--secondary-color);
+}
+
+  &__search .btn--search {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    gap: 10px;
+    transform: translateY(-50%);
+    background-color: var(--secondary-color);
+    color: #fff;
+    font-family: $font-family--secondary;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+  &__search .btn--search span {
+    display: none;
   }
 
   & span {
