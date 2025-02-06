@@ -1,0 +1,22 @@
+.media-toggler {
+    $block-name: &;
+
+    margin-top: 20px;
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+
+    & label {
+        display: block!important;
+    }
+    
+    & .field-toggler {
+        display: block!important;
+        margin-top: 10px;
+    }
+
+}
