@@ -2,12 +2,15 @@
 
     $block-name:                &;
   
+    margin-top: 20px;
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    background: var(--slider-green-bg-color);
+    border-radius: 5px;
     
 
     &__wrap {
