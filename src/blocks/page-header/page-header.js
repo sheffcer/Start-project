@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function(){
 
 // Получаем все элементы селектора с классом .page-header__region
-const selectContainers = document.querySelectorAll('.page-header__region');
+const selectRegionContainers = document.querySelectorAll('.page-header__region');
 
-selectContainers.forEach(container => {
+selectRegionContainers.forEach(container => {
   const selectElement = container.querySelector('.field-select__select');
   const optionsContainer = container.querySelector('.field-select__options');
   const selectedText = container.querySelector('.field-select__selected');
@@ -25,7 +25,7 @@ selectContainers.forEach(container => {
       optionsContainer.style.display = 'none';
       
       // Обновляем все другие селекторы с этим классом
-      selectContainers.forEach(otherContainer => {
+      selectRegionContainers.forEach(otherContainer => {
         if (otherContainer !== container) {
           const otherSelectedText = otherContainer.querySelector('.field-select__selected');
           if (otherSelectedText) {
@@ -39,7 +39,7 @@ selectContainers.forEach(container => {
 
 // Закрытие списка при клике вне
 document.addEventListener('click', function(event) {
-  selectContainers.forEach(container => {
+  selectRegionContainers.forEach(container => {
     const optionsContainer = container.querySelector('.field-select__options');
     if (!container.contains(event.target)) {
       optionsContainer.style.display = 'none';
@@ -47,43 +47,54 @@ document.addEventListener('click', function(event) {
   });
 });
 
+ // language switcher
+
+// Получаем все элементы с классом .page-header__lang (для переключения языка)
+const selectLangContainers = document.querySelectorAll('.page-header__lang');
+
+selectLangContainers.forEach(container => {
+  const selectElement = container.querySelector('.field-select__select');
+  const optionsContainer = container.querySelector('.field-select__options');
+  const selectedText = container.querySelector('.field-select__selected');
+  const options = container.querySelectorAll('.field-select__option');
+
+  // Открытие/закрытие списка при клике на селектор
+  selectElement.addEventListener('click', function(event) {
+    event.stopPropagation(); // Предотвращаем всплытие события
+    optionsContainer.style.display = optionsContainer.style.display === 'block' ? 'none' : 'block'; // Переключаем отображение
+  });
+
+  // Выбор опции
+  options.forEach(option => {
+    option.addEventListener('click', function() {
+      // Меняем выбранное значение
+      selectedText.innerHTML = option.innerHTML;
       
-// // Получаем все элементы
-// const selectContainer = document.querySelector('.main .field-select__select');
-// const optionsContainer = document.querySelector('.main .field-select__options');  // Список с опциями
-// const selectedText = document.querySelector('.field-select__selected');
-// const options = document.querySelectorAll('.field-select__option');
+      // Закрываем список после выбора
+      optionsContainer.style.display = 'none';
+      
+      // Обновляем все другие селекторы с этим классом .page-header__lang
+      selectLangContainers.forEach(otherContainer => {
+        if (otherContainer !== container) {
+          const otherSelectedText = otherContainer.querySelector('.field-select__selected');
+          if (otherSelectedText) {
+            otherSelectedText.innerHTML = selectedText.innerHTML;
+          }
+        }
+      });
+    });
+  });
+});
 
-// // console.log(optionsContainer);
-// console.log(selectContainer, optionsContainer, selectedText, options);
-
-// // Открытие/закрытие списка при клике на контейнер
-// selectContainer.addEventListener('click', function(event) {
-//   console.log('Select container clicked');  
-//   event.stopPropagation(); // Предотвращаем событие всплытия
-//   optionsContainer.classList.toggle('open');  // Добавляем/удаляем класс .open на контейнере с опциями
-// });
-
-// // Обработчик выбора опции
-// options.forEach(option => {
-//   option.addEventListener('click', function() {
-//     const selectedFlag = option.querySelector('.field-select__icon').src;
-//     const selectedTextValue = option.textContent.trim();
-    
-//     // Изменяем выбранное значение
-//     selectedText.innerHTML = `<img src="${selectedFlag}" class="field-select__icon" alt="Selected Flag"> ${selectedTextValue}`;
-
-//     // Закрыть список после выбора
-//     optionsContainer.classList.remove('open');  // Убираем класс open, чтобы скрыть список
-//   });
-// });
-
-// // Закрытие списка при клике вне
-// document.addEventListener('click', function(event) {
-//   if (!selectContainer.contains(event.target)) {
-//     optionsContainer.classList.remove('open');  // Закрываем список, если кликнули вне контейнера
-//   }
-// });
+// Закрытие списка при клике вне селектора
+document.addEventListener('click', function(event) {
+  selectLangContainers.forEach(container => {
+    const optionsContainer = container.querySelector('.field-select__options');
+    if (!container.contains(event.target)) {
+      optionsContainer.style.display = 'none';
+    }
+  });
+});
 
 
 

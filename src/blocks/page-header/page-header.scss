@@ -342,7 +342,8 @@ label.page-header__lang.field-select {
   }
   
   /* Псевдоэлемент для флага */
-  .page-header__region .field-select__select {
+  .page-header__region .field-select__select,
+  .page-header__lang .field-select__select {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -353,11 +354,20 @@ label.page-header__lang.field-select {
     background-color: white;
   }
   
-  .page-header__region .field-select__selected {
+  .page-header__region .field-select__selected,
+  .page-header__lang .field-select__selected  {
     color: var(--secondary-color);
     display: flex;
     align-items: center;
   }
+
+//   .page-header__region .field-select__selected span,
+//   .page-header__lang .field-select__selected span  {
+//     color: var(--secondary-color)!important;
+//     display: flex;
+//     align-items: center;
+//   }
+  
   
   .page-header__region .field-select__selected .field-select__icon {
     width: 16px;
@@ -365,12 +375,14 @@ label.page-header__lang.field-select {
     margin-right: 8px;
   }
   
-  .page-header__region .field-select__options {
+  .page-header__region .field-select__options,
+  .page-header__lang .field-select__options {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
+    // color: black;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -378,18 +390,25 @@ label.page-header__lang.field-select {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  .page-header__region .field-select__options.open {
+  .page-header__lang .field-select__options span {
+    color: var(--light-text-color);
+  }
+
+  .page-header__region .field-select__options.open,
+  .page-header__lang .field-select__options open {
     display: block;  /* Показываем список, если класс open добавлен на .field-select__options */
   }
-  
-  .page-header__region .field-select__option {
+
+  .page-header__region .field-select__option,
+  .page-header__lang .field-select__option {
     padding: 10px;
     display: flex;
     align-items: center;
     cursor: pointer;
   }
   
-  .page-header__region .field-select__option:hover {
+  .page-header__region .field-select__option:hover,
+  .page-header__lang .field-select__option:hover  {
     background-color: #f0f0f0;
   }
   
@@ -399,7 +418,8 @@ label.page-header__lang.field-select {
     margin-right: 8px;
   }
   
-  .page-header__region .field-select__select.open .field-select__options {
+  .page-header__region .field-select__select.open .field-select__options,
+  .page-header__lang .field-select__select.open .field-select__options {
     display: block;
   }
 
