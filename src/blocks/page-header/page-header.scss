@@ -314,7 +314,8 @@ label.page-header__lang.field-select {
 
 
 /* Обертка для select */
-.page-header__lang .field-select__select-wrap {
+.page-header__lang .field-select__select-wrap,
+.page-header__region .field-select__select-wrap {
     position: relative; /* Позиционируем стрелку относительно родителя */
     width: 100%; /* Ширина select */
     display: inline-block; /* Делаем inline-block для правильного выравнивания */
@@ -340,8 +341,72 @@ label.page-header__lang.field-select {
     cursor: pointer;
   }
   
+  /* Псевдоэлемент для флага */
+  .page-header__region .field-select__select {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // padding: 10px;
+    // border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+  }
+  
+  .page-header__region .field-select__selected {
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+  }
+  
+  .page-header__region .field-select__selected .field-select__icon {
+    width: 16px;
+    height: 12px;
+    margin-right: 8px;
+  }
+  
+  .page-header__region .field-select__options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .page-header__region .field-select__options.open {
+    display: block;  /* Показываем список, если класс open добавлен на .field-select__options */
+  }
+  
+  .page-header__region .field-select__option {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .page-header__region .field-select__option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .page-header__region .field-select__option .field-select__icon {
+    width: 16px;
+    height: 12px;
+    margin-right: 8px;
+  }
+  
+  .page-header__region .field-select__select.open .field-select__options {
+    display: block;
+  }
+
+
   /* Псевдоэлемент для стрелки */
-  .page-header__lang .field-select__select-wrap::after {
+  .page-header__lang .field-select__select-wrap::after,
+  .page-header__region .field-select__select-wrap::after {
     content: "";
     position: absolute;
     top: 50%; /* Центрируем по вертикали */
