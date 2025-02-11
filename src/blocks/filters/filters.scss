@@ -1,0 +1,33 @@
+.filters {
+    $block-name:                &;
+
+        width: 242px;
+        padding: 20px;
+        display: flex;
+        
+        margin-bottom: 20px;
+
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        // margin-bottom: 20px;
+    }
+    
+    &__title {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: var(--primary-dark-color);
+        font-family: $font-family;
+        font-family: Manrope;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px; /* 200% */
+    }
+
+}

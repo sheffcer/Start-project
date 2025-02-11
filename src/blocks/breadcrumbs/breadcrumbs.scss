@@ -34,4 +34,10 @@ $text-color:                  hsl(0, 0%, 10%) !default;
       text-decoration: none;
     }
   }
+
+  &__img {
+    // display: block;
+    height: auto;
+    margin-right: 0.8em;
+  }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js  page" lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>NTH start project</title>
@@ -10,12 +11,14 @@
       padding-top: 1em;
       padding-bottom: 1em;
     }
+
     main-nav__link a {
-      color: #3498db!important;
+      color: #3498db !important;
     }
   </style>
   <script src="/js/"></script>
 </head>
+
 <body>
   <div class="off-canvas" id="off-canvas">
     <aside class="off-canvas__aside" role="complementary" aria-label="Список компонентов">
@@ -27,7 +30,8 @@
           <div class="burger  burger--close" data-toggle="off-canvas"><span></span></div>
         </div>
         <div class="off-canvas__dropdown dropdown">
-          <a id="dropdown-demo-1" href="#" class="btn btn--off-canvas dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <a id="dropdown-demo-1" href="#" class="btn btn--off-canvas dropdown__toggler" data-toggle="dropdown"
+            role="button" aria-haspopup="true" aria-expanded="false">
             <img src="/img/catalog-icon.svg" alt="">
             <span>Каталог</span>
           </a>
@@ -42,68 +46,69 @@
         </div>
         <label class="off-canvas__search field-text">
           <span class="field-text__input-wrap">
-           <input class="field-text__input" type="search" placeholder="Шукати серед 25 000 товарів">
-           <button class="btn--search"><span>Пошук</span> <img src="/img/search-icon.svg" alt=""></button>
-           </span>                  
-     </label>
-     <div class="off-canvas__user-block">
+            <input class="field-text__input" type="search" placeholder="Шукати серед 25 000 товарів">
+            <button class="btn--search"><span>Пошук</span> <img src="/img/search-icon.svg" alt=""></button>
+          </span>
+        </label>
+        <div class="off-canvas__user-block">
 
-      @@include('blocks/user-block/user-block.html')
+          @@include('blocks/user-block/user-block.html')
 
-     </div>
-     <div class="off-canvas__details-menu">
-      @@include('blocks/details-menu/details-menu.html')
-     </div>
-     <div class="off-canvas__text">
-      <p class="off-canvas__text--parag">Є питання ? <a class="off-canvas__text--link">Зв’яжіться з нами</a></p>
-      <p class="off-canvas__text--parag">Пн-Пт  <span class="off-canvas__text--span">9:00 - 16:00<span></p>
-    </div> 
-     <div class="off-canvas__media-toggler">
-      @@include('blocks/media-toggler/media-toggler.html')
-     </div>
-    </div> 
+        </div>
+        <div class="off-canvas__details-menu">
+          @@include('blocks/details-menu/details-menu.html')
+        </div>
+        <div class="off-canvas__text">
+          <p class="off-canvas__text--parag">Є питання ? <a class="off-canvas__text--link">Зв’яжіться з нами</a></p>
+          <p class="off-canvas__text--parag">Пн-Пт <span class="off-canvas__text--span">9:00 - 16:00<span></p>
+        </div>
+        <div class="off-canvas__media-toggler">
+          @@include('blocks/media-toggler/media-toggler.html')
+        </div>
+      </div>
     </aside>
-  <div class="page__inner off-canvas__page-content">
-    <div class="page__content">
-      <header class="page-header container" role="banner">
-            <div class="page-header__burger burger" data-toggle="off-canvas"><span></span></div>
-            <a href="/" class="page-header__logo logo">
-              <picture class="page-header__img">
-                <source media="(max-width: 767px)" srcset="/img/logo-mobile.svg">                 
-                <source media="(min-width: 768px)" srcset="/img/logo.svg">  
-                <img src="/img/logo.svg" alt="">
-              </picture>
+    <div class="page__inner off-canvas__page-content">
+      <div class="page__content">
+        <header class="page-header container" role="banner">
+          <div class="page-header__burger burger" data-toggle="off-canvas"><span></span></div>
+          <a href="/" class="page-header__logo logo">
+            <picture class="page-header__img">
+              <source media="(max-width: 767px)" srcset="/img/logo-mobile.svg">
+              <source media="(min-width: 768px)" srcset="/img/logo.svg">
+              <img src="/img/logo.svg" alt="">
+            </picture>
+          </a>
+          <div class="page-header__catalog dropdown">
+            <a id="dropdown-demo-1" href="#" class="btn dropdown__toggler" data-toggle="dropdown" role="button"
+              aria-haspopup="true" aria-expanded="false">
+              <img src="/img/catalog-icon.svg" alt="">
+              <span>Каталог</span>
             </a>
-            <div class="page-header__catalog dropdown">
-                <a id="dropdown-demo-1" href="#" class="btn dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  <img src="/img/catalog-icon.svg" alt="">
-                  <span>Каталог</span>
-                </a>
-                <ul class="dropdown__menu  menu" aria-labelledby="dropdown-demo-1">
-                  <li class="menu__item"><a class="menu__link" href="#">Лазерні картриджи</a></li>
-                  <li class="menu__item  menu__item--separator"><a class="menu__link" href="#">...</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#">Чорнила</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#">Фотопапір</a>
-                  <li class="menu__item"><a class="menu__link" href="#">Повербанки</a>
-                </li>
-                </ul>
+            <ul class="dropdown__menu  menu" aria-labelledby="dropdown-demo-1">
+              <li class="menu__item"><a class="menu__link" href="#">Лазерні картриджи</a></li>
+              <li class="menu__item  menu__item--separator"><a class="menu__link" href="#">...</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Чорнила</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Фотопапір</a>
+              <li class="menu__item"><a class="menu__link" href="#">Повербанки</a>
+              </li>
+            </ul>
+          </div>
+          <label class="page-header__search field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="search" placeholder="Шукати серед 25 000 товарів">
+              <button class="btn btn--search"><span>Пошук</span> <img src="/img/search-icon.svg" alt=""></button>
+            </span>
+          </label>
+          <div class="page-header__toggler field-toggler">
+            <div class="field-toggler__input-wrap">
+              <label class="field-toggler__name">
+                <input class="field-toggler__input" type="checkbox">
+                <span class="field-toggler__name-text"></span>
+              </label>
             </div>
-            <label class="page-header__search field-text">
-                 <span class="field-text__input-wrap">
-                  <input class="field-text__input" type="search" placeholder="Шукати серед 25 000 товарів">
-                  <button class="btn btn--search"><span>Пошук</span> <img src="/img/search-icon.svg" alt=""></button>
-                  </span>                  
-            </label>
-            <div class="page-header__toggler field-toggler">
-                <div class="field-toggler__input-wrap">
-                  <label class="field-toggler__name">
-                    <input class="field-toggler__input" type="checkbox">
-                    <span class="field-toggler__name-text"></span>
-                  </label>
-                </div>
-            </div>
-            <!-- <div class="page-header__lang-inner"> -->
-              <!-- <label class="page-header__region field-select">
+          </div>
+          <!-- <div class="page-header__lang-inner"> -->
+          <!-- <label class="page-header__region field-select">
                 <div class="field-select__name"><span>регіон</span></div>
                   <div class="field-select__select-wrap">
                     <select class="field-select__select">
@@ -114,31 +119,31 @@
                 </label> -->
 
 
-             <!-- </div> -->
-             
-             <label class="page-header__region field-select">
-              <div class="field-select__name"><span>регіон</span></div>
-              <div class="field-select__select-wrap">
-                <div class="main field-select__select">
-                  <span class="field-select__selected">
-                    <img src="/img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
-                  </span>
-                </div>
-                <div class="field-select__options">
-                  <div class="field-select__option" data-value="UA">
-                    <img src="/img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
-                    <!-- <img src="/img/ок-icon.svg" alt="UA Flag" class="field-select__icon"> -->
-                  </div>
-                  <div class="field-select__option" data-value="EU">
-                    <img src="/img/eu-flag-icon.svg" alt="EU Flag" class="field-select__icon"> EU
-                  </div>
-                  <!-- Добавьте другие опции по мере необходимости -->
-                </div>
-              </div>
-            </label>
-            
+          <!-- </div> -->
 
-              <!-- <label class="page-header__lang field-select">
+          <label class="page-header__region field-select">
+            <div class="field-select__name"><span>регіон</span></div>
+            <div class="field-select__select-wrap">
+              <div class="main field-select__select">
+                <span class="field-select__selected">
+                  <img src="/img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
+                </span>
+              </div>
+              <div class="field-select__options">
+                <div class="field-select__option" data-value="UA">
+                  <img src="/img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
+                  <!-- <img src="/img/ок-icon.svg" alt="UA Flag" class="field-select__icon"> -->
+                </div>
+                <div class="field-select__option" data-value="EU">
+                  <img src="/img/eu-flag-icon.svg" alt="EU Flag" class="field-select__icon"> EU
+                </div>
+                <!-- Добавьте другие опции по мере необходимости -->
+              </div>
+            </div>
+          </label>
+
+
+          <!-- <label class="page-header__lang field-select">
                 <div class="field-select__name"><span>мова</span></div>
                 <div class="field-select__select-wrap">
                   <select class="field-select__select">
@@ -149,51 +154,88 @@
                 </div>
               </label> -->
 
-              
-              <label class="page-header__lang field-select">
-                <div class="field-select__name"><span>мова</span></div>
-                <div class="field-select__select-wrap">
-                  <div class="field-select__select">
-                    <span class="field-select__selected">Укр</span>
+
+          <label class="page-header__lang field-select">
+            <div class="field-select__name"><span>мова</span></div>
+            <div class="field-select__select-wrap">
+              <div class="field-select__select">
+                <span class="field-select__selected">Укр</span>
+              </div>
+              <div class="field-select__options">
+                <div class="field-select__option" data-value="UA">
+                  <span>Укр</span>
+                </div>
+                <div class="field-select__option" data-value="RU">
+                  <span>Рус</span>
+                </div>
+                <div class="field-select__option" data-value="EN">
+                  <span>Eng</span>
+                </div>
+              </div>
+            </div>
+          </label>
+
+          <div class="page-header__login">
+            <img src="/img/login.svg" alt="" class="user-blcok__img">
+          </div>
+          <div class="page-header__cart cart">
+            <img src="/img/cart.svg" alt="" class="cart__img">
+            <span class="page-header__cart-count">12</span>
+          </div>
+        </header>
+        <main class="main-content" role="main">
+          <div class="main-content__inner">
+            @@include('blocks/breadcrumbs/breadcrumbs.html')
+            <h2 class="product-list__title">Кабелі</h2>
+            @@include('blocks/catalog-slider/catalog-slider.html')
+            <div class="product-list">
+              <div class="product-list__inner">
+                <div class="product-list__filter">
+                  @@include('blocks/filters/filters.html')
+                </div>
+                <div class="product-list__item-wrap">
+                  <div class="product-list__item">
+                    <a href="#" class="product-list__link">
+                      <img src="/img/cable.png" alt="" class="product-list__img">
+                      <div class="product-list__title">Кабель USB - Lightning</div>
+                      <div class="product-list__price">150 грн</div>
+                    </a>
                   </div>
-                  <div class="field-select__options">
-                    <div class="field-select__option" data-value="UA">
-                      <span>Укр</span>
-                    </div>
-                    <div class="field-select__option" data-value="RU">
-                      <span>Рус</span>
-                    </div>
-                    <div class="field-select__option" data-value="EN">
-                      <span>Eng</span>
-                    </div>
+                  <div class="product-list__item">
+                    <a href="#" class="product-list__link">
+                      <img src="/img/cable.png" alt="" class="product-list__img">
+                      <div class="product-list__title">Кабель USB - Lightning</div>
+                      <div class="product-list__price">150 грн</div>
+                    </a>
+                  </div>
+                  <div class="product-list__item">
+                    <a href="#" class="product-list__link">
+                      <img src="/img/cable.png" alt="" class="product-list__img">
+                      <div class="product-list__title">Кабель USB - Lightning</div>
+                      <div class="product-list__price">150 грн</div>
+                    </a>
+                  </div>
+                  <div class="product-list__item">
+                    <a href="#" class="product-list__link">
+                      <img src="/img/cable.png" alt="" class="product-list__img">
+                      <div class="product-list__title">Кабель USB - Lightning</div>
+                      <div class="product-list__price">150 грн</div>
+                    </a>
                   </div>
                 </div>
-              </label>
-
-              <div class="page-header__login">
-                <img src="/img/login.svg" alt="" class="user-blcok__img">
               </div>
-              <div class="page-header__cart cart">
-                <img src="/img/cart.svg" alt="" class="cart__img">
-                <span class="page-header__cart-count">12</span>
-              </div>
-      </header>
-      <main class="main-content" role="main">
-        <div class="main-content__inner">
-            @@include('blocks/breadcrumbs/breadcrumbs.html')
-            @@include('blocks/catalog-slider/catalog-slider.html')
-        </div> <!-- Close main-content inner -->
-      </main>
-    </div>
-    <!-- </div> -->
-    <div class="page__footer-wrapper">
+            </div> <!-- Close main-content inner -->
+        </main>
+      </div>
+      <!-- </div> -->
+      <div class="page__footer-wrapper">
         <footer class="page-footer" role="contentinfo">
-            <!-- Футер -->
-      @@include('blocks/footer-nav/footer-nav.html')
-            <hr>
-            <p class="page-footer__copyright">© 2024 ColorWay | All Rights Reserved</p>
+          <!-- Футер -->
+          @@include('blocks/footer-nav/footer-nav.html')
+          <hr>
+          <p class="page-footer__copyright">© 2024 ColorWay | All Rights Reserved</p>
         </footer>
-    </div>
+      </div>
     </div>
     <div class="off-canvas__overlay" data-toggle="off-canvas"></div>
   </div> <!-- Close off-canvas -->
@@ -201,4 +243,5 @@
   @@include('_include/page_bottom.html')
   </div>
 </body>
+
 </html>

@@ -1,0 +1,23 @@
+.product-list {
+    $block-name:                &;
+
+    
+    &__inner {
+        @include row;
+    }
+    
+    &__title {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: var( --secondary-color);
+        font-family: $font-family--secondary;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__filter {
+        flex-basis: 242px;
+    }
+}
