@@ -3,9 +3,11 @@
 
         width: 242px;
         padding: 20px;
-        display: flex;
-        
+        // outline: 1px dotted pink;
+        border: 1px solid var( --light-text-color);
         margin-bottom: 20px;
+        margin-top: 20px;
+        border-radius: 20px;
 
 
     &__list {
@@ -14,13 +16,24 @@
         justify-content: space-between;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+        // align-items: center;
         // margin-bottom: 20px;
+    }
+
+    &__item {
+        margin-bottom: 40px;
+    }
+
+    &__price-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
     }
     
     &__title {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 0;
+        margin-bottom: 40px;
         color: var(--primary-dark-color);
         font-family: $font-family;
         font-family: Manrope;

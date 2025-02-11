@@ -4,6 +4,10 @@
     
     &__inner {
         @include row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        /* height: 120vh; */
+        align-items: flex-start;
     }
     
     &__title {
@@ -19,5 +23,11 @@
 
     &__filter {
         flex-basis: 242px;
+    }
+
+    &__item-wrap {
+        margin-top: 20px;
+        @include row;
+        flex-basis: calc(100% - 242px);
     }
 }
