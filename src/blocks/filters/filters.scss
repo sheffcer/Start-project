@@ -24,6 +24,54 @@
         margin-bottom: 40px;
     }
 
+    &__item--toggle .field-toggler {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    &__item--toggle .field-toggler__name-text:before {
+        content: "";
+        position: absolute;
+        top: -0.4em;
+        left: 0;
+        width: 45px;
+        height: 24px;
+        border-radius: 12px;
+        background: var(--toggler-light-gray-color);
+        border: none;
+    }
+
+    &__item--toggle .field-toggler__name-text:after {
+        content: "";
+        position: absolute;
+        top: -0.4em;
+        left: 2px;
+        top: -5px;
+        width: 20px;
+        height: 20px;
+        transform: translateY(-50%);
+        background-color: $white;
+        background-repeat: no-repeat;
+        background-position-x: 50%;
+        background-position-y: 50%;
+        border: none;
+        border-radius: 50%;
+    }
+
+    &__item--toggle .field-toggler__input:checked + .field-toggler__name-text::after {
+        left: 6px; /* Изменение позиции после активации чекбокса */
+        // background-image: url('/img/toggler-dark-icon.svg');
+        background-color: var(--secondary-color);
+        // background-repeat: no-repeat;
+      }
+    
+      &__item--toggle .page-header__toggler {
+        @at-root input:checked ~ &:after {
+        transform: translate(px-to-em(34), -50%);
+        }
+    }
+
     &__price-wrap {
         display: flex;
         flex-direction: row;
