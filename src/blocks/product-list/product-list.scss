@@ -4,6 +4,8 @@
     
     &__inner {
         @include row;
+        margin-left: 0;
+        margin-right: 0;
         flex-wrap: nowrap;
         justify-content: space-around;
         /* height: 120vh; */
@@ -32,7 +34,7 @@
     &__settings {
         display: flex;
         flex-direction: row;
-        align-items: baseline;
+        align-items: flex-start;
         justify-content: space-around;
         gap: 10px;
     }
@@ -44,6 +46,7 @@
     }
 
     &__reset-filter {
+        min-width: 130px;
         padding: 6px 10px;
         color: #000;
         background: $white;
@@ -63,7 +66,7 @@
 
     &__filter-item {
         // padding: 0.3em 0.6em;
-        padding: 6px 10px;
+        padding: 7px 10px;
         display: flex;
         align-items: baseline;
         gap: 5px;
@@ -94,6 +97,7 @@
     }
 
     &__label {
+        min-width: 100px;
         color: var(--arrow-slider-color);
         font-family: $font-family;
         font-size: 14px;
@@ -104,7 +108,7 @@
 
     &__button {
         display: flex;
-        padding: 0.6em;
+        padding: 0.5em;
         border: 1px solid var(--arrow-slider-button-border-color);
         border-radius: 4px;
         cursor: pointer;
@@ -129,7 +133,18 @@
         border: 1px solid var(--secondary-color);
     }
 
+    &__sorting {
+        padding: 6px 10px;
+        border-radius: 5px;
+        border: 1px solid var(--arrow-slider-color);
+    }
+
     & .card__inner {
         align-items: start;
+    }
+
+    & .pagination {
+        margin: 0 auto;
+        flex-shrink: 0;
     }
 }
