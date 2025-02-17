@@ -21,6 +21,17 @@
         line-height: normal;
     }
 
+    &__settings {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-around;
+    }
+
+    &__selected-filter {
+        display: flex;
+    }
+
     &__filter {
         flex-basis: 242px;
     }

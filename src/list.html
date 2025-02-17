@@ -192,7 +192,39 @@
               <div class="product-list__inner">
                 <div class="product-list__filter">
                   @@include('blocks/filters/filters.html')
-                  <!-- </div> -->
+                </div>
+                <div class="product-list__goods-inner">
+                  <div class="product-list__settings">
+                    <div class="product-list__label">20468 Товарів</div>
+                    <div class="product-list__selected-filter">
+                      <div class="product-list__filter-item">
+                        Акція
+                        <img src="/img/cross-icon.svg" alt="">
+                      </div>
+                      <div class="product-list__filter-item">
+                        USB Hub
+                        <img src="/img/cross-icon.svg" alt="">
+                      </div>
+                      <div class="product-list__filter-item">
+                        Новинки
+                        <img src="/img/cross-icon.svg" alt="">
+                      </div>
+                      <div class="product-list__filter-item">
+                        Акція
+                        <img src="/img/cross-icon.svg" alt="">
+                      </div>
+                    </div>
+                    <select class="product-list__sorting" name="" id="">
+                      <option value="">За зростанням ціни</option>
+                      <option value="">За зменшенням ціни</option>
+                      <option value="">За алфавитом</option>
+                      <!-- <option value=""></option> -->
+                    </select>
+                    <div class="product-list__view">
+                      <button class="btn product-list__button"><img src="/img/card-icon.svg" alt=""></button>
+                      <button class="btn product-list__button"><img src="/img/string-icon.svg" alt=""></button>
+                    </div>
+                  </div>
                   <div class="product-list__item-wrap">
                     <!-- <div class="new-product">
                      <h2 class="new-product__title">Новинки</h2>
@@ -323,9 +355,12 @@
                       <!-- <button class="card__buy">Купить</button> -->
                     </article>
                   </div>
+                  <!-- </div> -->
+                  @@include('blocks/pagination/pagination.html')
                 </div>
               </div>
-            </div> <!-- Close main-content inner -->
+            </div>
+          </div> <!-- Close main-content inner -->
         </main>
       </div>
       <!-- </div> -->
