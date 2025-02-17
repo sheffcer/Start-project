@@ -9,6 +9,11 @@
         /* height: 120vh; */
         align-items: flex-start;
     }
+
+    &__goods-inner {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
     
     &__title {
         margin-top: 20px;
@@ -26,19 +31,70 @@
         flex-direction: row;
         align-items: baseline;
         justify-content: space-around;
+        gap: 10px;
     }
 
     &__selected-filter {
         display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    &__reset-filter {
+        padding: 6px 10px;
+        color: #000;
+        background: $white;
+        border-radius: 20px;
+        border: 1px solid $black;
+        text-align: center;
+        font-family: $font-family--secondary;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 16px;
     }
 
     &__filter {
         flex-basis: 242px;
     }
 
+    &__filter-item {
+        // padding: 0.3em 0.6em;
+        padding: 6px 10px;
+        display: flex;
+        align-items: baseline;
+        gap: 5px;
+        // outline: 1px solid var(--secondary-color);
+        background: var(--arrow-slider-button-color);
+        border-radius: 4px;
+        color: #000;
+        text-align: center;
+        font-feature-settings: 'liga' off, 'clig' off;
+        font-family: Manro$font-family;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+    }
+
+
     &__item-wrap {
         margin-top: 20px;
         @include row;
         flex-basis: calc(100% - 242px);
+    }
+
+    &__view {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__label {
+        color: var(--arrow-slider-color);
+        font-family: $font-family;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
     }
 }
