@@ -671,7 +671,7 @@
     background: var(--slider-green-bg-color);
   }
 
-  .embla--zero .embla__slide__number--selected {
+  .embla--zero .embla__slide--selected .embla__slide__number {
     outline: 1px solid var(--secondary-color);
   }
 
@@ -680,19 +680,23 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 5%;
-    left: 5%;
+    top: 7%;
+    left: 7%;
     background: var(--secondary-color);
     border: none;
     border-radius: 3px;
   }
 
-  .embla__slide__close svg {
-    fill: $white;
+  // .embla__slide__close svg {
+  //   fill: $white;
+  // }
+
+  .embla--zero .embla__slide--selected .embla__slide__close {
+    display: block;
   }
   
-  .embla--zero .embla__slide__number--selected .embla__slide__close {
-    display: block;
+  .embla--zero .embla__slide--selected .embla__slide__title {
+    color: var(--secondary-color)!important;
   }
 
   .embla--zero .embla__controls {
