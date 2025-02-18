@@ -3,9 +3,11 @@
 // Не пишите здесь другие селекторы.
 
 .page-header {
+    position: relative;
     margin-top: 10px;
-    outline: 1px dotted plum;
+    // outline: 1px dotted plum;
     @include container;
+    outline: none!important;
     display: flex;
     width: 1296px;
     height: 60px;
