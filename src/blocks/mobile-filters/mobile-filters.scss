@@ -1,6 +1,7 @@
-.filters {
+.mobile-filters {
     $block-name:                &;
 
+        display: none;
         position: absolute;
         top: 0;
         left: 0;
@@ -11,9 +12,12 @@
         margin-bottom: 20px;
         margin-top: 20px;
         border-radius: 20px;
+        background: $white;
+        opacity: 1;
+        z-index: 10;
 
         @media(min-width: 992px) {
-            position: static;
+           display: none;
         }
 
 
