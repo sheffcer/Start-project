@@ -81,4 +81,31 @@ $border-radius:               3px !default;
   //     border-color: $color-main;
   //   }
   // }
+
+  &--filters {
+    padding: 14px 24px;
+    color: $white;
+    background: var(--secondary-color);
+    font-family: $font-family--secondary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    border: none;
+    border-radius: 25px;
+  }
+  
+  &--ok {
+    padding: 9px 22px;
+    color: $black;
+    background: transparent;
+    font-family: $font-family--secondary;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    border: 1px solid $black;
+    border-radius: 25px;
+  }
+  
 }
