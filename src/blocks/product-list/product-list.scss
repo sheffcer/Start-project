@@ -17,7 +17,11 @@
         flex-direction: column;
         min-height: 100vh;
         margin-top: 20px;
-        margin-left: 20px;
+        margin-left: 0;
+
+        @media (min-width: 992px) {
+            margin-left: 20px;
+        }
     }
     
     &__title {
@@ -36,9 +40,15 @@
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
+        flex-wrap: wrap;
         gap: 10px;
+        @media(min-width: 768px) {
+            flex-wrap: nowrap;
+        }
+
         @media(min-width: 992px) {
             justify-content: space-around;
+            flex-wrap: nowrap;
         }
     }
 
@@ -138,9 +148,11 @@
     &__view {
         display: flex;
         gap: 10px;
+        min-width: 78px;
     }
 
     &__label {
+        display: none;
         min-width: 100px;
         color: var(--arrow-slider-color);
         font-family: $font-family;
@@ -148,6 +160,10 @@
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+
+        @media(min-width: 768px) {
+            display: block;
+        }
     }
 
     &__button {
