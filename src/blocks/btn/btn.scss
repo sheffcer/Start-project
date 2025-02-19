@@ -82,17 +82,35 @@ $border-radius:               3px !default;
   //   }
   // }
 
-  &--filters {
+  &--submit {
     padding: 14px 24px;
     color: $white;
     background: var(--secondary-color);
     font-family: $font-family--secondary;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: 15px;
     border: none;
     border-radius: 25px;
+  }
+
+  &--reset {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    // min-width: 130px;
+    padding: 14px 24px;
+    color: #000;
+    background: #fff;
+    border-radius: 25px;
+    border: 1px solid #000;
+    text-align: center;
+    font-family: $font-family--secondary;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
   }
   
   &--ok {
