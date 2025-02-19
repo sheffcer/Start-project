@@ -106,4 +106,16 @@
         background-color: lighten($color-danger, 35%);
       }
     }
+    
+    &--filters .field-num__input-and-btns {
+      width: 125px;
+    }
+    
+    &--filters .field-num__input {
+      width: 125px;
+    }
+    
+    &--filters .btn btn--ok {
+      width: 105px;
+    }
   }
