@@ -1,11 +1,13 @@
 .mobile-filters {
     $block-name:                &;
 
-        display: block;
+        // display: none;
         position: absolute;
         top: 0;
-        left: 0;
-        // width: 242px;
+        left: -200%; 
+        width: 100%;
+        max-width: 400px;
+        // height: 100%;
         padding: 20px;
         // outline: 1px dotted pink;
         border: 1px solid var( --light-text-color);
@@ -13,13 +15,22 @@
         // margin-top: 20px;
         border-radius: 20px;
         background: $white;
-        opacity: 1;
+        transition: left 0.3s ease;
+        opacity: 1!important;
         z-index: 10;
+
+        @media(min-width: 768px) {
+            max-width: 430px;
+        }
 
         @media(min-width: 992px) {
            display: none;
         }
-
+    
+    &--open {
+        left: 0;
+        // display: block;
+    }    
 
     &__list {
         display: flex;
