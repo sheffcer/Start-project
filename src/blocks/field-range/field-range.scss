@@ -54,10 +54,13 @@ $border-radius:               3px !default;
     @mixin field-range-runnable-track {
       box-sizing: border-box;
       width: 100%;
-      height: 0.75em;
+      height: 2px;
+      // height: 0.75em;
       border-radius: $border-radius;
-      background: #fff;
-      border: 1px solid $border-color;
+      background: var(--arrow-slider-button-color);
+      border: none;
+      // background: #fff;
+      // border: 1px solid $border-color;
     }
 
     // Увы, тут похожие наборы свойств приходится писать порознь.
@@ -81,13 +84,18 @@ $border-radius:               3px !default;
     @mixin field-range-slider-thumb {
       box-sizing: border-box;
       padding: 0;
-      width: 2em;
-      height: 2em;
-      border-radius: 1em;
+      margin-top: -6px;
+      width: 14px;
+      height: 14px;
+      // width: 2em;
+      // height: 2em;
+      border-radius: 50%;
+      // border-radius: 1em;
       box-shadow: none;
       cursor: ew-resize;
-      background: $gray-lightest;
-      border: 1px solid $border-color;
+      // background: $gray-lightest;
+      background: var(--secondary-color);
+      // border: 1px solid $border-color;
     }
 
     &::-webkit-slider-thumb {
