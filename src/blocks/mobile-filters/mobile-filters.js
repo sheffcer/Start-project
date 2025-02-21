@@ -5,19 +5,25 @@ document.addEventListener('DOMContentLoaded', function(){
     var filters = document.querySelector('.mobile-filters');
 
     // Открытие фильтров при клике на кнопку
-    filtersBtn.addEventListener('click', function() {
-        filters.classList.toggle('mobile-filters--open');
-    });
+    if (filtersBtn) {
+        filtersBtn.addEventListener('click', function() {
+            filters.classList.toggle('mobile-filters--open');
+        });
+    }
 
     // Закрытие фильтров при клике на кнопку закрытия
-    closeFiltersBtn.addEventListener('click', function() {
-        filters.classList.remove('mobile-filters--open');
-    });
+    if (closeFiltersBtn) {
+        closeFiltersBtn.addEventListener('click', function() {
+            filters.classList.remove('mobile-filters--open');
+        });
+    }
    
     // Закрытие фильтров при клике на кнопку применения фильтров
-    submitFiltersBtn.addEventListener('click', function() {
-        filters.classList.remove('mobile-filters--open');
-    });
+    if (submitFiltersBtn) {
+        submitFiltersBtn.addEventListener('click', function() {
+            filters.classList.remove('mobile-filters--open');
+        });
+    }
 
     // Закрытие фильтров при нажатии клавиши Escape
     document.addEventListener('keydown', function(event) {

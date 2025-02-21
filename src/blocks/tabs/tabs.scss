@@ -80,6 +80,7 @@ $field-padding-horizontal:    0.7em !default;
   }
 
   &__content-item {
+    display: none;
 
     .js & {
       display: none;
