@@ -156,6 +156,17 @@ $border-radius:               3px !default;
     align-items: center;
     gap: 10px;
     justify-content: center;
+    fill: var(--secondary-color);
+  }
+
+  &--reload:hover {
+    color: var(--secondary-third-color);
+    border-color: var(--secondary-third-color);
+    background: $white;
+    fill: red;
+  }
+  &--reload:hover .reload {
+    fill: red;
   }
   
 }

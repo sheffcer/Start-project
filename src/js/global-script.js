@@ -20,4 +20,18 @@ $( document ).ready(function() {
     //   selectWrap.classList.remove('open'); // Убираем класс, чтобы вернуть стрелку в исходное положение
     // });
 
+//     fetch('/img/sprite.svg')
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error('Failed to fetch sprite.svg');
+//     }
+//     return response.text();
+//   })
+//   .then(data => {
+//     console.log(data);  // Ты должен увидеть SVG код спрайта в консоли
+//   })
+//   .catch(error => {
+//     console.error('Error fetching sprite:', error);
+//   });
+
 });
