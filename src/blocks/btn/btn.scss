@@ -166,7 +166,7 @@ $border-radius:               3px !default;
     fill: red;
   }
   &--reload:hover .reload {
-    fill: red;
+    fill: red!important;
   }
   
 }
