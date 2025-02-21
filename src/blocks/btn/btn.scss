@@ -138,5 +138,24 @@ $border-radius:               3px !default;
     border: 1px solid $black;
     border-radius: 25px;
   }
+
+  &--reload {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: var(--secondary-color);
+    text-align: center;
+    font-family: $font-family;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    background: $white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
   
 }
