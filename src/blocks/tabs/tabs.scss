@@ -87,7 +87,7 @@ $field-padding-horizontal:    0.7em !default;
     }
 
     &--active {
-
+      display: block;
       .js & {
         display: block;
       }

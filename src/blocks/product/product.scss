@@ -1,0 +1,50 @@
+.product {
+
+    $block-name:                &;
+
+    &__photo-wrap {
+        @include row;
+        
+        @media(min-width: 768px) {
+            flex-wrap: nowrap;
+        }
+
+    }
+    
+    
+    &__descr {
+        font-size: 14px;
+        color: #333;
+        margin-top: 10px;
+    }
+
+    &__price {
+        font-size: 16px;
+        color: #333;
+        margin-top: 10px;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000;
+        margin-top: 15px;
+    }
+
+    &__photo-inner img {
+        width: 354px;
+        height: 354px;
+        object-fit: cover;
+
+        @media(min-width: 768px) {
+            width: 283px;
+            height: 283px;
+        }
+
+        @media(min-width: 992px) {
+            width: 532px;
+            height: 532px;
+        }
+    }
+    
+}

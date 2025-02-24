@@ -180,8 +180,9 @@ gulp.task('watch', () => {
  // Task for watching files for live changes
  gulp.task('liveWatch', () => {
     // gulp.watch('src/**/*.html', gulp.series('html', browserSync.reload));
-    gulp.watch('src/**/*.html', gulp.series('html', 'reloadHtml'));
-    gulp.watch('src/js/**/*.js', gulp.series('scripts', 'reloadJS'));
+    // gulp.watch('src/**/*.html', gulp.series('html', 'reloadHtml'));
+    gulp.watch(['src/**/*.html', 'src/blocks/**/*.html'], gulp.series('html', 'reloadHtml'));
+    gulp.watch(['src/js/**/*.js', 'src/blocks/**/*.js'], gulp.series('scripts', 'reloadJS'));
     gulp.watch(['src/scss/**/*.scss', 'src/blocks/**/*.scss'], gulp.series('styles'));
   });
 
