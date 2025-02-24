@@ -29,6 +29,8 @@ $field-padding-horizontal:    0.7em !default;
     flex-wrap: wrap;
     align-items: flex-end;
     cursor: pointer;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
 
     .no-js & {
       display: none;
@@ -38,13 +40,15 @@ $field-padding-horizontal:    0.7em !default;
       content: '';
       flex-grow: 1;
       height: 1px;
-      background-color: $border-color;
+      // background-color: $border-color;
     }
   }
 
   &__link-wrap {
     position: relative;
-    border: 1px solid $border-color;
+    // border-top: 1px solid $border-color;
+    // border-bottom: 1px solid $border-color;
+    // border: 1px solid $border-color;
 
     &:not(:last-child) {
       border-right: none;
@@ -53,29 +57,56 @@ $field-padding-horizontal:    0.7em !default;
     &--active {
 
       #{$block-name}__link {
-        color: $text-color;
+        color: var(--secondary-color);
+        // color: $text-color;
         background-color: #fff;
       }
     }
+
+    &--active .tabs__link {
+      position: relative;
+      color: var(--secondary-color)!important;
+      // border-color: var(--secondary-color)!important;
+      // color: var(--secondary-color)!important;
+      // border-bottom: solid 3px transparent!important;
+    }
+
+    &--active .tabs__link::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: var(--secondary-color);
+      bottom: -2px;
+      left: 0;
+    } 
   }
 
   &__link {
     display: block;
-    padding: $field-padding-vertical $field-padding-horizontal;
-    color: $text-color--muted;
+    padding: 10px;
+    // padding: $field-padding-vertical $field-padding-horizontal;
+    color: var(--light-text-color);
+    font-family: $font-family;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 133.333% */
+    // color: $text-color--muted;
     text-decoration: none;
-    background-color: $gray-lightest;
+    // background-color: $gray-lightest;`
 
     &:hover,
     &:focus {
       color: $text-color--muted;
+      background: #E9FBE5;
     }
   }
 
   &__content-wrapper {
     display: block;
     padding: $field-padding-vertical $field-padding-horizontal;
-    border: 1px solid $border-color;
+    // border: 1px solid $border-color;
     border-top: none;
   }
 

@@ -4,6 +4,8 @@
 
     &__photo-wrap {
         @include row;
+        margin-left: 0;
+        margin-right: 0;
         
         @media(min-width: 768px) {
             flex-wrap: nowrap;

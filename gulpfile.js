@@ -183,7 +183,7 @@ gulp.task('watch', () => {
     // gulp.watch('src/**/*.html', gulp.series('html', 'reloadHtml'));
     gulp.watch(['src/**/*.html', 'src/blocks/**/*.html'], gulp.series('html', 'reloadHtml'));
     gulp.watch(['src/js/**/*.js', 'src/blocks/**/*.js'], gulp.series('scripts', 'reloadJS'));
-    gulp.watch(['src/scss/**/*.scss', 'src/blocks/**/*.scss'], gulp.series('styles'));
+    gulp.watch(['src/scss/**/*.scss', 'src/blocks/**/*.scss'], gulp.series('styles', 'reloadCss'));
   });
 
 // Default task: run all tasks
@@ -283,6 +283,10 @@ gulp.task('cleanDist', () => {
 
   gulp.task('reloadHtml', () => {
     browserSync.reload('dist/*.html');
+  });
+  
+  gulp.task('reloadCss', () => {
+    browserSync.reload('dist/css/*.css');
   });
   
    
