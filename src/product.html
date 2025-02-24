@@ -189,7 +189,51 @@
             @@include('blocks/breadcrumbs/breadcrumbs.html')
             <h1 class="product__title">Мережевий фільтр-подовжувач СolorWay 3 розетки/4USB GaN3 Pro PD (2USB-A + 2 TYPE-C) (65W) 2M (CW-CHE34PDW)</h1>
             <div class="product">
-                @@include('blocks/tabs/tabs.html')
+                <div class="tabs">
+                    <ul class="tabs__links" role="tablist">
+                      <li class="tabs__link-wrap tabs__link-wrap--active" role="presentation">
+                        <a class="tabs__link" href="#tab00" role="tab">Усе про товар</a>
+                      </li>
+                      <li class="tabs__link-wrap" role="presentation">
+                        <a class="tabs__link" href="#tab01" role="tab">Фото</a>
+                      </li>
+                      <li class="tabs__link-wrap" role="presentation">
+                        <a class="tabs__link" href="#tab02" role="tab">Опис</a>
+                      </li>
+                      <li class="tabs__link-wrap" role="presentation">
+                        <a class="tabs__link" href="#tab03" role="tab">Характеристики</a>
+                      </li>
+                      <li class="tabs__link-wrap" role="presentation">
+                        <a class="tabs__link" href="#tab04" role="tab">Особливості</a>
+                      </li>
+                      <li class="tabs__link-wrap" role="presentation">
+                        <a class="tabs__link" href="#tab05" role="tab">Комплектація</a>
+                      </li>
+                    </ul>
+                  
+                    <div class="tabs__content-wrapper">
+                      <div class="tabs__content-item tabs__content-item--active" id="tab00" role="tabpanel">
+                        <!-- Пустое содержимое для вкладки "Усе про товар" -->
+                      </div>
+                      <div class="tabs__content-item tabs__content-item--active" id="tab01" role="tabpanel">
+                        <p>Фото! Здесь вы найдете фото продукта.</p>
+                      </div>
+                      <div class="tabs__content-item tabs__content-item--active" id="tab02" role="tabpanel">
+                        <p>Опис! Описание продукта.</p>
+                      </div>
+                      <div class="tabs__content-item tabs__content-item--active" id="tab03" role="tabpanel">
+                        <p>Характеристики! Здесь указаны технические характеристики.</p>
+                      </div>
+                      <div class="tabs__content-item tabs__content-item--active" id="tab04" role="tabpanel">
+                        <p>Особливості! Особенности этого продукта.</p>
+                      </div>
+                      <div class="tabs__content-item tabs__content-item--active" id="tab05" role="tabpanel">
+                        <p>Комплектація! Состав комплекта.</p>
+                      </div>
+                    </div>
+                  </div>
+                                                     
+                                    
             </div>
           </div> <!-- Close main-content inner -->
         </main>
