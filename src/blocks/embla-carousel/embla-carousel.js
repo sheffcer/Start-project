@@ -249,3 +249,61 @@ const removePrevNextBtnsClickHandlersZero = addPrevNextBtnsClickHandlers(
 emblaApiZero.on('destroy', removePrevNextBtnsClickHandlersZero)
 // emblaApiZero.on('destroy', removeDotBtnsAndClickHandlersZero)
 } else {console.error('Root node for zero slider is not found');}
+
+
+
+// Embla--product-slider
+
+
+// Embla--product-slider
+
+const emblaNodeProduct = document.querySelector('.embla--product');
+if (emblaNodeProduct) {
+  console.log('Root Node for Product Slider is: ', emblaNodeProduct);
+  
+  const viewportNodeProduct = emblaNodeProduct.querySelector('.embla__viewport');
+  const thumbnails = document.querySelectorAll('.embla-thumbnail');
+
+  const emblaApiProduct = EmblaCarousel(viewportNodeProduct, {
+    loop: true,  // Зацикливаем карусель
+    autoplay: false,  // Отключаем автопрокрутку для теста
+    speed: 5,  // Скорость анимации
+  });
+
+  // Проверка на миниатюры
+  if (thumbnails.length === 0) {
+    console.error('Не найдены элементы миниатюр');
+  } else {
+    // Обработчик клика по миниатюре
+    thumbnails.forEach((thumbnail, index) => {
+      thumbnail.addEventListener('click', () => {
+        console.log(`Миниатюра нажата: ${index}`);
+        emblaApiProduct.scrollTo(index);  // Переход к слайду при клике на миниатюру
+        updateThumbnailActiveClass(index);  // Обновление активного состояния миниатюры
+      });
+    });
+
+    // Функция для обновления активного состояния миниатюр
+    function updateThumbnailActiveClass(index) {
+      thumbnails.forEach((thumb, i) => {
+        if (i === index) {
+          thumb.classList.add('active');  // Добавляем класс для активной миниатюры
+        } else {
+          thumb.classList.remove('active');  // Убираем класс с неактивных миниатюр
+        }
+      });
+    }
+
+    // Синхронизация слайдера с миниатюрами
+    emblaApiProduct.on('select', () => {
+      const selectedIndex = emblaApiProduct.selectedScrollSnap();
+      console.log(`Слайд переключен на индекс: ${selectedIndex}`);
+      updateThumbnailActiveClass(selectedIndex);  // Обновляем миниатюры, когда слайдер двигается
+    });
+
+    // Изначальная установка активной миниатюры
+    updateThumbnailActiveClass(0);
+  }
+} else {
+  console.error("Root node for product slider is not found");
+}

@@ -218,34 +218,35 @@
                       <div class="tabs__content-item tabs__content-item--active" id="tab01" role="tabpanel">
                         <!-- <p>Фото! Здесь вы найдете фото продукта.</p> -->
                         <div class="product__photo-wrap">
+
                           <div class="product__photo-inner">
-                            <img src="/img/CW-CHE34PDW.jpg" alt="Product Photo" class="product__photo" width="532" height="532">
+                            <div class="embla embla--product">
+                                <!-- Основной слайдер -->
+                                <div class="embla__viewport">
+                                  <div class="embla__container">
+                                    <div class="embla__slide"><img src="/img/CW-CHE34PDW.jpg" alt="Image 1"></div>
+                                    <div class="embla__slide"><img src="/img/CW-CHE34PDW_01.jpg" alt="Image 2"></div>
+                                    <div class="embla__slide"><img src="/img/CW-CHE34PDW_02.jpg" alt="Image 3"></div>
+                                    <!-- Добавьте больше слайдов по мере необходимости -->
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <!-- Контейнер для миниатюр -->
+                              <div class="embla-thumbnails">
+                                <button class="embla-thumbnail" data-index="0"><img src="/img/thumb/CW-CHE34PDW.jpg" alt="Thumbnail 1"></button>
+                                <button class="embla-thumbnail" data-index="1"><img src="/img/thumb/CW-CHE34PDW_01.jpg" alt="Thumbnail 2"></button>
+                                <button class="embla-thumbnail" data-index="2"><img src="/img/thumb/CW-CHE34PDW_02.jpg" alt="Thumbnail 3"></button>
+                                <!-- Добавьте больше миниатюр по мере необходимости -->
+                              </div>
                           </div>
+                          
                           <div class="product__price-inner">
                             <p class="product__descr">Артикул: CW-EW400SET01</p>
                             <h1 class="product__title">Мережевий фільтр-подовжувач СolorWay 3 розетки/4USB GaN3 Pro PD (2USB-A + 2 TYPE-C) (65W) 2M (CW-CHE34PDW)</h1>
-                            <!-- <div class="price-block">
-                                <div class="price-block__inner">
-                                    <div class="price-block__status">
-                                        <img src="/img/status-ok-icon.svg" alt="" width="24" height="24">
-                                        <span>В наявності</span>
-                                    </div>
-                                    <div class="price-block__price-btn-wrap">
-                                        <div class="price-block__price">
-                                            <span class="price-block__price-new">2&nbsp;899₴</span>
-                                            <span class="price-block__price-old">3&nbsp;999₴</span>
-                                            <span class="price-block__price-old-discount">-35%</span>
-                                        </div>
-                                            <button class="btn btn--add-to-cart" aria-label="Додати в кошик">
-                                                <span>Додати в кошик</span>
-                                                <img src="/img/cart-white-icon.svg" alt="Cart Icon">
-                                            </button>
-                                    </div>
-                                </div>
-                            </div> -->
 
                             @@include('blocks/price-block/price-block.html')
-                            
+
                             <div class="price-block__additional-info">
                                 <span>Безкоштовна доставка</span>
                             </div>

@@ -74,5 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
         history.pushState(null, '', tabId); // Меняем хеш без прокрутки страницы
       }
     });
+
+    
   });
   
