@@ -1224,6 +1224,8 @@
   .embla-thumbnail:hover img,
   .embla-thumbnail.active img {
     opacity: 1;
-    border: 2px solid #000; /* Или другой стиль для выделения */
+    border: 1px solid var(--toggler-light-gray-color);
+    border-radius: 5px;
+    // border: 2px solid #000; /* Или другой стиль для выделения */
   }
 
