@@ -15,9 +15,14 @@
     
     
     &__descr {
+        color: #000;
+        font-family: $font-family;
         font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
         color: #333;
-        margin-top: 10px;
+        // margin-top: 10px;
     }
 
     &__price {

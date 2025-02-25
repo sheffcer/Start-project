@@ -168,5 +168,21 @@ $border-radius:               3px !default;
   &--reload:hover .reload {
     fill: red!important;
   }
+
+  &--add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    color: $white;
+    background: var(--secondary-color);
+    font-family: $font-family--secondary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    border: none;
+    border-radius: 25px;
+  } 
   
 }
