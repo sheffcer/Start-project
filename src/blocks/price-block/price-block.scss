@@ -1,6 +1,8 @@
 .price-block {
   $block-name:                &;
 
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 20px;
   background-color: var(--background-video-color);
   border-radius: 10px;
