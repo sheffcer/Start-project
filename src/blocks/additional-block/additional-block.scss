@@ -1,0 +1,33 @@
+.additional-block {
+    $block-name:                &;
+
+    margin-top: 10px;
+    padding: 20px;
+    border: 1px solid var(--light-text-color);
+    border-radius: 10px;
+
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__item {
+        color: var(--light-text-color);
+        font-family: $font-family;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        display: flex;
+        gap: 10px;
+    }
+
+    &__item--descr  {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+}
