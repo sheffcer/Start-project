@@ -9,6 +9,7 @@
     &__inner {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         gap: 20px;
@@ -46,5 +47,60 @@
         margin-left: 20px;
         display: flex;
         flex-direction: column;
+    }
+
+    &__title {
+        color: var(--light-text-color);
+        font-family: $font-family;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+   
+    &__link {
+        color: var(--secondary-third-color);
+        font-family: $font-family;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        
+    }
+
+    &__desc {
+        color: var(--light-text-color);
+        font-family: $font-family;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+    }
+    
+    &__desc-01 {
+        color: var(--light-text-color);
+        font-family: $font-family;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__desc-02 {
+        color: $black;
+        font-family: $font-family;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__desc-03 {
+        color: $black;
+        font-family: $font-family;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
     }
 }

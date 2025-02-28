@@ -4,8 +4,9 @@
 
     &__photo-wrap {
         @include row;
-        margin-left: 0;
-        margin-right: 0;
+        // margin-left: 0;
+        // margin-right: 0;
+        flex-wrap: wrap;
         
         @media(min-width: 768px) {
             flex-wrap: nowrap;
@@ -13,7 +14,18 @@
 
     }
     
+    &__photo-inner {
+        @media(min-width: 768px) {
+            @include col(sm, 6, 12, 30px);
+        }
+    }
     
+    &__price-inner {
+        @media(min-width: 768px) {
+            @include col(sm, 6, 12, 30px);
+        }
+    }
+
     &__descr {
         margin-top: 20px;
         color: #000;
