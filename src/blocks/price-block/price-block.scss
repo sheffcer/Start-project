@@ -102,7 +102,7 @@
   &__btns {
     display: flex;
     flex-direction: row;
-    align-items: end;
+    align-items: flex-end;
     gap: 10px;
   }
 }
