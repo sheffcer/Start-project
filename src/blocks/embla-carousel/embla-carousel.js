@@ -257,53 +257,206 @@ emblaApiZero.on('destroy', removePrevNextBtnsClickHandlersZero)
 
 // Embla--product-slider
 
-const emblaNodeProduct = document.querySelector('.embla--product');
-if (emblaNodeProduct) {
-  console.log('Root Node for Product Slider is: ', emblaNodeProduct);
+// const emblaNodeProduct = document.querySelector('.embla--product');
+// if (emblaNodeProduct) {
+//   console.log('Root Node for Product Slider is: ', emblaNodeProduct);
   
-  const viewportNodeProduct = emblaNodeProduct.querySelector('.embla__viewport');
-  const thumbnails = document.querySelectorAll('.embla-thumbnail');
+//   const viewportNodeProduct = emblaNodeProduct.querySelector('.embla__viewport');
+//   const thumbnails = document.querySelectorAll('.embla-thumbnail');
 
-  const emblaApiProduct = EmblaCarousel(viewportNodeProduct, {
-    loop: true,  // Зацикливаем карусель
-    autoplay: false,  // Отключаем автопрокрутку для теста
-    speed: 5,  // Скорость анимации
-  });
+//   const emblaApiProduct = EmblaCarousel(viewportNodeProduct, {
+//     loop: true,  // Зацикливаем карусель
+//     autoplay: false,  // Отключаем автопрокрутку для теста
+//     speed: 5,  // Скорость анимации
+//   });
 
-  // Проверка на миниатюры
-  if (thumbnails.length === 0) {
-    console.error('Не найдены элементы миниатюр');
+//   // Проверка на миниатюры
+//   if (thumbnails.length === 0) {
+//     console.error('Не найдены элементы миниатюр');
+//   } else {
+//     // Обработчик клика по миниатюре
+//     thumbnails.forEach((thumbnail, index) => {
+//       thumbnail.addEventListener('click', () => {
+//         console.log(`Миниатюра нажата: ${index}`);
+//         emblaApiProduct.scrollTo(index);  // Переход к слайду при клике на миниатюру
+//         updateThumbnailActiveClass(index);  // Обновление активного состояния миниатюры
+//       });
+//     });
+
+//     // Функция для обновления активного состояния миниатюр
+//     function updateThumbnailActiveClass(index) {
+//       thumbnails.forEach((thumb, i) => {
+//         if (i === index) {
+//           thumb.classList.add('active');  // Добавляем класс для активной миниатюры
+//         } else {
+//           thumb.classList.remove('active');  // Убираем класс с неактивных миниатюр
+//         }
+//       });
+//     }
+
+//     // Синхронизация слайдера с миниатюрами
+//     emblaApiProduct.on('select', () => {
+//       const selectedIndex = emblaApiProduct.selectedScrollSnap();
+//       console.log(`Слайд переключен на индекс: ${selectedIndex}`);
+//       updateThumbnailActiveClass(selectedIndex);  // Обновляем миниатюры, когда слайдер двигается
+//     });
+
+//     // Изначальная установка активной миниатюры
+//     updateThumbnailActiveClass(0);
+//   }
+// } else {
+//   console.error("Root node for product slider is not found");
+// }
+
+
+
+// // Embla--product-slider
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const emblaNodeProduct = document.querySelector('.embla--product');
+  
+//   if (emblaNodeProduct) {
+//     console.log('Root Node for Product Slider is: ', emblaNodeProduct);
+    
+//     const viewportNodeProduct = emblaNodeProduct.querySelector('.embla__viewport');
+//     const thumbnails = document.querySelectorAll('.embla-thumbnail');
+//     const prevBtnNode = document.querySelector('.product__photo-inner .embla__button--prev');
+//     const nextBtnNode = document.querySelector('.product__photo-inner .embla__button--next');
+    
+//     // Проверка наличия кнопок prev и next
+//     if (!prevBtnNode || !nextBtnNode) {
+//       console.error('Не найдены кнопки prev или next');
+//       return; // Если кнопки не найдены, прекращаем выполнение
+//     }
+    
+//     const emblaApiProduct = EmblaCarousel(viewportNodeProduct, {
+//       loop: true,
+//       autoplay: false,
+//       speed: 5
+//     });
+
+//     // Функция для обновления активного состояния миниатюр
+//     const updateThumbnailActiveClass = (index) => {
+//       thumbnails.forEach((thumb, i) => {
+//         if (i === index) {
+//           thumb.classList.add('active');
+//         } else {
+//           thumb.classList.remove('active');
+//         }
+//       });
+//     };
+
+//     // Обработчик клика по миниатюре
+//     thumbnails.forEach((thumbnail, index) => {
+//       thumbnail.addEventListener('click', () => {
+//         emblaApiProduct.scrollTo(index);
+//         updateThumbnailActiveClass(index);
+//       });
+//     });
+
+//     emblaApiProduct.on('select', () => {
+//       const selectedIndex = emblaApiProduct.selectedScrollSnap();
+//       updateThumbnailActiveClass(selectedIndex);
+//     });
+
+//     updateThumbnailActiveClass(0);
+
+//     // Обработчики для кнопок prev и next
+//     prevBtnNode.addEventListener('click', () => {
+//       emblaApiProduct.scrollPrev();
+//     });
+
+//     nextBtnNode.addEventListener('click', () => {
+//       emblaApiProduct.scrollNext();
+//     });
+
+//   } else {
+//     console.error('Root node for product slider is not found');
+//   }
+// });
+
+
+// Embla--product-slider
+
+document.addEventListener('DOMContentLoaded', function() {
+  const emblaNodeProduct = document.querySelector('.embla--product');
+
+  if (emblaNodeProduct) {
+      console.log('Root Node for Product Slider is: ', emblaNodeProduct);
+
+      const viewportNodeProduct = emblaNodeProduct.querySelector('.embla__viewport');
+      const sliderControls = document.querySelector('.product__photo-inner .embla__controls');  // Исправленный выбор кнопки prev
+      const prevBtnNode = sliderControls.querySelector('.embla__button--prev');  // Исправленный выбор кнопки prev
+      const nextBtnNode = sliderControls.querySelector('.embla__button--next');  // Исправленный выбор кнопки next
+      const thumbnails = document.querySelectorAll('.embla-thumbnail');
+
+      const emblaApiProduct = EmblaCarousel(viewportNodeProduct, {
+          loop: true,  // Зацикливаем карусель
+          autoplay: false,  // Отключаем автопрокрутку
+          speed: 5,  // Скорость анимации
+      });
+
+      // Проверка на миниатюры
+      if (thumbnails.length === 0) {
+          console.error('Не найдены элементы миниатюр');
+      } else {
+          const updateThumbnailActiveClass = (index) => {
+              thumbnails.forEach((thumb, i) => {
+                  if (i === index) {
+                      thumb.classList.add('active');
+                  } else {
+                      thumb.classList.remove('active');
+                  }
+              });
+          };
+
+          // Обработчик клика по миниатюре
+          thumbnails.forEach((thumbnail, index) => {
+              thumbnail.addEventListener('click', () => {
+                  emblaApiProduct.scrollTo(index);
+                  updateThumbnailActiveClass(index);
+              });
+          });
+
+          // Синхронизация слайдера с миниатюрами
+          emblaApiProduct.on('select', () => {
+              const selectedIndex = emblaApiProduct.selectedScrollSnap();
+              console.log(`Слайд переключен на индекс: ${selectedIndex}`);
+              updateThumbnailActiveClass(selectedIndex);  // Обновляем миниатюры
+          });
+
+          // Изначальная установка активной миниатюры
+          updateThumbnailActiveClass(0);
+      }
+
+      // Обработчики для кнопок prev и next
+      prevBtnNode.addEventListener('click', function() {
+          emblaApiProduct.scrollPrev();
+      });
+
+      nextBtnNode.addEventListener('click', function() {
+          emblaApiProduct.scrollNext();
+      });
+
+      // Отслеживаем события перемещения, чтобы избежать лишних анимаций
+      emblaApiProduct.on('select', function() {
+          const currentIndex = emblaApiProduct.selectedScrollSnap();
+          const totalSlides = emblaApiProduct.slideNodes().length;
+
+          if (currentIndex === 0) {
+              prevBtnNode.setAttribute('disabled', 'true');  // Отключаем кнопку prev на первом слайде
+          } else {
+              prevBtnNode.removeAttribute('disabled');
+          }
+
+          if (currentIndex === totalSlides - 1) {
+              nextBtnNode.setAttribute('disabled', 'true');  // Отключаем кнопку next на последнем слайде
+          } else {
+              nextBtnNode.removeAttribute('disabled');
+          }
+      });
+
   } else {
-    // Обработчик клика по миниатюре
-    thumbnails.forEach((thumbnail, index) => {
-      thumbnail.addEventListener('click', () => {
-        console.log(`Миниатюра нажата: ${index}`);
-        emblaApiProduct.scrollTo(index);  // Переход к слайду при клике на миниатюру
-        updateThumbnailActiveClass(index);  // Обновление активного состояния миниатюры
-      });
-    });
-
-    // Функция для обновления активного состояния миниатюр
-    function updateThumbnailActiveClass(index) {
-      thumbnails.forEach((thumb, i) => {
-        if (i === index) {
-          thumb.classList.add('active');  // Добавляем класс для активной миниатюры
-        } else {
-          thumb.classList.remove('active');  // Убираем класс с неактивных миниатюр
-        }
-      });
-    }
-
-    // Синхронизация слайдера с миниатюрами
-    emblaApiProduct.on('select', () => {
-      const selectedIndex = emblaApiProduct.selectedScrollSnap();
-      console.log(`Слайд переключен на индекс: ${selectedIndex}`);
-      updateThumbnailActiveClass(selectedIndex);  // Обновляем миниатюры, когда слайдер двигается
-    });
-
-    // Изначальная установка активной миниатюры
-    updateThumbnailActiveClass(0);
+      console.error('Root node for product slider is not found');
   }
-} else {
-  console.error("Root node for product slider is not found");
-}
+});
