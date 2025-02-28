@@ -42,6 +42,13 @@
         display: flex;
         flex-direction: column;
     }
+    
+    &__sub-item.row {
+        width: 110px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
     &__item--descr  {
         margin-left: 20px;
