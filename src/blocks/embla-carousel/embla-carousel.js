@@ -380,23 +380,23 @@ emblaApiZero.on('destroy', removePrevNextBtnsClickHandlersZero)
 
 document.addEventListener('DOMContentLoaded', function() {
   const emblaNodeProduct = document.querySelector('.embla--product');
-
+  
   if (emblaNodeProduct) {
-      console.log('Root Node for Product Slider is: ', emblaNodeProduct);
-
       const viewportNodeProduct = emblaNodeProduct.querySelector('.embla__viewport');
-      const sliderControls = document.querySelector('.product__photo-inner .embla__controls');  // Исправленный выбор кнопки prev
-      const prevBtnNode = sliderControls.querySelector('.embla__button--prev');  // Исправленный выбор кнопки prev
-      const nextBtnNode = sliderControls.querySelector('.embla__button--next');  // Исправленный выбор кнопки next
+      const sliderControls = document.querySelector('.product__photo-inner .embla__controls');
+      const prevBtnNode = sliderControls.querySelector('.embla__button--prev');
+      const nextBtnNode = sliderControls.querySelector('.embla__button--next');
+      const thumbnailsContainer = document.querySelector('.embla-thumbnails');
       const thumbnails = document.querySelectorAll('.embla-thumbnail');
 
+      // Инициализация Embla
       const emblaApiProduct = EmblaCarousel(viewportNodeProduct, {
-          loop: true,  // Зацикливаем карусель
-          autoplay: false,  // Отключаем автопрокрутку
-          speed: 5,  // Скорость анимации
+          loop: true,
+          autoplay: false,
+          speed: 5,
       });
 
-      // Проверка на миниатюры
+      // Проверяем на наличие миниатюр
       if (thumbnails.length === 0) {
           console.error('Не найдены элементы миниатюр');
       } else {
@@ -421,41 +421,67 @@ document.addEventListener('DOMContentLoaded', function() {
           // Синхронизация слайдера с миниатюрами
           emblaApiProduct.on('select', () => {
               const selectedIndex = emblaApiProduct.selectedScrollSnap();
-              console.log(`Слайд переключен на индекс: ${selectedIndex}`);
-              updateThumbnailActiveClass(selectedIndex);  // Обновляем миниатюры
+              updateThumbnailActiveClass(selectedIndex);
+
+              // Прокручиваем контейнер миниатюр
+              const thumbnailWidth = thumbnails[0].offsetWidth + 10; // Учитываем gap между миниатюрами
+              thumbnailsContainer.scrollTo({
+                  left: selectedIndex * thumbnailWidth,
+                  behavior: 'smooth',
+              });
           });
 
-          // Изначальная установка активной миниатюры
+          // Изначальная установка активной миниатюры на первый слайд
           updateThumbnailActiveClass(0);
+          const initialScrollPosition = 0; // Начальная позиция скроллинга миниатюр
+          thumbnailsContainer.scrollTo({
+              left: initialScrollPosition,
+              behavior: 'smooth',
+          });
+
+          // Блокировка кнопки prev, если мы на первом слайде
+          const blockPrevButtonIfNeeded = () => {
+              const currentIndex = emblaApiProduct.selectedScrollSnap();
+              const totalSlides = emblaApiProduct.slideNodes().length;
+
+              if (currentIndex === 0) {
+                  prevBtnNode.setAttribute('disabled', 'true');
+              } else {
+                  prevBtnNode.removeAttribute('disabled');
+              }
+
+              if (currentIndex === totalSlides - 1) {
+                  nextBtnNode.setAttribute('disabled', 'true');
+              } else {
+                  nextBtnNode.removeAttribute('disabled');
+              }
+          };
+
+          // Блокировка кнопки prev и next при инициализации
+          blockPrevButtonIfNeeded();
+
+          // Прокрутка миниатюр на одну ширину при клике на prev/next
+          const thumbnailWidth = thumbnails[0].offsetWidth + 10; // Учитываем gap между миниатюрами
+
+          prevBtnNode.addEventListener('click', function() {
+              const currentIndex = emblaApiProduct.selectedScrollSnap();
+              emblaApiProduct.scrollPrev(); // Переключаем слайд
+              updateThumbnailActiveClass(currentIndex === 0 ? 0 : currentIndex - 1); // Обновляем активную миниатюру
+              blockPrevButtonIfNeeded(); // Проверяем, нужно ли блокировать prev
+          });
+
+          nextBtnNode.addEventListener('click', function() {
+              const currentIndex = emblaApiProduct.selectedScrollSnap();
+              emblaApiProduct.scrollNext(); // Переключаем слайд
+              updateThumbnailActiveClass(currentIndex === thumbnails.length - 1 ? currentIndex : currentIndex + 1); // Обновляем активную миниатюру
+              blockPrevButtonIfNeeded(); // Проверяем, нужно ли блокировать prev
+          });
+
+          // Отслеживаем события перемещения, чтобы избежать лишних анимаций
+          emblaApiProduct.on('select', function() {
+              blockPrevButtonIfNeeded(); // Проверяем, нужно ли блокировать prev
+          });
       }
-
-      // Обработчики для кнопок prev и next
-      prevBtnNode.addEventListener('click', function() {
-          emblaApiProduct.scrollPrev();
-      });
-
-      nextBtnNode.addEventListener('click', function() {
-          emblaApiProduct.scrollNext();
-      });
-
-      // Отслеживаем события перемещения, чтобы избежать лишних анимаций
-      emblaApiProduct.on('select', function() {
-          const currentIndex = emblaApiProduct.selectedScrollSnap();
-          const totalSlides = emblaApiProduct.slideNodes().length;
-
-          if (currentIndex === 0) {
-              prevBtnNode.setAttribute('disabled', 'true');  // Отключаем кнопку prev на первом слайде
-          } else {
-              prevBtnNode.removeAttribute('disabled');
-          }
-
-          if (currentIndex === totalSlides - 1) {
-              nextBtnNode.setAttribute('disabled', 'true');  // Отключаем кнопку next на последнем слайде
-          } else {
-              nextBtnNode.removeAttribute('disabled');
-          }
-      });
-
   } else {
       console.error('Root node for product slider is not found');
   }
