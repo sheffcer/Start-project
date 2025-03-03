@@ -37,7 +37,7 @@ $field-padding-horizontal:    0.7em !default;
     border-bottom: 1px solid $border-color;
 
     &:not(:first-child) {
-      border-left: 1px solid $border-color;
+      // border-left: 1px solid $border-color;
     }
   }
 
@@ -54,4 +54,22 @@ $field-padding-horizontal:    0.7em !default;
   &__footer {
     background-color: $gray-lightest;
   }
+
+  &--characteristics {
+    border: none;
+
+    tr {
+      padding: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    td {
+      background-color: $white;
+      border: none;
+      border-left: none;
+    }
+  }
+
+
 }

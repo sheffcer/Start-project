@@ -114,6 +114,10 @@ $field-padding-horizontal:    0.7em !default;
     display: none;
     margin-bottom: 30px;
 
+  //   [id^="tab"]:not([id="tab00"]):not([id="tab01"]) {
+  //     background-color: var(--background-tab-color); /* Замените на нужный вам цвет */
+  // }
+
     .js & {
       display: none;
     }
@@ -129,9 +133,12 @@ $field-padding-horizontal:    0.7em !default;
   &__content-wrap {
     margin-left: -15px;
     margin-right: -15px;
+    margin-bottom: 30px;
     padding: 20px;
     border: 1px solid var(--light-text-color);
     border-radius: 5px;
+    background-color: var(--background-tab-color); /* Замените на нужный вам цвет */
+    
   }
 
   &__content-title {
@@ -172,3 +179,6 @@ $field-padding-horizontal:    0.7em !default;
 
 }
 
+// [id^="tab"]:not([id="tab00"]):not([id="tab01"]) {
+//   background-color: var(--background-tab-color); /* Замените на нужный вам цвет */
+// }
