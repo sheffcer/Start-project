@@ -57,11 +57,12 @@ $field-padding-horizontal:    0.7em !default;
 
   &--characteristics {
     border: none;
+    
 
     tr {
-      padding: 3px;
-      display: flex;
-      flex-direction: column;
+      // padding: 3px;
+      // display: flex;
+      // flex-direction: column;
     }
 
     td {
@@ -71,5 +72,32 @@ $field-padding-horizontal:    0.7em !default;
     }
   }
 
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    @media(min-width: 992px) {
+      flex-direction: row;
+    }
+    
+  }
+
+  &__row td:last-child {
+    @media(min-width: 992px) {
+      flex: 2;
+    }
+  }
+
+
+  &__row td:first-child {
+    @media(min-width: 992px) {
+      flex: 1;
+    }
+  }
 
 }
