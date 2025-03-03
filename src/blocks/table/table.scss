@@ -100,4 +100,17 @@ $field-padding-horizontal:    0.7em !default;
     }
   }
 
+  &__features-list {
+    list-style: none;
+    padding-left: 20px; /* Отступ слева для маркера */
+  
+  }
+  
+  &__features-item {
+    padding: 15px 16px;
+    background: white;
+    margin-bottom: 3px;
+  
+  }
+
 }

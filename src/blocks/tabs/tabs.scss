@@ -142,6 +142,8 @@ $field-padding-horizontal:    0.7em !default;
   }
 
   &__content-title {
+    margin: 0;
+    margin-bottom: 20px;
     color: var(--secondary-color);
     font-family: $font-family--secondary;
     font-size: 24px;
@@ -175,6 +177,61 @@ $field-padding-horizontal:    0.7em !default;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+  }
+
+  &__features-list {
+    list-style: none;
+    padding-left: 0; /* Отступ слева для маркера */
+  
+  }
+  
+  &__features-item {
+    position: relative;
+    padding: 15px 16px;
+    padding-left: 30px;
+    background: white;
+    margin-bottom: 3px;
+    color: $black;
+    font-family: $font-family;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  
+  }
+
+  &__features-item::before {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    content: '';
+    display: inline-block;
+    width: 8px; /* Размер маркера */
+    height: 8px;
+    background-color: var(--secondary-color); /* Цвет маркера */
+    border-radius: 50%; /* Сделать маркер круглым */
+    margin-right: 10px;
+  }
+
+  &__composition-list {
+    display: flex;
+    gap: 14px;
+    list-style: none;
+    padding-left: 0;
+  
+  }
+
+  &__composition-item {
+    padding: 20px;
+    background: white;
+    margin-bottom: 3px;
+    color: $black;
+    font-family: $font-family;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  
   }
 
 }
