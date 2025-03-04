@@ -28,7 +28,7 @@
         </div>
         <div class="off-canvas__dropdown dropdown">
           <a id="dropdown-demo-1" href="#" class="btn btn--off-canvas dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <img src="/img/catalog-icon.svg" alt="">
+            <img src="img/catalog-icon.svg" alt="">
             <span>Каталог</span>
           </a>
           <ul class="dropdown__menu  menu" aria-labelledby="dropdown-demo-1">
@@ -43,7 +43,7 @@
         <label class="off-canvas__search field-text">
           <span class="field-text__input-wrap">
            <input class="field-text__input" type="search" placeholder="Шукати серед 25 000 товарів">
-           <button class="btn--search"><span>Пошук</span> <img src="/img/search-icon.svg" alt=""></button>
+           <button class="btn--search"><span>Пошук</span> <img src="img/search-icon.svg" alt=""></button>
            </span>                  
      </label>
      <div class="off-canvas__user-block">
@@ -120,29 +120,67 @@
             <div class="page-header__burger burger" data-toggle="off-canvas"><span></span></div>
             <a href="/" class="page-header__logo logo">
               <picture class="page-header__img">
-                <source media="(max-width: 767px)" srcset="/img/logo-mobile.svg">                 
-                <source media="(min-width: 768px)" srcset="/img/logo.svg">  
-                <img src="/img/logo.svg" alt="">
+                <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">                 
+                <source media="(min-width: 768px)" srcset="img/logo.svg">  
+                <img src="img/logo.svg" alt="">
               </picture>
             </a>
             <div class="page-header__catalog dropdown">
-                <a id="dropdown-demo-1" href="#" class="btn dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  <img src="/img/catalog-icon.svg" alt="">
-                  <span>Каталог</span>
+              <a href="#" class="btn dropdown__toggler" role="button"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="img/catalog-icon.svg" alt="">
+                <span>Каталог</span>
+              </a>
+              <!-- <a id="dropdown-demo-1" href="#" class="btn dropdown__toggler" data-toggle="dropdown" role="button"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="img/catalog-icon.svg" alt="">
+                <span>Каталог</span>''
+              </a> -->
+              <ul class="menu" aria-labelledby="dropdown-demo-1">
+                <li class="menu__item"><a class="menu__link" href="#">Лазерні картриджи</a></li>
+                <li class="menu__item  menu__item--separator"><a class="menu__link" href="#">...</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Чорнила</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Фотопапір</a>
+                <li class="menu__item">
+                <a class="menu__link" href="#">Аксессуари</a>
+                  <div class="menu__lvl  menu__lvl--2">
+                    <ul class="menu__list  menu__list--lvl-2">
+                      <li class="menu__item  menu__item--lvl-2">
+                        <a href="" class="menu__link  menu__link--lvl-2">
+                          Контакты
+                        </a>
+                      </li>
+                      <li class="menu__item  menu__item--lvl-2">
+                        <a href="" class="menu__link  menu__link--lvl-2">
+                          Услуги
+                        </a>
+                      </li>
+                      <li class="menu__item  menu__item--lvl-2">
+                        <a href="" class="menu__link  menu__link--lvl-2">
+                          Повербанки
+                        </a>
+                      </li>
+                      <li class="menu__item  menu__item--lvl-2">
+                        <a href="" class="menu__link  menu__link--lvl-2">
+                          Чистячі засоби
+                        </a>
+                      </li>
+                      <li class="menu__item  menu__item--lvl-2">
+                        <a href="" class="menu__link  menu__link--lvl-2">
+                          Нові товари
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </a>
-                <ul class="dropdown__menu  menu" aria-labelledby="dropdown-demo-1">
-                  <li class="menu__item"><a class="menu__link" href="#">Лазерні картриджи</a></li>
-                  <li class="menu__item  menu__item--separator"><a class="menu__link" href="#">...</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#">Чорнила</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#">Фотопапір</a>
-                  <li class="menu__item"><a class="menu__link" href="#">Повербанки</a>
+              </li>
                 </li>
-                </ul>
+              </ul>
             </div>
             <label class="page-header__search field-text">
                  <span class="field-text__input-wrap">
                   <input class="field-text__input" type="search" placeholder="Шукати серед 25 000 товарів">
-                  <button class="btn btn--search"><span>Пошук</span> <img src="/img/search-icon.svg" alt=""></button>
+                  <button class="btn btn--search"><span>Пошук</span> <img src="img/search-icon.svg" alt=""></button>
                   </span>                  
             </label>
             <div class="page-header__toggler field-toggler">
@@ -172,16 +210,16 @@
               <div class="field-select__select-wrap">
                 <div class="main field-select__select">
                   <span class="field-select__selected">
-                    <img src="/img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
+                    <img src="img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
                   </span>
                 </div>
                 <div class="field-select__options">
                   <div class="field-select__option" data-value="UA">
-                    <img src="/img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
-                    <!-- <img src="/img/ок-icon.svg" alt="UA Flag" class="field-select__icon"> -->
+                    <img src="img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
+                    <!-- <img src="img/ок-icon.svg" alt="UA Flag" class="field-select__icon"> -->
                   </div>
                   <div class="field-select__option" data-value="EU">
-                    <img src="/img/eu-flag-icon.svg" alt="EU Flag" class="field-select__icon"> EU
+                    <img src="img/eu-flag-icon.svg" alt="EU Flag" class="field-select__icon"> EU
                   </div>
                   <!-- Добавьте другие опции по мере необходимости -->
                 </div>
@@ -222,10 +260,10 @@
               </label>
 
               <div class="page-header__login">
-                <img src="/img/login.svg" alt="" class="user-blcok__img">
+                <img src="img/login.svg" alt="" class="user-blcok__img">
               </div>
               <div class="page-header__cart cart">
-                <img src="/img/cart.svg" alt="" class="cart__img">
+                <img src="img/cart.svg" alt="" class="cart__img">
                 <span class="page-header__cart-count">12</span>
               </div>
       </header>
@@ -238,7 +276,7 @@
                 <div class="embla__slide">
                   <a class="embla__slide__link" href="">
                     <div class="embla__slide__number">
-                      <img class="embla__slide__img" src="/img/case.png" alt="">
+                      <img class="embla__slide__img" src="img/case.png" alt="">
                     </div>
                     <div class="embla__slide__title">Чохли</div>
                   </a>
@@ -246,7 +284,7 @@
                 <div class="embla__slide">
                   <a class="embla__slide__link" href="">
                     <div class="embla__slide__number">
-                      <img class="embla__slide__img" src="/img/cartridge.png" alt="">
+                      <img class="embla__slide__img" src="img/cartridge.png" alt="">
                     </div>
                     <div class="embla__slide__title">Лазерні картриджі</div>
                   </a>
@@ -254,7 +292,7 @@
                 <div class="embla__slide">
                   <a class="embla__slide__link" href="">
                     <div class="embla__slide__number">
-                      <img class="embla__slide__img" src="/img/paper.png" alt="">
+                      <img class="embla__slide__img" src="img/paper.png" alt="">
                     </div>
                     <div class="embla__slide__title">Фотопапір</div>
                   </a>
@@ -262,7 +300,7 @@
                 <div class="embla__slide">
                   <a class="embla__slide__link" href="">
                     <div class="embla__slide__number">
-                      <img class="embla__slide__img" src="/img/charge.png" alt="">
+                      <img class="embla__slide__img" src="img/charge.png" alt="">
                     </div>
                     <div class="embla__slide__title">Зарядні пристро</div>
                   </a>
@@ -270,7 +308,7 @@
                 <div class="embla__slide">
                   <a class="embla__slide__link" href="">
                     <div class="embla__slide__number">
-                      <img class="embla__slide__img" src="/img/headphones.png" alt="">
+                      <img class="embla__slide__img" src="img/headphones.png" alt="">
                     </div>
                     <div class="embla__slide__title">Навушники</div>
                   </a>
@@ -278,7 +316,7 @@
                 <div class="embla__slide">
                   <a class="embla__slide__link" href="">
                     <div class="embla__slide__number">
-                      <img class="embla__slide__img" src="/img/powerbank.png" alt="">
+                      <img class="embla__slide__img" src="img/powerbank.png" alt="">
                     </div>
                     <div class="embla__slide__title">Повербанки</div>
                   </a>
@@ -286,7 +324,7 @@
                 <div class="embla__slide">
                   <a class="embla__slide__link" href="">
                     <div class="embla__slide__number">
-                      <img class="embla__slide__img" src="/img/battery.png" alt="">
+                      <img class="embla__slide__img" src="img/battery.png" alt="">
                     </div>
                     <div class="embla__slide__title">Батарейки</div>
                   </a>
@@ -294,7 +332,7 @@
                 <div class="embla__slide">
                   <a class="embla__slide__link" href="">
                     <div class="embla__slide__number">
-                      <img class="embla__slide__img" src="/img/bag.png" alt="">
+                      <img class="embla__slide__img" src="img/bag.png" alt="">
                     </div>
                     <div class="embla__slide__title">Сумки та рюкзаки</div>
                   </a>
@@ -302,7 +340,7 @@
                 <div class="embla__slide">
                   <a class="embla__slide__link" href="">
                     <div class="embla__slide__number">
-                      <img class="embla__slide__img" src="/img/spare.png" alt="">
+                      <img class="embla__slide__img" src="img/spare.png" alt="">
                     </div>
                     <div class="embla__slide__title">ЗІП для друку</div>
                   </a>
@@ -310,7 +348,7 @@
                 <div class="embla__slide">
                   <a class="embla__slide__link" href="">
                     <div class="embla__slide__number">
-                      <img class="embla__slide__img" src="/img/ink.png" alt="">
+                      <img class="embla__slide__img" src="img/ink.png" alt="">
                     </div>
                     <div class="embla__slide__title">Чорнило</div>
                   </a>
@@ -318,7 +356,7 @@
                 <div class="embla__slide">
                   <a class="embla__slide__link" href="">
                     <div class="embla__slide__number">
-                      <img class="embla__slide__img" src="/img/glass.png" alt="">
+                      <img class="embla__slide__img" src="img/glass.png" alt="">
                     </div>
                     <div class="embla__slide__title">Захисне скло</div>
                   </a>
@@ -326,7 +364,7 @@
                 <div class="embla__slide">
                   <a class="embla__slide__link" href="">
                     <div class="embla__slide__number">
-                      <img class="embla__slide__img" src="/img/cleaner.png" alt="">
+                      <img class="embla__slide__img" src="img/cleaner.png" alt="">
                     </div>
                     <div class="embla__slide__title">Чистилки</div>
                   </a>
@@ -334,7 +372,7 @@
                 <div class="embla__slide">
                   <a class="embla__slide__link" href="">
                     <div class="embla__slide__number">
-                      <img class="embla__slide__img" src="/img/decoration.png" alt="">
+                      <img class="embla__slide__img" src="img/decoration.png" alt="">
                     </div>
                     <div class="embla__slide__title">Декор</div>
                   </a>
@@ -342,7 +380,7 @@
                 <div class="embla__slide">
                   <a class="embla__slide__link" href="">
                     <div class="embla__slide__number">
-                      <img class="embla__slide__img" src="/img/paper.png" alt="">
+                      <img class="embla__slide__img" src="img/paper.png" alt="">
                     </div>
                     <div class="embla__slide__title">Фотопапір</div>
                   </a>
@@ -350,7 +388,7 @@
                 <div class="embla__slide">
                   <a class="embla__slide__link" href="">
                     <div class="embla__slide__number">
-                      <img class="embla__slide__img" src="/img/ink.png" alt="">
+                      <img class="embla__slide__img" src="img/ink.png" alt="">
                     </div>
                     <div class="embla__slide__title">Чорнило</div>
                   </a>
@@ -358,7 +396,7 @@
                 <div class="embla__slide">
                   <a class="embla__slide__link" href="">
                     <div class="embla__slide__number">
-                      <img class="embla__slide__img" src="/img/glass.png" alt="">
+                      <img class="embla__slide__img" src="img/glass.png" alt="">
                     </div>
                     <div class="embla__slide__title">Захисне скло</div>
                   </a>
@@ -366,7 +404,7 @@
                 <div class="embla__slide">
                   <a class="embla__slide__link" href="">
                     <div class="embla__slide__number">
-                      <img class="embla__slide__img" src="/img/cleaner.png" alt="">
+                      <img class="embla__slide__img" src="img/cleaner.png" alt="">
                     </div>
                     <div class="embla__slide__title">Чистилки</div>
                   </a>
@@ -404,26 +442,26 @@
               <div class="embla__container">
                 <div class="embla__slide"> 
                   <picture class="main-slider__img">
-                    <source media="(max-width: 767px)" srcset="/img/main-slider-01-mobile.jpg">                 
-                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="/img/main-slider-01-tablet.jpg">
-                    <source media="(min-width: 992px)" srcset="/img/main-slider-01-desktop.jpg">  
-                    <img src="/img/main-slider-01.jpg" alt="">
+                    <source media="(max-width: 767px)" srcset="img/main-slider-01-mobile.jpg">                 
+                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="img/main-slider-01-tablet.jpg">
+                    <source media="(min-width: 992px)" srcset="img/main-slider-01-desktop.jpg">  
+                    <img src="img/main-slider-01.jpg" alt="">
                   </picture>
                 </div>
                 <div class="embla__slide"> 
                   <picture class="main-slider__img">
-                    <source media="(max-width: 767px)" srcset="/img/main-slider-01-mobile.jpg">                 
-                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="/img/main-slider-01-tablet.jpg">
-                    <source media="(min-width: 992px)" srcset="/img/main-slider-01-desktop.jpg">  
-                    <img src="/img/main-slider-01.jpg" alt="">
+                    <source media="(max-width: 767px)" srcset="img/main-slider-01-mobile.jpg">                 
+                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="img/main-slider-01-tablet.jpg">
+                    <source media="(min-width: 992px)" srcset="img/main-slider-01-desktop.jpg">  
+                    <img src="img/main-slider-01.jpg" alt="">
                     </picture>
                 </div>
                   <div class="embla__slide"> 
                     <picture class="main-slider__img">
-                      <source media="(max-width: 767px)" srcset="/img/main-slider-01-mobile.jpg">                 
-                      <source media="(min-width: 768px) and (max-width: 991px)" srcset="/img/main-slider-01-tablet.jpg">
-                      <source media="(min-width: 992px)" srcset="/img/main-slider-01-desktop.jpg">  
-                      <img src="/img/main-slider-01.jpg" alt="">
+                      <source media="(max-width: 767px)" srcset="img/main-slider-01-mobile.jpg">                 
+                      <source media="(min-width: 768px) and (max-width: 991px)" srcset="img/main-slider-01-tablet.jpg">
+                      <source media="(min-width: 992px)" srcset="img/main-slider-01-desktop.jpg">  
+                      <img src="img/main-slider-01.jpg" alt="">
                     </picture>
                   </div>
               </div>
@@ -439,30 +477,30 @@
               <div class="embla__container">
                 <div class="embla__slide">
                     <picture class="main-slider__img">
-                      <source media="(min-width: 992px)" srcset="/img/sub-slider-01-desktop.jpg" sizes="100vw">
-                      <source media="(min-width: 768px)" srcset="/img/sub-slider-01-tablet.jpg" sizes="100vw">  
-                      <img src="/img/sub-slider-01.jpg" alt="">
+                      <source media="(min-width: 992px)" srcset="img/sub-slider-01-desktop.jpg" sizes="100vw">
+                      <source media="(min-width: 768px)" srcset="img/sub-slider-01-tablet.jpg" sizes="100vw">  
+                      <img src="img/sub-slider-01.jpg" alt="">
                     </picture>
                   </div>
                   <div class="embla__slide">
                     <picture class="main-slider__img">
-                      <source media="(min-width: 992px)" srcset="/img/sub-slider-02-desktop.jpg" sizes="100vw">
-                      <source media="(min-width: 768px)" srcset="/img/sub-slider-02-tablet.jpg" sizes="100vw">  
-                    <img src="/img/sub-slider-02.jpg" alt="">
+                      <source media="(min-width: 992px)" srcset="img/sub-slider-02-desktop.jpg" sizes="100vw">
+                      <source media="(min-width: 768px)" srcset="img/sub-slider-02-tablet.jpg" sizes="100vw">  
+                    <img src="img/sub-slider-02.jpg" alt="">
                   </picture>
                   </div>
                   <!-- <div class="embla__slide">
                     <picture class="main-slider__img">
-                      <source media="(min-width: 992px)" srcset="/img/sub-slider-02-desktop.jpg" sizes="100vw">
-                      <source media="(min-width: 768px)" srcset="/img/sub-slider-02-tablet.jpg" sizes="100vw">  
-                    <img src="/img/sub-slider-02.jpg" alt="">
+                      <source media="(min-width: 992px)" srcset="img/sub-slider-02-desktop.jpg" sizes="100vw">
+                      <source media="(min-width: 768px)" srcset="img/sub-slider-02-tablet.jpg" sizes="100vw">  
+                    <img src="img/sub-slider-02.jpg" alt="">
                   </picture>
                   </div>
                   <div class="embla__slide">
                     <picture class="main-slider__img">
-                      <source media="(min-width: 992px)" srcset="/img/sub-slider-01-desktop.jpg" sizes="100vw">
-                      <source media="(min-width: 768px)" srcset="/img/sub-slider-01-tablet.jpg" sizes="100vw">  
-                      <img src="/img/sub-slider-01.jpg" alt="">
+                      <source media="(min-width: 992px)" srcset="img/sub-slider-01-desktop.jpg" sizes="100vw">
+                      <source media="(min-width: 768px)" srcset="img/sub-slider-01-tablet.jpg" sizes="100vw">  
+                      <img src="img/sub-slider-01.jpg" alt="">
                     </picture>
                   </div> -->
                 </div>
@@ -478,37 +516,37 @@
                 <div class="embla__container">
                   <div class="embla__slide">
                     <div class="embla__slide__number">
-                      <img  class="embla__slide__img" src="/img/supplies.png" alt="">
+                      <img  class="embla__slide__img" src="img/supplies.png" alt="">
                       <div class="embla__slide__title">Витратні матеріали</div>
                     </div>                   
                   </div>
                   <div class="embla__slide">
                     <div class="embla__slide__number">
-                      <img  class="embla__slide__img" src="/img/accessory.png" alt="">
+                      <img  class="embla__slide__img" src="img/accessory.png" alt="">
                       <div class="embla__slide__title">Аксессуари</div>
                   </div>
                   </div>
                   <div class="embla__slide">
                     <div class="embla__slide__number">
-                      <img  class="embla__slide__img" src="/img/smart-home.png" alt="">
+                      <img  class="embla__slide__img" src="img/smart-home.png" alt="">
                       <div class="embla__slide__title">Розумний дім</div>
                   </div>
                   </div>
                   <div class="embla__slide">
                     <div class="embla__slide__number">
-                      <img  class="embla__slide__img" src="/img/decoration.png" alt="">
+                      <img  class="embla__slide__img" src="img/decoration.png" alt="">
                       <div class="embla__slide__title">Декор</div>
                     </div>
                   </div>
                   <div class="embla__slide">
                     <div class="embla__slide__number">
-                      <img  class="embla__slide__img" src="/img/supplies.png" alt="">
+                      <img  class="embla__slide__img" src="img/supplies.png" alt="">
                       <div class="embla__slide__title">Витратні матеріали</div>
                     </div>                   
                   </div>
                   <div class="embla__slide">
                     <div class="embla__slide__number">
-                      <img  class="embla__slide__img" src="/img/accessory.png" alt="">
+                      <img  class="embla__slide__img" src="img/accessory.png" alt="">
                       <div class="embla__slide__title">Аксессуари</div>
                   </div>
                   </div>
@@ -555,7 +593,7 @@
                   <div class="card__price-block">
                     <p class="card__price">899&nbsp;₴</p>
                     <!-- <button class="card__buy">Купить</button> -->
-                    <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                    <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                   </div>
                 </div>
               
@@ -574,7 +612,7 @@
                   <div class="card__price-block">
                     <p class="card__price">2&nbsp;899₴</p>
                     <!-- <button class="card__buy">Купить</button> -->
-                    <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                    <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                   </div>
                 </div>
               
@@ -595,7 +633,7 @@
                   <div class="card__price-block">
                     <p class="card__price">859&nbsp;₴</p>
                     <!-- <button class="card__buy">Купить</button> -->
-                    <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                    <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                   </div>
                 </div>
               
@@ -616,7 +654,7 @@
                     <p class="card__price">2&nbsp;099₴</p>
                     <div class="card__procent">-15%</div> 
                     <!-- <button class="card__buy">Купить</button> -->
-                    <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                    <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                   </div>
                 </div>
               
@@ -637,7 +675,7 @@
                   <div class="card__price-block">
                     <p class="card__price">699&nbsp;₴</p>
                     <!-- <button class="card__buy">Купить</button> -->
-                    <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                    <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                   </div>
                 </div>
               
@@ -656,7 +694,7 @@
                   <div class="card__price-block">
                     <p class="card__price">999&nbsp;₴</p>
                     <!-- <button class="card__buy">Купить</button> -->
-                    <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                    <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                   </div>
                 </div>
               
@@ -685,7 +723,7 @@
                         <p class="card__price">41&nbsp;399₴</p>
                         <div class="card__procent">-10%</div> 
                         <!-- <button class="card__buy">Купить</button> -->
-                        <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                       </div>
                     </div>
                   </article>
@@ -698,7 +736,7 @@
                       <h3 class="card__title">Світлодіодна гірлянда-струна СolorWay LED 100 10м теплий колір 3AA Battery</h3>
                       <div class="card__price-block">
                         <p class="card__price">379&nbsp;₴</p>
-                        <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                       </div>
                     </div>
                   </article>
@@ -715,7 +753,7 @@
                       <div class="card__price-block">
                         <p class="card__price">1&nbsp;099₴</p>
                         <!-- <button class="card__buy">Купить</button> -->
-                        <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                       </div>
                     </div>
                   </article>              
@@ -731,7 +769,7 @@
                         <p class="card__price">1&nbsp;124₴</p>
                         <div class="card__procent">-25%</div> 
                         <!-- <button class="card__buy">Купить</button> -->
-                        <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                       </div>
                     </div>
                   
@@ -751,7 +789,7 @@
                       <div class="card__price-block">
                         <p class="card__price">899&nbsp;₴</p>
                         <!-- <button class="card__buy">Купить</button> -->
-                        <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                       </div>
                     </div>
                   </article>
@@ -764,7 +802,7 @@
                       <h3 class="card__title">Кабель Colorway Type-C - Type-C (transparent head) (PD E-Marker 100W) 5А 1.2м чорний</h3>
                       <div class="card__price-block">
                         <p class="card__price">359&nbsp;₴</p>
-                        <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                       </div>
                     </div>
                   </article>
@@ -979,7 +1017,7 @@
                         <p class="card__price">41&nbsp;399₴</p>
                         <div class="card__procent">-10%</div> 
                         <!-- <button class="card__buy">Купить</button> -->
-                        <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                       </div>
                     </div>
                   </article>
@@ -992,7 +1030,7 @@
                       <h3 class="card__title">Світлодіодна гірлянда-струна СolorWay LED 100 10м теплий колір 3AA Battery</h3>
                       <div class="card__price-block">
                         <p class="card__price">379&nbsp;₴</p>
-                        <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                       </div>
                     </div>
                   </article>
@@ -1009,7 +1047,7 @@
                       <div class="card__price-block">
                         <p class="card__price">1&nbsp;099₴</p>
                         <!-- <button class="card__buy">Купить</button> -->
-                        <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                       </div>
                     </div>
                   </article>              
@@ -1025,7 +1063,7 @@
                         <p class="card__price">1&nbsp;124₴</p>
                         <div class="card__procent">-25%</div> 
                         <!-- <button class="card__buy">Купить</button> -->
-                        <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                       </div>
                     </div>
                   
@@ -1045,7 +1083,7 @@
                       <div class="card__price-block">
                         <p class="card__price">899&nbsp;₴</p>
                         <!-- <button class="card__buy">Купить</button> -->
-                        <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                       </div>
                     </div>
                   </article>
@@ -1058,7 +1096,7 @@
                       <h3 class="card__title">Кабель Colorway Type-C - Type-C (transparent head) (PD E-Marker 100W) 5А 1.2м чорний</h3>
                       <div class="card__price-block">
                         <p class="card__price">359&nbsp;₴</p>
-                        <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                       </div>
                     </div>
                   </article>

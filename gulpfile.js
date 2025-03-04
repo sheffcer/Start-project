@@ -329,12 +329,21 @@ gulp.task('optimizeSvgFiles', () => {
       .pipe(render())
       .pipe(gulp.dest('dist/templates'));
   });
+ 
+  // gulp.task('deploy', function() {
+  //   var ghPages = require('gulp-gh-pages');
+  //   console.log('---------- Публикация содержимого ./dist/ на GH pages');
+  //   return gulp.src(dirs.buildPath + '**/*')
+  //     .pipe(ghPages());
+  // });
+  
   gulp.task('deploy', function() {
     var ghPages = require('gulp-gh-pages');
-    console.log('---------- Публикация содержимого ./build/ на GH pages');
-    return gulp.src(dirs.buildPath + '**/*')
-      .pipe(ghPages());
+    console.log('---------- Публикация содержимого ./dist/ на GH pages');
+    return gulp.src('dist/**/*') // Путь к файлам, которые вы хотите загрузить в gh-pages
+    .pipe(ghPages()); // Публикация на gh-pages
   });
+
   
   // Final deploy task: copy everything to the remote server
 //   gulp.task('finalDeploy', gulp.series('deploy', 'cleanupOldFiles', 'minifyHtml', 'minifyCss', 'optimizeSvgFiles', 'fonts', 'serveDist'));

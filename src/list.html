@@ -32,7 +32,7 @@
         <div class="off-canvas__dropdown dropdown">
           <a id="dropdown-demo-1" href="#" class="btn btn--off-canvas dropdown__toggler" data-toggle="dropdown"
             role="button" aria-haspopup="true" aria-expanded="false">
-            <img src="/img/catalog-icon.svg" alt="">
+            <img src="img/catalog-icon.svg" alt="">
             <span>Каталог</span>
           </a>
           <ul class="dropdown__menu  menu" aria-labelledby="dropdown-demo-1">
@@ -47,7 +47,7 @@
         <label class="off-canvas__search field-text">
           <span class="field-text__input-wrap">
             <input class="field-text__input" type="search" placeholder="Шукати серед 25 000 товарів">
-            <button class="btn--search"><span>Пошук</span> <img src="/img/search-icon.svg" alt=""></button>
+            <button class="btn--search"><span>Пошук</span> <img src="img/search-icon.svg" alt=""></button>
           </span>
         </label>
         <div class="off-canvas__user-block">
@@ -74,30 +74,67 @@
           <div class="page-header__burger burger" data-toggle="off-canvas"><span></span></div>
           <a href="/" class="page-header__logo logo">
             <picture class="page-header__img">
-              <source media="(max-width: 767px)" srcset="/img/logo-mobile.svg">
-              <source media="(min-width: 768px)" srcset="/img/logo.svg">
-              <img src="/img/logo.svg" alt="">
+              <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
+              <source media="(min-width: 768px)" srcset="img/logo.svg">
+              <img src="img/logo.svg" alt="">
             </picture>
           </a>
           <div class="page-header__catalog dropdown">
-            <a id="dropdown-demo-1" href="#" class="btn dropdown__toggler" data-toggle="dropdown" role="button"
+            <a href="#" class="btn dropdown__toggler" role="button"
               aria-haspopup="true" aria-expanded="false">
-              <img src="/img/catalog-icon.svg" alt="">
+              <img src="img/catalog-icon.svg" alt="">
               <span>Каталог</span>
             </a>
-            <ul class="dropdown__menu  menu" aria-labelledby="dropdown-demo-1">
+            <!-- <a id="dropdown-demo-1" href="#" class="btn dropdown__toggler" data-toggle="dropdown" role="button"
+              aria-haspopup="true" aria-expanded="false">
+              <img src="img/catalog-icon.svg" alt="">
+              <span>Каталог</span>''
+            </a> -->
+            <ul class="menu" aria-labelledby="dropdown-demo-1">
               <li class="menu__item"><a class="menu__link" href="#">Лазерні картриджи</a></li>
               <li class="menu__item  menu__item--separator"><a class="menu__link" href="#">...</a></li>
               <li class="menu__item"><a class="menu__link" href="#">Чорнила</a></li>
               <li class="menu__item"><a class="menu__link" href="#">Фотопапір</a>
-              <li class="menu__item"><a class="menu__link" href="#">Повербанки</a>
+              <li class="menu__item">
+              <a class="menu__link" href="#">Аксессуари</a>
+                <div class="menu__lvl  menu__lvl--2">
+                  <ul class="menu__list  menu__list--lvl-2">
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Контакты
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Услуги
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Повербанки
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Чистячі засоби
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Нові товари
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </li>
               </li>
             </ul>
           </div>
           <label class="page-header__search field-text">
             <span class="field-text__input-wrap">
               <input class="field-text__input" type="search" placeholder="Шукати серед 25 000 товарів">
-              <button class="btn btn--search"><span>Пошук</span> <img src="/img/search-icon.svg" alt=""></button>
+              <button class="btn btn--search"><span>Пошук</span> <img src="img/search-icon.svg" alt=""></button>
             </span>
           </label>
           <div class="page-header__toggler field-toggler">
@@ -127,16 +164,16 @@
             <div class="field-select__select-wrap">
               <div class="main field-select__select">
                 <span class="field-select__selected">
-                  <img src="/img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
+                  <img src="img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
                 </span>
               </div>
               <div class="field-select__options">
                 <div class="field-select__option" data-value="UA">
-                  <img src="/img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
-                  <!-- <img src="/img/ок-icon.svg" alt="UA Flag" class="field-select__icon"> -->
+                  <img src="img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
+                  <!-- <img src="img/ок-icon.svg" alt="UA Flag" class="field-select__icon"> -->
                 </div>
                 <div class="field-select__option" data-value="EU">
-                  <img src="/img/eu-flag-icon.svg" alt="EU Flag" class="field-select__icon"> EU
+                  <img src="img/eu-flag-icon.svg" alt="EU Flag" class="field-select__icon"> EU
                 </div>
                 <!-- Добавьте другие опции по мере необходимости -->
               </div>
@@ -177,10 +214,10 @@
           </label>
 
           <div class="page-header__login">
-            <img src="/img/login.svg" alt="" class="user-blcok__img">
+            <img src="img/login.svg" alt="" class="user-blcok__img">
           </div>
           <div class="page-header__cart cart">
-            <img src="/img/cart.svg" alt="" class="cart__img">
+            <img src="img/cart.svg" alt="" class="cart__img">
             <span class="page-header__cart-count">12</span>
           </div>
         </header>
@@ -198,32 +235,32 @@
                   <div class="product-list__settings">
                     <button class="product-list__filters">
                       <span>Фільтр</span>
-                      <img src="/img/filter-icon.svg" alt="">
+                      <img src="img/filter-icon.svg" alt="">
                     </button>
                     <div class="product-list__label"><span>20468</span> Товарів</div>
                     <button class="product-list__reset-filter">Скинути фільтри
-                      <img src="/img/cross-icon.svg" alt="">
+                      <img src="img/cross-icon.svg" alt="">
                     </button>
                     <div class="product-list__selected-filter">
                       <div class="product-list__filter-item">
                         <span>Акція</span>
-                        <img src="/img/cross-icon.svg" alt="">
+                        <img src="img/cross-icon.svg" alt="">
                       </div>
                       <div class="product-list__filter-item">
                         <span>USB Hub</span>
-                        <img src="/img/cross-icon.svg" alt="">
+                        <img src="img/cross-icon.svg" alt="">
                       </div>
                       <div class="product-list__filter-item">
                         <span>Новинки</span>
-                        <img src="/img/cross-icon.svg" alt="">
+                        <img src="img/cross-icon.svg" alt="">
                       </div>
                       <div class="product-list__filter-item">
                         <span>Акція</span>
-                        <img src="/img/cross-icon.svg" alt="">
+                        <img src="img/cross-icon.svg" alt="">
                       </div>
                       <div class="product-list__filter-item">
                         <span>Type-C - Type-C</span>
-                        <img src="/img/cross-icon.svg" alt="">
+                        <img src="img/cross-icon.svg" alt="">
                       </div>
                     </div>
                     <select class="product-list__sorting" name="" id="">
@@ -233,8 +270,8 @@
                       <!-- <option value=""></option> -->
                     </select>
                     <div class="product-list__view">
-                      <button class="product-list__button  product-list__button--active"><img src="/img/card-icon.svg" alt=""></button>
-                      <button class="product-list__button"><img src="/img/string-icon.svg" alt=""></button>
+                      <button class="product-list__button  product-list__button--active"><img src="img/card-icon.svg" alt=""></button>
+                      <button class="product-list__button"><img src="img/string-icon.svg" alt=""></button>
                     </div>
                   </div>
                   <div class="product-list__item-wrap">
@@ -253,11 +290,11 @@
                           <a href="good01">Навушники СolorWay Slim TWS-1 Earbuds Long Life Бежеві</a>
                         </h3>
                         <!-- <p class="card__descr">Описание1</p> -->
-                        <div class="card__descr  card__descr--status"><img src="/img/status-ok-icon.svg" alt=""><span>В наявності</span></div> 
+                        <div class="card__descr  card__descr--status"><img src="img/status-ok-icon.svg" alt=""><span>В наявності</span></div> 
                         <div class="card__price-block">
                           <p class="card__price">899&nbsp;₴</p>
                           <!-- <button class="card__buy">Купить</button> -->
-                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                         </div>
                       </div>
 
@@ -275,11 +312,11 @@
                         <p class="card__descr">Артикул CW-TWS1BK1</p>
                         <h3 class="card__title">УМБ ColorWay Power Bank 80 000 mAh LCD/Lamp (USB QC3.0 + USB-C Power
                           Delivery 22.5W) Black</h3>
-                        <div class="card__descr  card__descr--status"><img src="/img/status-ok-icon.svg" alt=""><span>В наявності</span></div>  
+                        <div class="card__descr  card__descr--status"><img src="img/status-ok-icon.svg" alt=""><span>В наявності</span></div>  
                         <div class="card__price-block">
                           <p class="card__price">2&nbsp;899₴</p>
                           <!-- <button class="card__buy">Купить</button> -->
-                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                         </div>
                       </div>
 
@@ -298,11 +335,11 @@
                           <a href="good01">Навушники СolorWay TWS-3 Earbuds чорні</a>
                         </h3>
                         <!-- <p class="card__descr">Описание1</p> -->
-                        <div class="card__descr  card__descr--status"><img src="/img/status-ok-icon.svg" alt=""><span>В наявності</span></div>
+                        <div class="card__descr  card__descr--status"><img src="img/status-ok-icon.svg" alt=""><span>В наявності</span></div>
                         <div class="card__price-block">
                           <p class="card__price">859&nbsp;₴</p>
                           <!-- <button class="card__buy">Купить</button> -->
-                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                         </div>
                       </div>
 
@@ -320,7 +357,7 @@
                         <p class="card__descr">Артикул CW-TWS1BK1</p>
                         <h3 class="card__title">Сетевое зарядное устройство ColorWay Power Delivery GaN (USB-A + 3USB
                           TYPE-C) (100W) черное</h3>
-                        <div class="card__descr  card__descr--status"><img src="/img/status-ok-icon.svg" alt=""><span>В наявності</span></div>  
+                        <div class="card__descr  card__descr--status"><img src="img/status-ok-icon.svg" alt=""><span>В наявності</span></div>  
                         
                           <div class="card__promo">
                             <div class="card__price-old">1&nbsp;784 ₴</div>
@@ -330,7 +367,7 @@
                           <p class="card__price">2&nbsp;099₴</p>
                           <!-- <div class="card__procent">-15%</div> -->
                           <!-- <button class="card__buy">Купить</button> -->
-                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                         </div>
                       </div>
 
@@ -349,11 +386,11 @@
                           <a href="good01">Мережевий фільтр-подовжувач СolorWay 4 розетки/4USB</a>
                         </h3>
                         <!-- <p class="card__descr">Описание1</p> -->
-                        <div class="card__descr  card__descr--status"><img src="/img/status-ok-icon.svg" alt=""><span>В наявності</span></div>
+                        <div class="card__descr  card__descr--status"><img src="img/status-ok-icon.svg" alt=""><span>В наявності</span></div>
                         <div class="card__price-block">
                           <p class="card__price">699&nbsp;₴</p>
                           <!-- <button class="card__buy">Купить</button> -->
-                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                         </div>
                       </div>
 
@@ -371,11 +408,11 @@
                         <p class="card__descr">Артикул CW-TWS1BK1</p>
                         <h3 class="card__title">Мережевий зарядний пристрій ColorWay GaN Mini 65W PD Port PPS USB-C
                           білий</h3>
-                        <div class="card__descr  card__descr--status"><img src="/img/status-ok-icon.svg" alt=""><span>В наявності</span></div>  
+                        <div class="card__descr  card__descr--status"><img src="img/status-ok-icon.svg" alt=""><span>В наявності</span></div>  
                         <div class="card__price-block">
                           <p class="card__price">999&nbsp;₴</p>
                           <!-- <button class="card__buy">Купить</button> -->
-                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
                         </div>
                       </div>
 
@@ -385,7 +422,7 @@
                   </div>
                   <!-- </div> -->
                    <a href="" class="btn btn--reload">
-                    <!-- <img src="/img/reload-icon.svg" alt=""> -->
+                    <!-- <img src="img/reload-icon.svg" alt=""> -->
                     <svg width="24" height="24" class="reload">
                       <use href="img/symbols.svg#icon-reload" viewBox="0 0 24 24" class="reload"></use>
                     </svg>

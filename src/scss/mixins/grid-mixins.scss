@@ -36,7 +36,7 @@ $grid-gutter-width:           30px !default;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  outline: 1px dotted darkviolet;
+  // outline: 1px dotted darkviolet;
 
   @if ($xs-grid-gutter != 0) {
     padding-left: math.div($xs-grid-gutter, 2);
