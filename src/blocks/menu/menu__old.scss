@@ -1,0 +1,83 @@
+// В этом файле должны быть стили только для БЭМ-блока menu, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+$text-color:                  hsl(0, 0%, 10%) !default;
+
+$border-color:                hsl(0, 0%, 60%) !default;
+
+.menu {
+  $block-name:                &;
+
+  min-width: 10em;
+  margin: 0;
+  padding: 0.3em 0;
+  list-style: none;
+
+  &__item {
+    position: relative;
+
+    &--separator {
+
+      &:not(:last-child) {
+        padding-bottom: 0.3em;
+        margin-bottom: 0.3em;
+        border-bottom: 1px solid $border-color;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0.3em 1em;
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {}
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  } 
+
+  &--lvl-2 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+  }
+
+
+  &__lvl {
+
+    &--2 {
+
+      // @media (min-width: $menu-desktop-width) {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: opacity $transition-time;
+
+        #{$block-name}__item--show-child > &,
+        #{$block-name}__item:hover & {
+          opacity: 1;
+          height: auto;
+          overflow: visible;
+        }
+      // }
+    }
+
+  }
+
+}

@@ -1,25 +1,47 @@
-// В этом файле должны быть стили только для БЭМ-блока menu, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Не пишите здесь другие селекторы.
-
-$text-color:                  hsl(0, 0%, 10%) !default;
-
-$border-color:                hsl(0, 0%, 60%) !default;
+$text-color: hsl(0, 0%, 10%) !default;
+$border-color: hsl(0, 0%, 60%) !default;
+$transition-time: 0.3s !default;
 
 .menu {
-  min-width: 10em;
+  position: absolute;
   margin: 0;
-  padding: 0.3em 0;
+  padding: 0;
   list-style: none;
+  z-index: 10;
+  top: 120%;
+  left: 0;
+  width: auto;
+  min-width: 10em;  // минимальная ширина меню
+  max-width: 90vw;
+  background-color: #fff;
+  color: $text-color;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  opacity: 0;  // меню скрыто по умолчанию
+  visibility: hidden;  // меню скрыто
+  overflow: hidden; // Для предотвращения выхода контента за пределы
+  transition: opacity $transition-time, visibility $transition-time, max-height $transition-time;
 
+  // Стили для пункта меню
   &__item {
+    position: relative;
+    cursor: pointer;
 
     &--separator {
-
       &:not(:last-child) {
         padding-bottom: 0.3em;
         margin-bottom: 0.3em;
         border-bottom: 1px solid $border-color;
+      }
+    }
+
+    // Для подменю при наведении
+    &:hover {
+      & > .menu__lvl--2 {
+        opacity: 1;
+        visibility: visible;
+        max-height: 1000px;
+        overflow: visible;
       }
     }
   }
@@ -35,6 +57,45 @@ $border-color:                hsl(0, 0%, 60%) !default;
     text-decoration: none;
 
     &:hover,
-    &:focus {}
+    &:focus {
+      color: darken($text-color, 10%);
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  // Подменю, изменено на отображение справа от основного меню
+  &__lvl--2 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;  // Начинаем с верхней границы родителя
+    left: 100%;  // Показываем справа от родителя
+    z-index: 1;
+    opacity: 0;  // Скрыто по умолчанию
+    visibility: hidden; // Скрыто по умолчанию
+    max-height: 0;  // Скрыто
+    overflow: hidden;
+    transition: opacity $transition-time, visibility $transition-time, max-height $transition-time;
+
+    // Стиль подменю, идентичный основному меню
+    background-color: #fff;
+    border: 1px solid $border-color;
+    border-radius: 3px;
+    width: auto;
+    min-width: 10em;
+  }
+
+  // Этот класс применяется при открытии
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    max-height: 1000px;
+    overflow: visible;
   }
 }
