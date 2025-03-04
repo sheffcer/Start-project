@@ -221,7 +221,7 @@
 
 .page-header__toggler .field-toggler__name-text:after {
     top: -5px;
-    background-image: url('/img/toggler-light-icon.svg');
+    background-image: url('../img/toggler-light-icon.svg');
     background-repeat: no-repeat;
     background-position-x: 50%;
     background-position-y: 50%;
@@ -249,7 +249,7 @@
 
 .page-header__toggler .field-toggler__input:checked + .field-toggler__name-text::after {
     left: 5px; /* Изменение позиции после активации чекбокса */
-    background-image: url('/img/toggler-dark-icon.svg');
+    background-image: url('../img/toggler-dark-icon.svg');
     background-repeat: no-repeat;
   }
 
@@ -435,7 +435,7 @@ label.page-header__lang.field-select {
     right: 10px; /* Отступ справа для стрелки */
     width: 12px; /* Размер стрелки */
     height: 12px; /* Размер стрелки */
-    background: url('/img/arrow-down-icon.svg') no-repeat center center; /* Фоновое изображение стрелки */
+    background: url('../img/arrow-down-icon.svg') no-repeat center center; /* Фоновое изображение стрелки */
     background-size: contain; /* Масштабируем изображение стрелки */
     transform: translateY(-50%); /* Центрируем по вертикали */
     pointer-events: none; /* Стрелка не перехватывает клики */
