@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>NTH start project</title>
+  <meta name="description" content="">
+  <!--DEV Такой комментарий не попадет в собранный HTML
+<meta name="viewport" content="width=1000">
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<link href="css/style.min.css" rel="stylesheet" media="screen">
+<link href="css/owl.carousel.min.css" rel="stylesheet" media="screen">
+<link href="css/owl.theme.default.min.css" rel="stylesheet" media="screen">
+
+<!-- Подключение jQuery и jQuery Migrate -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script>
+  // Маркер работающего javascript
+  document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  document.addEventListener('DOMContentLoaded', function(){
+  if (window.isMobile !== undefined) {
+    // console.log(isMobile);
+    if(isMobile.any) {
+      var rootClasses = ' is-mobile';
+      for (key in isMobile) {
+        if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+        if(typeof isMobile[key] === 'object' && key !== 'other') {
+          for (type in isMobile[key]) {
+            if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+          }
+        }
+      }
+      document.documentElement.className += rootClasses;
+    }
+  }
+  else {
+    console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+  }
+});
+
+</script>
+
+<link href="img/favicon.ico" rel="icon" type="image/x-icon">
+<!--DEV Такой комментарий не попадет в собранный HTML
+<link rel="icon" sizes="192x192" href="img/favicons/favicon-192x192.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-57x57.png">
+<meta name="theme-color" content="#2b2f38">
+<meta name="msapplication-TileColor" content="#2b2f38">
+<meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
+-->
+
+  <style>
+    .off-canvas__aside {
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+
+    main-nav__link a {
+      color: #3498db !important;
+    }
+  </style>
+  <!-- <script src="/js/"></script> -->
+</head>
+
+<body>
+  <div class="off-canvas" id="off-canvas">
+    <aside class="off-canvas__aside" role="complementary" aria-label="Список компонентов">
+      <div class="off-canvas__block">
+        <div class="off-canvas__header">
+          <a href="/" class="logo">
+            <img src="img/logo.svg" alt="logo">
+          </a>
+          <div class="burger  burger--close" data-toggle="off-canvas"><span></span></div>
+        </div>
+        <div class="off-canvas__dropdown dropdown">
+          <a id="dropdown-demo-1" href="#" class="btn btn--off-canvas dropdown__toggler" data-toggle="dropdown"
+            role="button" aria-haspopup="true" aria-expanded="false">
+            <img src="/img/catalog-icon.svg" alt="">
+            <span>Каталог</span>
+          </a>
+          <ul class="dropdown__menu  menu" aria-labelledby="dropdown-demo-1">
+            <li class="menu__item"><a class="menu__link" href="#">Лазерні картриджи</a></li>
+            <li class="menu__item  menu__item--separator"><a class="menu__link" href="#">...</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Чорнила</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Фотопапір</a>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Аксессуари</a>
+                <div class="menu__lvl  menu__lvl--2">
+                  <ul class="menu__list  menu__list--lvl-2">
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Контакты
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Услуги
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Повербанки
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Чистячі засоби
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Нові товари
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <label class="off-canvas__search field-text">
+          <span class="field-text__input-wrap">
+            <input class="field-text__input" type="search" placeholder="Шукати серед 25 000 товарів">
+            <button class="btn--search"><span>Пошук</span> <img src="/img/search-icon.svg" alt=""></button>
+          </span>
+        </label>
+        <div class="off-canvas__user-block">
+
+          <div class="user-block">
+    <div class="user-block__wrap">
+      <img src="/img/login.svg" alt="">
+      <div class="user-block__inner">
+        <span class="user-block__login">вхід</span>
+        <span class="user-block__account">Акаунт</span>
+      </div>
+        </div>
+    <a class="btn btn--user-block">Вхід в акаунт</a>
+</div>
+
+        </div>
+        <div class="off-canvas__details-menu">
+          <nav class="details-menu">
+  <details>
+    <summary class="details-menu__title">Про ColorWay</summary>
+    <ul class="details-menu__list">
+      <li class="details-menu__item"><a class="details-menu__link" href="#">Про Компанію</a></li>
+      <li class="details-menu__item"><a class="details-menu__link" href="#">Новини</a></li>
+      <li class="details-menu__item"><a class="details-menu__link" href="#">Нагороди</a></li>
+      <li class="details-menu__item"><a class="details-menu__link" href="#">Публікації</a></li>
+      <li class="details-menu__item"><a class="details-menu__link" href="#">Вакансії</a></li>
+    </ul>
+  </details>
+
+  <details>
+    <summary class="details-menu__title">Підтримка</summary>
+    <ul class="details-menu__list">
+      <li class="details-menu__item"><a class="details-menu__link" href="#">Техпіддтримка</a></li>
+      <li class="details-menu__item"><a class="details-menu__link" href="#">Гарантія</a></li>
+      <li class="details-menu__item"><a class="details-menu__link" href="#">Зворотній зв'язок</a></li>
+      <li class="details-menu__item"><a class="details-menu__link" href="#">Інструкції</a></li>
+      <li class="details-menu__item"><a class="details-menu__link" href="#">Зворотній зв'язок</a></li>
+      <li class="details-menu__item"><a class="details-menu__link" href="#">Статті</a></li>
+      <li class="details-menu__item"><a class="details-menu__link" href="#">B2B</a></li>
+      <li class="details-menu__item"><a class="details-menu__link" href="#">ICC профілі</a></li>
+    </ul>
+  </details>
+
+  <!-- <details>
+    <summary>About</summary>
+    <ul>
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Team</a></li>
+      <li><a href="#">Careers</a></li>
+    </ul>
+  </details> -->
+
+  <details>
+    <summary class="details-menu__title">Контакти</summary>
+    <ul class="details-menu__list">
+      <li class="details-menu__item">
+        <span class="details-menu__text">Гуртові продаж</span><br>
+        <a class="details-menu__link" href="#">+38 (097) 846-06-91</a>
+      </li>
+      <li class="details-menu__item">
+        <span class="details-menu__text">Техпідтримка</span><br>
+        <a class="details-menu__link" href="#">+38 (097) 228-4603</a>
+      </li>
+      <li class="details-menu__item">  
+        <span class="details-menu__text">Роздрібний продаж</span><br>
+        <a class="details-menu__link" href="#">+38 (095) 270-50-86</a>
+      </li>
+      
+    </ul>
+  </details>
+</nav>
+        </div>
+        <div class="off-canvas__text">
+          <p class="off-canvas__text--parag">Є питання ? <a class="off-canvas__text--link">Зв’яжіться з нами</a></p>
+          <p class="off-canvas__text--parag">Пн-Пт <span class="off-canvas__text--span">9:00 - 16:00<span></p>
+        </div>
+        <div class="off-canvas__media-toggler">
+          <div class="media-toggler">
+  <hr>
+  <div class="media-toggler__wrap">
+      <!-- <label class="page-header__lang field-select">
+        <div class="field-select__name"><span>мова</span></div>
+        <div class="field-select__select-wrap">
+          <select class="field-select__select">
+            <option>Укр</option>
+            <option>Рус</option>
+            <option>Eng</option>
+          </select>
+        </div>
+      </label> -->
+      <label class="page-header__lang field-select">
+        <div class="field-select__name"><span>мова</span></div>
+        <div class="field-select__select-wrap">
+          <div class="field-select__select">
+            <span class="field-select__selected">Укр</span>
+          </div>
+          <div class="field-select__options">
+            <div class="field-select__option" data-value="UA">
+              <span>Укр</span>
+            </div>
+            <div class="field-select__option" data-value="RU">
+              <span>Рус</span>
+            </div>
+            <div class="field-select__option" data-value="EN">
+              <span>Eng</span>
+            </div>
+          </div>
+        </div>
+      </label>
+
+      <!-- <label class="page-header__region field-select">
+          <div class="field-select__name"><span>регіон</span></div>
+          <div class="field-select__select-wrap">
+            <select class="field-select__select">
+               <option>UA</option>
+               <option>EU</option>
+            </select>
+          </div>
+      </label> -->
+      <label class="page-header__region field-select">
+        <div class="field-select__name"><span>регіон</span></div>
+        <div class="field-select__select-wrap">
+          <div class="main field-select__select">
+            <span class="field-select__selected">
+              <img src="/img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
+            </span>
+          </div>
+          <div class="field-select__options">
+            <div class="field-select__option" data-value="UA">
+              <img src="/img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
+              <!-- <img src="/img/ок-icon.svg" alt="UA Flag" class="field-select__icon"> -->
+            </div>
+            <div class="field-select__option" data-value="EU">
+              <img src="/img/eu-flag-icon.svg" alt="EU Flag" class="field-select__icon"> EU
+            </div>
+            <!-- Добавьте другие опции по мере необходимости -->
+          </div>
+        </div>
+      </label>
+      <div class="page-header__toggler field-toggler">
+        <div class="field-toggler__input-wrap">
+          <label class="field-toggler__name">
+            <input class="field-toggler__input" type="checkbox">
+            <span class="field-toggler__name-text"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+        </div>
+      </div>
+    </aside>
+    <div class="page__inner off-canvas__page-content">
+      <div class="page__content">
+        <header class="page-header container" role="banner">
+          <div class="mobile-filters">
+    <div class="mobile-filters__header">
+      <div class="mobile-filters__header-text">
+        <h2 class="mobile-filters__title">Фільтр</h2>
+        <span class="mobile-filters__count">4</span>
+      </div>
+      <div class="burger  burger--close"><span></span></div>
+    </div>
+    <div class="mobile-filters__list">
+      <div class="mobile-filters__item selected-filters">
+        <div class="selected-filters__list">
+          <div class="selected-filters__item">
+            <span>Акція</span>
+            <img src="/img/cross-icon.svg" alt="">
+          </div>
+          <div class="selected-filters__item">
+            <span>USB Hub</span>
+            <img src="/img/cross-icon.svg" alt="">
+          </div>
+          <div class="selected-filters__item">
+            <span>Новинки</span>
+            <img src="/img/cross-icon.svg" alt="">
+          </div>
+          <div class="selected-filters__item">
+            <span>Акція</span>
+            <img src="/img/cross-icon.svg" alt="">
+          </div>
+          <div class="selected-filters__item">
+            <span>Type-C - Type-C</span>
+            <img src="/img/cross-icon.svg" alt="">
+          </div>
+        </div>
+        <button class="selected-filters__reset">
+          <span>Скинути фільтри</span>
+          <img src="/img/cross-black-icon.svg" alt="">
+        </button>
+      </div>
+
+      <div class="mobile-filters__item  mobile-filters__item--toggle">
+        <div class="field-toggler">
+          <div class="field-toggler__title">Новинки</div>
+          <div class="field-toggler__input-wrap">
+            <label class="field-toggler__name">
+              <input class="field-toggler__input" type="checkbox">
+              <span class="field-toggler__name-text"></span>
+              <!-- <span class="field-toggler__name-text">Использовать</span> -->
+            </label>
+            <!-- <div class="field-toggler__help-text">Графика не используется, всё нарисовано CSS-ом.</div> -->
+          </div>
+        </div>
+      </div>
+      <div class="mobile-filters__item  mobile-filters__item--toggle">
+        <div class="field-toggler">
+          <div class="field-toggler__title">Акційні пропозиції</div>
+          <div class="field-toggler__input-wrap">
+            <label class="field-toggler__name">
+              <input class="field-toggler__input" type="checkbox">
+              <span class="field-toggler__name-text"></span>
+              <!-- <span class="field-toggler__name-text">Использовать</span> -->
+            </label>
+            <!-- <div class="field-toggler__help-text">Графика не используется, всё нарисовано CSS-ом.</div> -->
+          </div>
+        </div>
+      </div>
+      <div class="mobile-filters__item">
+        <div class="field-checkbox">
+          <div class="field-checkbox__title">Виробник</div>
+          <div class="field-checkbox__input-wrap field-checkbox__input-wrap--cw">
+            <label class="field-checkbox__name">
+              <input class="field-checkbox__input " type="checkbox" checked>
+              <span class="field-checkbox__name-text">ColorWay</span>
+            </label>
+            <div class="field-checkbox__help-text-wrap field-checkbox__input-wrap--cw">
+              <div class="field-checkbox__help-text">(435)</div>
+            </div>
+          </div>
+          <div class="field-checkbox__input-wrap field-checkbox__input-wrap--cw">
+            <label class="field-checkbox__name">
+              <input class="field-checkbox__input" type="checkbox">
+              <span class="field-checkbox__name-text">PrintPro</span>
+            </label>
+          </div>
+          <div class="field-checkbox__input-wrap field-checkbox__input-wrap--cw">
+            <label class="field-checkbox__name">
+              <input class="field-checkbox__input" type="checkbox">
+              <span class="field-checkbox__name-text">Over</span>
+            </label>
+          </div>
+        </div>
+  
+      </div>
+      <div class="mobile-filters__item">
+        <div class="field-checkbox__title">Тип</div>
+        <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--cw">
+          <label class="field-checkbox__name">
+            <input class="field-checkbox__input" type="checkbox" checked>
+            <span class="field-checkbox__name-text">Adapter/Перехідник</span>
+          </label>
+          <div class="field-checkbox__help-text-wrap">
+            <div class="field-checkbox__help-text">(3)</div>
+          </div>
+        </div>
+        <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--cw">
+          <label class="field-checkbox__name">
+            <input class="field-checkbox__input" type="checkbox">
+            <span class="field-checkbox__name-text"> Type-C - DC 5.5х2.5mm</span>
+          </label>
+        </div>
+        <div class="field-checkbox__input-wrap field-checkbox__input-wrap--cw">
+          <label class="field-checkbox__name">
+            <input class="field-checkbox__input" type="checkbox">
+            <span class="field-checkbox__name-text">Type-C - Type-C</span>
+          </label>
+        </div>
+        <div class="field-checkbox__input-wrap field-checkbox__input-wrap--cw">
+          <label class="field-checkbox__name">
+            <input class="field-checkbox__input" type="checkbox">
+            <span class="field-checkbox__name-text">Type-C - Type-C</span>
+          </label>
+        </div>
+        <div class="field-checkbox__input-wrap field-checkbox__input-wrap--cw">
+          <label class="field-checkbox__name">
+            <input class="field-checkbox__input" type="checkbox">
+            <span class="field-checkbox__name-text">Type-C – Lightning</span>
+          </label>
+        </div>
+        <div class="field-checkbox__input-wrap field-checkbox__input-wrap--cw">
+          <label class="field-checkbox__name">
+            <input class="field-checkbox__input" type="checkbox">
+            <span class="field-checkbox__name-text">USB hub/dock station</span>
+          </label>
+        </div>
+      </div>
+      <!-- </div> -->
+      <div class="mobile-filters__item">Бла-бла-бла</div>
+      <div class="mobile-filters__item">
+        <span class="field-text__name">Ціна</span>
+        <div class="mobile-filters__price-wrap">
+          <!-- <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="number" placeholder="0">
+            </span>
+          </label>
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="number" placeholder="2500">
+              </span>
+          </label> -->
+          <div class="field-num field-num--filters">
+            <!-- <span class="field-num__name"></span> -->
+            <div class="field-num__input-wrap">
+              <div class="field-num__input-and-btns">
+                <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                <input class="field-num__input" type="number" value="1" name="quantity" min="1" step="1" />
+              </div>
+            </div>
+          </div>
+          <div class="field-num field-num--filters">
+            <!-- <span class="field-num__name">Количество</span> -->
+            <div class="field-num__input-wrap">
+              <div class="field-num__input-and-btns">
+                <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1" />
+              </div>
+              <!-- <span class="field-num__help-text">От 1 до 10, шаг 1</span> -->
+            </div>
+          </div>
+          <button class="btn btn--ok">Ok</button>
+        </div>
+        <div class="field-range">
+          <!-- <div class="field-range__name">Range</div> -->
+          <div class="field-range__input-wrap">
+            <input class="field-range__input" type="range" min="1" max="100" step="1" value="70">
+            <!-- <div class="field-range__help-text"><code>min="1" max="100" step="1" value="70"</code>, стилизован без JS.
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="mobile-filters__item">Бла-бла-бла</div>
+      <div class="mobile-filters__item field-actions--filters">
+        <button class="btn btn--reset" aria-label="Скинути фільтри">
+          <span>Скинути все</span>
+          <img src="/img/cross-black-icon.svg" alt="">
+        </button>
+        <button class="btn btn--submit" aria-label="Застосувати фільтри">Застосувати фільтри</button>
+      </div>
+      <!-- </div> -->
+    </div>
+  </div>
+          <div class="page-header__burger burger" data-toggle="off-canvas"><span></span></div>
+          <a href="/" class="page-header__logo logo">
+            <picture class="page-header__img">
+              <source media="(max-width: 767px)" srcset="/img/logo-mobile.svg">
+              <source media="(min-width: 768px)" srcset="/img/logo.svg">
+              <img src="/img/logo.svg" alt="">
+            </picture>
+          </a>
+          <div class="page-header__catalog dropdown">
+            <a href="#" class="btn dropdown__toggler" role="button"
+              aria-haspopup="true" aria-expanded="false">
+              <img src="/img/catalog-icon.svg" alt="">
+              <span>Каталог</span>
+            </a>
+            <!-- <a id="dropdown-demo-1" href="#" class="btn dropdown__toggler" data-toggle="dropdown" role="button"
+              aria-haspopup="true" aria-expanded="false">
+              <img src="/img/catalog-icon.svg" alt="">
+              <span>Каталог</span>''
+            </a> -->
+            <ul class="menu" aria-labelledby="dropdown-demo-1">
+              <li class="menu__item"><a class="menu__link" href="#">Лазерні картриджи</a></li>
+              <li class="menu__item  menu__item--separator"><a class="menu__link" href="#">...</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Чорнила</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Фотопапір</a>
+              <li class="menu__item">
+              <a class="menu__link" href="#">Аксессуари</a>
+                <div class="menu__lvl  menu__lvl--2">
+                  <ul class="menu__list  menu__list--lvl-2">
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Контакты
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Услуги
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Повербанки
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Чистячі засоби
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Нові товари
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+              </li>
+            </ul>
+          </div>
+          <label class="page-header__search field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="search" placeholder="Шукати серед 25 000 товарів">
+              <button class="btn btn--search"><span>Пошук</span> <img src="/img/search-icon.svg" alt=""></button>
+            </span>
+          </label>
+          <div class="page-header__toggler field-toggler">
+            <div class="field-toggler__input-wrap">
+              <label class="field-toggler__name">
+                <input class="field-toggler__input" type="checkbox">
+                <span class="field-toggler__name-text"></span>
+              </label>
+            </div>
+          </div>
+          <!-- <div class="page-header__lang-inner"> -->
+          <!-- <label class="page-header__region field-select">
+                <div class="field-select__name"><span>регіон</span></div>
+                  <div class="field-select__select-wrap">
+                    <select class="field-select__select">
+                       <option>UA</option>
+                       <option>EU</option>
+                    </select>
+                  </div>
+                </label> -->
+
+
+          <!-- </div> -->
+
+          <label class="page-header__region field-select">
+            <div class="field-select__name"><span>регіон</span></div>
+            <div class="field-select__select-wrap">
+              <div class="main field-select__select">
+                <span class="field-select__selected">
+                  <img src="/img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
+                </span>
+              </div>
+              <div class="field-select__options">
+                <div class="field-select__option" data-value="UA">
+                  <img src="/img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
+                  <!-- <img src="/img/ок-icon.svg" alt="UA Flag" class="field-select__icon"> -->
+                </div>
+                <div class="field-select__option" data-value="EU">
+                  <img src="/img/eu-flag-icon.svg" alt="EU Flag" class="field-select__icon"> EU
+                </div>
+                <!-- Добавьте другие опции по мере необходимости -->
+              </div>
+            </div>
+          </label>
+
+
+          <!-- <label class="page-header__lang field-select">
+                <div class="field-select__name"><span>мова</span></div>
+                <div class="field-select__select-wrap">
+                  <select class="field-select__select">
+                    <option>Укр</option>
+                    <option>Рус</option>
+                    <option>Eng</option>
+                  </select>
+                </div>
+              </label> -->
+
+
+          <label class="page-header__lang field-select">
+            <div class="field-select__name"><span>мова</span></div>
+            <div class="field-select__select-wrap">
+              <div class="field-select__select">
+                <span class="field-select__selected">Укр</span>
+              </div>
+              <div class="field-select__options">
+                <div class="field-select__option" data-value="UA">
+                  <span>Укр</span>
+                </div>
+                <div class="field-select__option" data-value="RU">
+                  <span>Рус</span>
+                </div>
+                <div class="field-select__option" data-value="EN">
+                  <span>Eng</span>
+                </div>
+              </div>
+            </div>
+          </label>
+
+          <div class="page-header__login">
+            <img src="/img/login.svg" alt="" class="user-blcok__img">
+          </div>
+          <div class="page-header__cart cart">
+            <img src="/img/cart.svg" alt="" class="cart__img">
+            <span class="page-header__cart-count">12</span>
+          </div>
+        </header>
+        <main class="main-content" role="main">
+          <div class="main-content__inner">
+            <!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/breadcrumbs/breadcrumbs.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+-->
+
+<ul class="breadcrumbs">
+  <li class="breadcrumbs__item">
+    <img class="breadcrumbs__img" src="/img/home-icon.svg" alt="">
+    <a href="" class="breadcrumbs__link">Главная</a>
+  </li>
+  <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Каталог</a></li>
+  <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Маркеры</a></li>
+</ul>
+
+            <!-- <h1 class="product__title">Мережевий фільтр-подовжувач СolorWay 3 розетки/4USB GaN3 Pro PD (2USB-A + 2 TYPE-C) (65W) 2M (CW-CHE34PDW)</h1> -->
+            <div class="product">
+                <div class="tabs">
+                    <ul class="tabs__links" role="tablist">
+                      <li class="tabs__link-wrap tabs__link-wrap--active" role="presentation">
+                        <a class="tabs__link" href="#tab00" role="tab">Усе про товар</a>
+                      </li>
+                      <li class="tabs__link-wrap" role="presentation">
+                        <a class="tabs__link" href="#tab01" role="tab">Фото</a>
+                      </li>
+                      <li class="tabs__link-wrap" role="presentation">
+                        <a class="tabs__link" href="#tab02" role="tab">Опис</a>
+                      </li>
+                      <li class="tabs__link-wrap" role="presentation">
+                        <a class="tabs__link" href="#tab03" role="tab">Характеристики</a>
+                      </li>
+                      <li class="tabs__link-wrap" role="presentation">
+                        <a class="tabs__link" href="#tab04" role="tab">Особливості</a>
+                      </li>
+                      <li class="tabs__link-wrap" role="presentation">
+                        <a class="tabs__link" href="#tab05" role="tab">Комплектація</a>
+                      </li>
+                    </ul>
+                  
+                    <div class="tabs__content-wrapper">
+                      <div class="tabs__content-item tabs__content-item--active" id="tab00" role="tabpanel">
+                        <!-- Пустое содержимое для вкладки "Усе про товар" -->
+                      </div>
+                      <div class="tabs__content-item tabs__content-item--active" id="tab01" role="tabpanel">
+                        <!-- <p>Фото! Здесь вы найдете фото продукта.</p> -->
+                        <div class="product__photo-wrap">
+
+                          <div class="product__photo-inner">
+                            <div class="embla embla--product">
+                                <!-- Основной слайдер -->
+                                <div class="embla__viewport">
+                                  <div class="embla__container">
+                                    <div class="embla__slide"><img src="/img/CW-CHE34PDW.jpg" alt="Image 1"></div>
+                                    <div class="embla__slide"><img src="/img/CW-CHE34PDW_01.jpg" alt="Image 2"></div>
+                                    <div class="embla__slide"><img src="/img/CW-CHE34PDW_02.jpg" alt="Image 3"></div>
+                                    <div class="embla__slide"><img src="/img/CW-CHE34PDW_03.jpg" alt="Image 4"></div>
+                                    <div class="embla__slide"><img src="/img/CW-CHE34PDW_04.jpg" alt="Image 5"></div>
+                                    <div class="embla__slide"><img src="/img/CW-CHE34PDW_05.jpg" alt="Image 6"></div>
+                                    <!-- Добавьте больше слайдов по мере необходимости -->
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <!-- Контейнер для миниатюр -->
+                              <div class="embla-thumbnails">
+                                <button class="embla-thumbnail" data-index="0"><img src="/img/CW-CHE34PDW.jpg" alt="Thumbnail 1"></button>
+                                <button class="embla-thumbnail" data-index="1"><img src="/img/CW-CHE34PDW_01.jpg" alt="Thumbnail 2"></button>
+                                <button class="embla-thumbnail" data-index="2"><img src="/img/CW-CHE34PDW_02.jpg" alt="Thumbnail 3"></button>
+                                <!-- Добавьте больше миниатюр по мере необходимости -->
+                                <button class="embla-thumbnail" data-index="3"><img src="/img/CW-CHE34PDW_03.jpg" alt="Thumbnail 4"></button>
+                                
+                                <button class="embla-thumbnail" data-index="4"><img src="/img/CW-CHE34PDW_04.jpg" alt="Thumbnail 5"></button>
+                                <button class="embla-thumbnail" data-index="5"><img src="/img/CW-CHE34PDW_05.jpg" alt="Thumbnail 6"></button>
+                              </div>
+                              <div class="embla__controls">
+                                <div class="embla__buttons">
+                                  <button class="embla__button embla__button--prev" type="button">
+                                    <svg class="embla__button__svg" viewBox="0 0 532 532">
+                                      <path
+                                        fill="currentColor"
+                                        d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"
+                                      ></path>
+                                    </svg>
+                                  </button>
+                          
+                                  <button class="embla__button embla__button--next" type="button">
+                                    <svg class="embla__button__svg" viewBox="0 0 532 532">
+                                      <path
+                                        fill="currentColor"
+                                        d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"
+                                      ></path>
+                                    </svg>
+                                  </button>
+                                </div>
+                          
+                                <!-- <div class="embla__dots"></div> -->
+                              </div>
+                          </div>
+
+                          <div class="product__price-inner">
+                            <p class="product__descr">Артикул: CW-EW400SET01</p>
+                            <h1 class="product__title">Мережевий фільтр-подовжувач СolorWay 3 розетки/4USB GaN3 Pro PD (2USB-A + 2 TYPE-C) (65W) 2M (CW-CHE34PDW)</h1>
+
+                            <div class="price-block">
+    <div class="price-block__inner">
+        <div class="price-block__status">
+            <img src="/img/status-ok-icon.svg" alt="" width="24" height="24">
+            <span>В наявності</span>
+        </div>
+        <div class="price-block__price-btn-wrap">
+            <div class="price-block__price">
+                <span class="price-block__price-new">2&nbsp;899₴</span>
+                <span class="price-block__price-old">3&nbsp;999₴</span>
+                <span class="price-block__price-old-discount">-35%</span>
+            </div>
+                <button class="btn btn--add-to-cart" aria-label="Додати в кошик">
+                    <span>Додати в кошик</span>
+                    <img src="/img/cart-white-icon.svg" alt="Cart Icon">
+                </button>
+        </div>
+    </div>
+</div>
+
+                            <div class="additional-block  additional-block--location">
+                                <div class="additional-block__inner  additional-block__inner--location">
+                                        <div class="additional-block__item">
+                                            <img src="/img/location-icon.svg" alt="">
+                                            <span class="additional-block__title">Доставка</span>
+                                            <select name="location" id="">
+                                                <option value="" disabled selected>Оберіть місце</option>
+                                                <option value="location1">Location 1</option>
+                                                <option value="location2">Location 2</option>
+                                                <option value="location3">Location 3</option>
+                                            </select>
+                                        </div>
+                                        <!-- <div class="additional-block__item">
+                                            <hr>
+                                        </div> -->
+                                        <div class="additional-block__item  additional-block__item--location">
+                                            <div class="additional-block__sub-item">
+                                                <span class="additional-block__title">Самовивіз з офісу</span>
+                                                <a href="" class="additional-block__link">Дивитись на карті</a>
+                                            </div>
+                                            <div class="additional-block__sub-item row">
+                                                <span class="additional-block__desc-01">Отримати</span>
+                                                <span class="additional-block__desc-02">30 жовтня</span>
+                                                <span class="additional-block__desc-03">Безкоштовно</span>
+                                            </div>
+                                        </div>
+                                        <div class="additional-block__item  additional-block__item--location">
+                                            <div class="additional-block__sub-item">
+                                                <span class="additional-block__title">Доставка Новою Поштою</span>
+                                                <a href="" class="additional-block__link">Дивитись на карті</a>
+                                            </div>
+                                            <div class="additional-block__sub-item row">
+                                                <span class="additional-block__desc-01">Відправка</span>
+                                                <span class="additional-block__desc-02">30 жовтня</span>
+                                                <span class="additional-block__desc-03">39₴ - 119₴</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="additional-block">
+                                <div class="additional-block__inner">
+                                        <div class="additional-block__item">
+                                            <img src="/img/payment-card-icon.svg" alt="">
+                                            <span class="additional-block__title">Оплата</span>
+                                        </div>
+                                        <div class="additional-block__item additional-block__item--descr">
+                                            <span class="additional-block__desc">Оплачуйте покупку готівкою, карткою або перерахунком на банківські реквізити (безготівково)</span>
+                                            <div class="payment-icons">
+                                                <div class="payment-icons__item"><img src="/img/apple-pay-icon.svg" alt=""></div>
+                                                <div class="payment-icons__item"><img src="/img/g-pay-icon.svg" alt=""></div>
+                                                <div class="payment-icons__item"><img src="/img/p24-icon.svg" alt=""></div>
+                                                <div class="payment-icons__item"><img src="/img/mastercard-icon.svg" alt=""></div>
+                                                <div class="payment-icons__item"><img src="/img/visa-icon.svg" alt=""></div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="additional-block">
+                                <div class="additional-block__inner">
+                                        <div class="additional-block__item">
+                                            <img src="/img/quality-icon.svg" alt="">
+                                            <span class="additional-block__title">Гарантія</span>
+                                        </div>
+                                        <div class="additional-block__item additional-block__item--descr">
+                                            <span class="additional-block__desc"><strong>12 місяців</strong>. Обмін/повернення товару впродовж <strong>14 днів</strong></span>
+                                        </div>
+                                    </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__content-item tabs__content-item--active" id="tab02" role="tabpanel">
+                        <!-- <p>Опис! Описание продукта.</p> -->
+                        <div class="tabs__content-wrap">
+                          <h2 class="tabs__content-title">Опис продукту</h2>
+                          <div class="tabs__content-description">
+                            <div class="tabs__content-block">
+                              <div class="tabs__content-text">
+                              <h3 class="tabs__content-heading">
+                              Потужна GaN3 Pro USB зарядка
+                              </h3>
+                              <p class="tabs__content-descr">
+                              Потужна GaN3 Pro USB зарядка, з максимально гарантованим навантаженням на всі порти 65W, дозволяє заряджати декілька пристроїв одночасно. Провід 1.8 метра з чистої міді витримує навантаження до до 3250 Вт.
+                              </p>
+                              </div>
+                              <img class="tabs__content-image" src="/img/rich_01.jpg" alt="">
+                          </div>
+                            <div class="tabs__content-block">
+                              <div class="tabs__content-text">
+                              <h3 class="tabs__content-heading">
+                                Компактний подовжувач з розетками та швидкою зарядкою
+                              </h3>
+                              <p class="tabs__content-descr">
+                                Компактний подовжувач з трьома розетками 220В і з 2 портами USB, що підтримують технологію швидкої зарядки Quick Charge 3.0/4.0, і 2 USB-C PD з підтримкою протоколів PD (Power Delivery) 2.0/3.0, 65W PPS; APPLE FAST CHARGE; SAMSUNG 5V-2A/AFC/SFC; QC2.0/3.0/4.0+; HUAWEI FCP/SCP, VOOC, XIAOMI 27W TURBO CHARGING.
+                              </p>
+                              </div>
+                              <img class="tabs__content-image" src="/img/rich_02.jpg" alt="">
+                          </div>
+                            <div class="tabs__content-block">
+                              <div class="tabs__content-text">
+                              <h3 class="tabs__content-heading">
+                                Ефективність і безпека
+                              </h3>
+                              <p class="tabs__content-descr">
+                                Інтелектуальна мікросхема USB Auto ID - автоматично визначає тип підключеного USB пристрою, що забезпечує високу сумісність розумної зарядки з пристроями будь-яких брендів. Контакти розеток виготовлені з бронзи, яка досить еластична і зносостійка. Електричні розетки з вбудованим захистом від дітей. Корпус з жароміцного пластика, витримує температуру до 750 °C.
+                              </p>
+                              </div>
+                              <img class="tabs__content-image" src="/img/rich_03.jpg" alt="">
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__content-item tabs__content-item--active" id="tab03" role="tabpanel">
+                        <div class="tabs__content-wrap">
+                          <h2 class="tabs__content-title">Характеристики</h2>
+                          <div class="tabs__content-characteristics">
+                            <table class="table  table--characteristics">
+                              <tbody class="table__body">
+                                <tr class="table__row">
+                                  <td>Ім'я:</td>
+                                  <td>Мережевий фільтр-подовжувач СolorWay 3 розетки/4USB GaN3 Pro PD (2USB-A + 2 TYPE-C) (65W) 2M (CW-CHE34PDW)</td>
+                                </tr>
+                                <tr class="table__row">
+                                  <td>Артикул:</td>
+                                  <td>CW-CHE34PDW</td>
+                                </tr>
+                                <tr class="table__row">
+                                  <td>Виробник:</td>
+                                  <td>ColorWay</td>
+                                </tr>
+                                <tr class="table__row">
+                                  <td>Тип:</td>
+                                  <td>Мережевий фільтр-подовжувач</td>
+                                </tr>
+                                <tr class="table__row">
+                                  <td>Вихідні порти USB:</td>
+                                  <td>2 USB Type-C (PD), 2 USB-A (QC3.0)</td>
+                                </tr>
+                                <tr class="table__row">
+                                  <td>Кількість мережевих розеток:</td>
+                                  <td>3</td>
+                                </tr>
+                                <tr class="table__row">
+                                  <td>Кількість USB виходів:</td>
+                                  <td>4</td>
+                                </tr>
+                                <tr class="table__row">
+                                  <td>Довжина кабеля:</td>
+                                  <td>2м</td>
+                                </tr>
+                                <tr class="table__row">
+                                  <td>Номінальний струм:</td>
+                                  <td>13A</td>
+                                </tr>
+                                <tr class="table__row">
+                                  <td>Номінальна напруга:</td>
+                                  <td>250V</td>
+                                </tr>
+                                <tr class="table__row">
+                                  <td>Габаритні розміри:</td>
+                                  <td>156 x 103 x 43mm</td>
+                                </tr>
+                                <tr class="table__row">
+                                  <td>Колір:</td>
+                                  <td>Сірий</td>
+                                </tr>
+                                <tr class="table__row">
+                                  <td>Параметри виходів USB:</td>
+                                  <td>Type-C (DC 5V⎓3A/9V⎓3A/12V⎓3A/15V⎓3A/20V⎓3.25A, 65W Max, PPS 3.3-11V⎓5A/3.3-21V⎓3.25A, 65W Max), USB A (DC 5V⎓3A/9V⎓3A/12V⎓3A,/20V⎓3A 60W Max);</td>
+                                </tr>
+                                <tr class="table__row">
+                                  <td>USB Протоколи зарядки:</td>
+                                  <td>AUTO-ID chip (PD3.0 65W, PPS, APPLE FAST CHARGE (Iphone 8 and newer), SAMSUNG AFC, QC2.0/QC3.0/QC4.0+ , HUAWEI FCP, HUAWEI SCP, VOOC, XIAOMI 27W TURBO CHARGING)</td>
+                                </tr>
+                                <tr class="table__row">
+                                  <td>Вихідна потужність USB:</td>
+                                  <td>USB: Single USB-C 65W, Single USB-A 60W, USB-C1+A1 45W+18W, USB-C1+A2 45W+18W, USB-C2+A1 15W+12W, USB-C2+A2 15W+12W, USB-C1+C2 45W+20W, USB-A1+A2 12.5W+12.5W, USB-C1+A1+A2 45W+18W, USB-C2+A1+A2 25W, USB-C1+C2+A1+A2 45W+18W</td>
+                                </tr>
+                                
+                              </tbody>
+                            </table>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="tabs__content-item tabs__content-item--active" id="tab04" role="tabpanel">
+                        <!-- <p>Особливості! Особенности этого продукта.</p> -->
+                        <div class="tabs__content-wrap">
+                          <h2 class="tabs__content-title">Особливості</h2>
+                          <div class="tabs__content-features">
+                            <ul class="tabs__features-list">
+                              <li class="tabs__features-item">Потужна GaN3 Pro USB зарядка, з максимально гарантованим навантаженням на всі порти 65W, дозволяє заряджати декілька пристроїв одночасно</li>
+                              <li class="tabs__features-item">Інтелектуальна мікросхема USB Auto ID - автоматично визначає тип підключеного USB пристрою, що забезпечує високу сумісність розумної зарядки з пристроями будь-яких брендів</li>
+                              <li class="tabs__features-item">Підтримка технології швидкої зарядки Quick Charge 3.0/4+ & Power Delivery 3.0</li>
+                              <li class="tabs__features-item">Три розетки 220В з захистом від перенапруги</li>
+                              <li class="tabs__features-item">Дріт 2.0 метра з чистої міді витримує навантаження до 3250 Вт.</li>
+                              <li class="tabs__features-item">Загальна кнопка вимикання. Одним натисканням ви можете повністю відключити живлення, поки фільтр не використовується, просто і зручно. Корпус з жароміцного пластика, витримує температуру до 750 °C.</li>
+                              <li class="tabs__features-item">Контакти розеток виготовлені з бронзи, яка досить еластична і зносостійка</li>
+                              <li class="tabs__features-item">Електричні розетки з вбудованим захистом від дітей</li>
+                              <li class="tabs__features-item">Напруга: ̴ 100-250В, 50/60Гц</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__content-item tabs__content-item--active" id="tab05" role="tabpanel">
+                        <!-- <p>Комплектація! Состав комплекта.</p> -->
+                        <div class="tabs__content-wrap">
+                          <h2 class="tabs__content-title">Комплектація</h2>
+                          <div class="tabs__content-composition">
+                            <ul class="tabs__composition-list">
+                              <li class="tabs__composition-item">Мережевий фільтр</li>
+                              <li class="tabs__composition-item">Упаковка</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>                                                                                         
+            </div>
+            <div class="top-product">
+              <h2 class="top-product__title">Інші товари цієї серії</h2>
+              <div class="embla">
+                <div class="embla__viewport">
+                  <div class="top-product__inner embla__container">
+                    <article class="card card--mod">
+                      <div class="card__top">Топ продажів!</div>              
+                      <div class="card__inner">
+                        <a class="card__img-wrap" href="good01">
+                          <img class="card__img" src="img/CW-PR-2K2W-01.jpg" alt="Товар1">
+                        </a>
+                        <h3 class="card__title">
+                          <a href="good01">Портативная зарядная станция ColorWay 2400Вт/2048Вт·ч / LiFePO4</a>
+                        </h3>
+                        <div class="card__price-block">
+                          <div class="card__price-old">45&nbsp;999₴</div>
+                          <p class="card__price">41&nbsp;399₴</p>
+                          <div class="card__procent">-10%</div> 
+                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <div class="card__top">Топ продажів!</div>  
+                      <div class="card__inner">
+                        <span class="card__img-wrap">
+                          <img class="card__img" src="img/CW-G-100L10NB.jpg" alt="Товар2">
+                        </span>
+                        <h3 class="card__title">Світлодіодна гірлянда-струна СolorWay LED 100 10м теплий колір 3AA Battery</h3>
+                        <div class="card__price-block">
+                          <p class="card__price">379&nbsp;₴</p>
+                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card card--mod">
+                      <div class="card__top">Топ продажів!</div>             
+                      <div class="card__inner">
+                        <a class="card__img-wrap" href="good01">
+                          <img class="card__img" src="img/CW-X3020M.jpg" alt="Товар1">
+                        </a>
+                        <h3 class="card__title">
+                          <a href="good01">Картридж лазерний ColorWay для Xerox:106R02773</a>
+                        </h3>
+                        <div class="card__price-block">
+                          <p class="card__price">1&nbsp;099₴</p>
+                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>              
+                    <article class="card">
+                      <div class="card__top">Топ продажів!</div>  
+                      <div class="card__inner">
+                        <span class="card__img-wrap">
+                          <img class="card__img" src="img/CW-PB088LI1WT.jpg" alt="Товар2">
+                        </span>
+                        <h3 class="card__title">Джерело безперебійного живлення ColorWay UPS для роутера 8800mAh 21W DC 5V/9V/12V/24V</h3>
+                        <div class="card__price-block">
+                          <div class="card__price-old">1&nbsp;489₴</div>
+                          <p class="card__price">1&nbsp;124₴</p>
+                          <div class="card__procent">-25%</div> 
+                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card card--mod">
+                      <div class="card__top">Топ продажів!</div>             
+                      <div class="card__inner">
+                        <a class="card__img-wrap" href="good01">
+                          <img class="card__img" src="img/CW-EP649SET01.jpg" alt="Товар1">
+                        </a>
+                        <h3 class="card__title">
+                          <a href="good01">Комплект чорнил ColorWay до Epson EP649 BK/C/M/Y Pigment 127 ml + 3 x 70 ml</a>
+                        </h3>
+                        <div class="card__price-block">
+                          <p class="card__price">899&nbsp;₴</p>
+                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <div class="card__top">Топ продажів!</div>  
+                      <div class="card__inner">
+                        <span class="card__img-wrap">
+                          <img class="card__img" src="img/CW-CBPDCC053-BK.jpg" alt="Товар2">
+                        </span>
+                        <h3 class="card__title">Кабель Colorway Type-C - Type-C (transparent head) (PD E-Marker 100W) 5А 1.2м чорний</h3>
+                        <div class="card__price-block">
+                          <p class="card__price">359&nbsp;₴</p>
+                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>       
+            </div> 
+            <div class="viewed-product">
+              <h2 class="viewed-product__title">Переглянуті товари</h2>
+              <div class="embla">
+                <div class="embla__viewport">
+                  <div class="viewed-product__inner embla__container">
+                    <article class="card card--mod">
+                      <div class="card__top">Топ продажів!</div>              
+                      <div class="card__inner">
+                        <a class="card__img-wrap" href="good01">
+                          <img class="card__img" src="img/CW-PR-2K2W-01.jpg" alt="Товар1">
+                        </a>
+                        <h3 class="card__title">
+                          <a href="good01">Портативная зарядная станция ColorWay 2400Вт/2048Вт·ч / LiFePO4</a>
+                        </h3>
+                        <div class="card__price-block">
+                          <div class="card__price-old">45&nbsp;999₴</div>
+                          <p class="card__price">41&nbsp;399₴</p>
+                          <div class="card__procent">-10%</div> 
+                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <div class="card__top">Топ продажів!</div>  
+                      <div class="card__inner">
+                        <span class="card__img-wrap">
+                          <img class="card__img" src="img/CW-G-100L10NB.jpg" alt="Товар2">
+                        </span>
+                        <h3 class="card__title">Світлодіодна гірлянда-струна СolorWay LED 100 10м теплий колір 3AA Battery</h3>
+                        <div class="card__price-block">
+                          <p class="card__price">379&nbsp;₴</p>
+                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card card--mod">
+                      <div class="card__top">Топ продажів!</div>             
+                      <div class="card__inner">
+                        <a class="card__img-wrap" href="good01">
+                          <img class="card__img" src="img/CW-X3020M.jpg" alt="Товар1">
+                        </a>
+                        <h3 class="card__title">
+                          <a href="good01">Картридж лазерний ColorWay для Xerox:106R02773</a>
+                        </h3>
+                        <div class="card__price-block">
+                          <p class="card__price">1&nbsp;099₴</p>
+                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>              
+                    <article class="card">
+                      <div class="card__top">Топ продажів!</div>  
+                      <div class="card__inner">
+                        <span class="card__img-wrap">
+                          <img class="card__img" src="img/CW-PB088LI1WT.jpg" alt="Товар2">
+                        </span>
+                        <h3 class="card__title">Джерело безперебійного живлення ColorWay UPS для роутера 8800mAh 21W DC 5V/9V/12V/24V</h3>
+                        <div class="card__price-block">
+                          <div class="card__price-old">1&nbsp;489₴</div>
+                          <p class="card__price">1&nbsp;124₴</p>
+                          <div class="card__procent">-25%</div> 
+                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card card--mod">
+                      <div class="card__top">Топ продажів!</div>             
+                      <div class="card__inner">
+                        <a class="card__img-wrap" href="good01">
+                          <img class="card__img" src="img/CW-EP649SET01.jpg" alt="Товар1">
+                        </a>
+                        <h3 class="card__title">
+                          <a href="good01">Комплект чорнил ColorWay до Epson EP649 BK/C/M/Y Pigment 127 ml + 3 x 70 ml</a>
+                        </h3>
+                        <div class="card__price-block">
+                          <p class="card__price">899&nbsp;₴</p>
+                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <div class="card__top">Топ продажів!</div>  
+                      <div class="card__inner">
+                        <span class="card__img-wrap">
+                          <img class="card__img" src="img/CW-CBPDCC053-BK.jpg" alt="Товар2">
+                        </span>
+                        <h3 class="card__title">Кабель Colorway Type-C - Type-C (transparent head) (PD E-Marker 100W) 5А 1.2м чорний</h3>
+                        <div class="card__price-block">
+                          <p class="card__price">359&nbsp;₴</p>
+                          <img class="card__buy" src="/img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- Close main-content inner -->
+        </main>
+      </div>
+      <!-- </div> -->
+      <div class="page__footer-wrapper">
+        <footer class="page-footer" role="contentinfo">
+          <!-- Футер -->
+          <nav id="footer-nav" class="footer-nav" role="navigation">
+  <!-- <div id="footer-nav-toggler" class="footer-nav__toggler  burger"><span></span></div> -->
+  <ul class="footer-nav__list">
+    <li class="footer-nav__item  footer-nav__item--active">
+      <a href="" class="footer-nav__link">
+        Про ColorWay
+      </a>
+      <div class="footer-nav__lvl  footer-nav__lvl--2">
+        <ul class="footer-nav__list  footer-nav__list--lvl-2">
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">
+              Про Компанію
+            </a>
+          </li>
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">
+              Нагороди
+            </a>
+          </li>
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">
+              Публікації
+            </a>
+          </li>
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">
+              Вакансії
+            </a>
+          </li>
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">
+              Новини
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="footer-nav__item">
+      <a href="" class="footer-nav__link">
+        Споживачу
+      </a>
+      <div class="footer-nav__lvl  footer-nav__lvl--2">
+        <ul class="footer-nav__list  footer-nav__list--lvl-2">
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">
+              Де придбати
+            </a>
+          </li>
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">
+              Відео про продукцію
+            </a>
+          </li>
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">
+              Статті
+            </a>
+          </li>
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">
+              ICC профіль
+            </a>
+          </li>
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">
+              Зворотній зв'язок
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="footer-nav__item">
+      <a href="" class="footer-nav__link">
+        Каталог
+      </a>
+      <div class="footer-nav__lvl  footer-nav__lvl--2">
+        <ul class="footer-nav__list  footer-nav__list--lvl-2">
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">
+              Витратні матеріали
+            </a>
+          </li>
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">
+              Мобільні аксесуари
+            </a>
+          </li>
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">
+              Аксесуари
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="footer-nav__item">
+      <a href="" class="footer-nav__link">
+        Контакти
+      </a>
+      <div class="footer-nav__lvl  footer-nav__lvl--2">
+        <ul class="footer-nav__list  footer-nav__list--lvl-2">
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <!-- <p class="footer-nav__descr">Гуртові продаж</p> -->
+            <span class="footer-nav__descr">Гуртові продаж</span><br>
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">
+              
+              +38 (097) 846-06-91
+            </a>
+          </li>
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <span class="footer-nav__descr">Роздрібний продаж</span><br>
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">+38 (095) 270-50-86</a>
+          </li>
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <span class="footer-nav__descr">Техпідтримка</span><br>
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">+38 (097) 228-4603</a>
+          </li>
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">info@colorway.ua</a>
+          </li>
+          <li class="footer-nav__item  footer-nav__item--lvl-2">
+            <a href="" class="footer-nav__link  footer-nav__link--lvl-2">
+            </a>
+            <ul class="social">
+    <li>
+        <a class="social__facebook" target="_blank" href="https://www.facebook.com/colorway.ua"></a></li>
+    <li>
+        <a class="social__instagram" target="_blank" href=""></a>
+    </li>
+    <li>
+        <a class="social__youtube" target="_blank" href="https://www.youtube.com/channel/UCtI3sOYTxhx_K59C65INGxg"></a>
+    </li>
+</ul>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>
+          <hr>
+          <p class="page-footer__copyright">© 2024 ColorWay | All Rights Reserved</p>
+        </footer>
+      </div>
+    </div>
+    <div class="off-canvas__overlay" data-toggle="off-canvas"></div>
+  </div> <!-- Close off-canvas -->
+
+  <!--DEV Такой комментарий не попадет в собранный HTML
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>
+-->
+<script src="js/script.min.js"></script>
+
+  </div>
+</body>
+
+</html>
