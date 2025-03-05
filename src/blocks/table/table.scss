@@ -69,6 +69,12 @@ $field-padding-horizontal:    0.7em !default;
       background-color: $white;
       border: none;
       border-left: none;
+
+      @media(max-width: 480px) {
+        // max-width: 250px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
   }
 

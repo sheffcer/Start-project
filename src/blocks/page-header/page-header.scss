@@ -9,13 +9,17 @@
     @include container;
     outline: none!important;
     display: flex;
-    width: 1296px;
+    // width: 1296px;
     height: 60px;
     gap: 10px;
     // justify-content: space-between;
     align-items: center;
     gap: 20px;
     flex-shrink: 0;
+
+    @media (min-width: 1400px) {
+        width: 1296px;       
+    }
     
 }
 

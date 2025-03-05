@@ -3,7 +3,12 @@
 
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 
+    @media (min-width: 480px) {
+        flex-wrap: nowrap;
+    }
+    
     @media (min-width: 768px) {
         gap: 5px;
     }
