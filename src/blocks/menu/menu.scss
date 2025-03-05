@@ -26,6 +26,8 @@ $transition-time: 0.3s !default;
   &__item {
     position: relative;
     cursor: pointer;
+    margin-bottom: 15px;
+    margin-top: 15px;
 
     &--separator {
       &:not(:last-child) {
@@ -53,12 +55,18 @@ $transition-time: 0.3s !default;
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 0.3em 1em;
-    color: $text-color;
+    color: $black;
     text-decoration: none;
+    font-family: $font-family;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 100% */
 
     &:hover,
     &:focus {
-      color: darken($text-color, 10%);
+      color: var(--secondary-color);
+    //   color: darken($text-color, 10%);
     }
   }
 
