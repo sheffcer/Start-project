@@ -78,7 +78,25 @@ $transition-time: 0.3s !default;
       color: var(--secondary-color);
     //   color: darken($text-color, 10%);
     }
+
   }
+
+    &__link--group {
+      position: relative;
+    }
+
+    &__link--group::after {
+      content: '';
+      position: absolute;
+      top: 40%;
+      right: 5px;
+      // transform: translateY(-50%);
+      background: url('../img/catalog-arrow-icon.svg') no-repeat center;
+      width: 9px;
+      height: 9px;
+    }
+
+  // }
 
   &__list {
     margin: 0;
