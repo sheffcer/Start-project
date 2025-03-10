@@ -28,8 +28,10 @@ $transition-time: 0.3s !default;
     position: relative;
     cursor: pointer;
     padding-left: 10px;
-    margin-bottom: 15px;
-    margin-top: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    // margin-top: 15px;
+    // margin-bottom: 15px;
     display: flex;
     gap: 12px;
     align-items: center;
@@ -44,6 +46,8 @@ $transition-time: 0.3s !default;
 
     // Для подменю при наведении
     &:hover {
+      background-color: var(--background-video-color);
+
       & > .menu__lvl--2 {
         opacity: 1;
         visibility: visible;
