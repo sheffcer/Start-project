@@ -15,6 +15,52 @@ const webpackStream = require('webpack-stream');
 const path = require('path');
 const fileInclude = require('gulp-file-include');
 const fs = require('fs');
+const svgmin = require('gulp-svgmin');
+const svgstore = require('gulp-svgstore');
+const replace = require('gulp-replace'); // Замена текста
+const svgo = require('gulp-svgo'); // Минификация SVG с помощью SVGO
+
+
+// // Задача для генерации SVG спрайта
+// function generateSvgSprite() {
+//   return gulp.src('src/icons/**/*.svg') // Путь к исходным SVG файлам
+//     .pipe(svgmin({
+//       plugins: [
+//         { cleanupIDs: { minify: true } }, // Минификация ID
+//         { removeViewBox: false }, // Не удалять viewBox
+//         { removeXMLNS: true }, // Удалить XML namespace
+//         { removeEmptyAttrs: true }, // Удалить пустые атрибуты
+//         { collapseGroups: true } // Объединить группы
+//       ]
+//     }))
+//     .pipe(svgstore({ inlineSvg: true })) // Создание спрайта
+//     .pipe(replace('<svg', '<svg style="display: none;"')) // Добавляем display:none к обертке <svg>
+//     .pipe(rename('sprite-sprite.svg')) // Переименование файла спрайта
+//     .pipe(gulp.dest('src/img/')); // Сохранение файла в нужную папку
+// }
+
+// exports.generateSvgSprite = generateSvgSprite;
+
+// Задача для генерации SVG спрайта с использованием SVGO
+function generateSvgSprite() {
+  return gulp.src('src/icons/**/*.svg') // Путь к исходным SVG файлам
+    .pipe(svgo({
+      plugins: [
+        { removeViewBox: false }, // Оставляем viewBox
+        { cleanupIDs: true }, // Минификация ID
+        { removeXMLNS: true }, // Удаление xmlns
+        { removeEmptyAttrs: true }, // Удаление пустых атрибутов
+        { collapseGroups: true }, // Объединение групп
+        { removeDefs: true } // Удаление тега <defs>
+      ]
+    }))
+    .pipe(svgstore({ inlineSvg: true })) // Создание спрайта
+    .pipe(replace('<svg', '<svg style="display: none;"')) // Добавляем display:none к обертке <svg>
+    .pipe(rename('svg-sprite.svg')) // Переименование файла спрайта
+    .pipe(gulp.dest('src/img/')); // Сохранение файла в нужную папку
+}
+
+exports.generateSvgSprite = generateSvgSprite;
 
 // File paths
 const paths = {
