@@ -9,16 +9,9 @@
   },
   "scripts": {
     "test:style": "stylelint \"src/**/*.scss\" --syntax=scss",
-    "test:orpho": "yaspeller -e \".md,.html\" ./src/",
     "start": "gulp",
     "deploy": "cross-env NODE_ENV=production npx gulp deploy",
-    "build": "cross-env NODE_ENV=production npm start build",
-    "lint-staged": "lint-staged",
-    "precommit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.scss": "stylelint --syntax=scss",
-    "*.{html,md}": "yaspeller -e \".md,.html\""
+    "build": "cross-env NODE_ENV=production npm start build"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -72,8 +65,7 @@
     "stylelint": "^10.0.1",
     "svg4everybody": "^2.1.9",
     "vinyl-buffer": "^1.0.1",
-    "webpack-stream": "^7.0.0",
-    "yaspeller": "^5.0.1"
+    "webpack-stream": "^7.0.0"
   },
   "dependencies": {
     "embla-carousel": "^8.5.2",
