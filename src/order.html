@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>NTH start project</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+  <style>
+    .off-canvas__aside {
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+
+    main-nav__link a {
+      color: #3498db !important;
+    }
+  </style>
+  <!-- <script src="/js/"></script> -->
+</head>
+
+<body>
+  <div class="off-canvas" id="off-canvas">
+    <aside class="off-canvas__aside" role="complementary" aria-label="Список компонентов">
+      <div class="off-canvas__block">
+        <div class="off-canvas__header">
+          <a href="main.html" class="logo">
+            <img src="img/logo.svg" alt="logo">
+          </a>
+          <div class="burger  burger--close" data-toggle="off-canvas"><span></span></div>
+        </div>
+        <div class="off-canvas__dropdown dropdown">
+          <a id="dropdown-demo-1" href="#" class="btn btn--off-canvas dropdown__toggler" data-toggle="dropdown"
+            role="button" aria-haspopup="true" aria-expanded="false">
+            <img src="img/catalog-icon.svg" alt="">
+            <span>Каталог</span>
+          </a>
+          <ul class="dropdown__menu  menu" aria-labelledby="dropdown-demo-1">
+            <li class="menu__item"><a class="menu__link" href="#">Лазерні картриджи</a></li>
+            <li class="menu__item  menu__item--separator"><a class="menu__link" href="#">...</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Чорнила</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Фотопапір</a>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Аксессуари</a>
+                <div class="menu__lvl  menu__lvl--2">
+                  <ul class="menu__list  menu__list--lvl-2">
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Контакты
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Услуги
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Повербанки
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Чистячі засоби
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Нові товари
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <label class="off-canvas__search field-text">
+          <span class="field-text__input-wrap">
+            <input class="field-text__input" type="search" placeholder="Шукати серед 25 000 товарів">
+            <button class="btn--search"><span>Пошук</span> <img src="img/search-icon.svg" alt=""></button>
+          </span>
+        </label>
+        <div class="off-canvas__user-block">
+
+          @@include('blocks/user-block/user-block.html')
+
+        </div>
+        <div class="off-canvas__details-menu">
+          @@include('blocks/details-menu/details-menu.html')
+        </div>
+        <div class="off-canvas__text">
+          <p class="off-canvas__text--parag">Є питання ? <a class="off-canvas__text--link">Зв’яжіться з нами</a></p>
+          <p class="off-canvas__text--parag">Пн-Пт <span class="off-canvas__text--span">9:00 - 16:00<span></p>
+        </div>
+        <div class="off-canvas__media-toggler">
+          @@include('blocks/media-toggler/media-toggler.html')
+        </div>
+      </div>
+    </aside>
+    <div class="page__inner off-canvas__page-content">
+      <div class="page__content">
+        <header class="page-header" role="banner">
+          @@include('blocks/mobile-filters/mobile-filters.html')
+          <div class="page-header__burger burger" data-toggle="off-canvas"><span></span></div>
+          <a href="main.html" class="page-header__logo logo">
+            <picture class="page-header__img">
+              <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
+              <source media="(min-width: 768px)" srcset="img/logo.svg">
+              <img src="img/logo.svg" alt="">
+            </picture>
+          </a>
+          <div class="page-header__catalog dropdown">
+            <a href="#" class="btn dropdown__toggler" role="button"
+              aria-haspopup="true" aria-expanded="false">
+              <img src="img/catalog-icon.svg" alt="">
+              <span>Каталог</span>
+            </a>
+            <!-- <a id="dropdown-demo-1" href="#" class="btn dropdown__toggler" data-toggle="dropdown" role="button"
+              aria-haspopup="true" aria-expanded="false">
+              <img src="img/catalog-icon.svg" alt="">
+              <span>Каталог</span>''
+            </a> -->
+            <ul class="menu" aria-labelledby="dropdown-demo-1">
+              <li class="menu__item">
+                <img class="menu__img" src="img/supplies-icon.svg" alt="" width="30">
+                <a class="menu__link  menu__link--group" href="#">Витратні Матеріали</a>
+                <div class="menu__lvl  menu__lvl--2">
+                  <ul class="menu__list  menu__list--lvl-2">
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/printer-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Лазерні картриджі
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/paper-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Фотопапір
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/ink-icon.svg" alt="" width="30" height="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Чорнило
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/toner-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Тонер
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/spare-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        ЗІП
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item  menu__item--separator"><a class="menu__link" href="#">...</a></li>
+              <li class="menu__item">
+                <img class="menu__img" src="img/cable-icon.svg" alt="" width="30">
+                <a class="menu__link menu__link--group" href="#">Мобільні Аксессуари</a>
+                <div class="menu__lvl  menu__lvl--2">
+                  <ul class="menu__list  menu__list--lvl-2">
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/glass-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Захисне скло
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/case-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Чохли
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/charge-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Зарядні пристрої
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/cable-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Кабелі, адаптери та USB хаби
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/powerbank-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Повербанки, зарядні станції та UPS
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- <li class="menu__item"><a class="menu__link" href="#">Аксесуари</a> -->
+              <li class="menu__item">
+                <img class="menu__img" src="img/lamp-icon.svg" alt="" width="30">
+                <a class="menu__link menu__link--group" href="#">Аксесуари</a>
+                <div class="menu__lvl  menu__lvl--2">
+                  <ul class="menu__list  menu__list--lvl-2">
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/headphones-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Навушники
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/antiseptic-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Антисептики
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/cleaner-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Чистилки
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/powersocket-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Мережеві фільтри та реле напруги
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/battery-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Акумуляторні USB батареї
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/batteries-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Батарейки
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/lamp-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Лампи
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/decore-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Декор
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/bags-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Сумки та рюкзаки
+                      </a>
+                    </li>
+                    <li class="menu__item  menu__item--lvl-2">
+                      <img class="menu__img" src="img/accessory-icon.svg" alt="" width="30">
+                      <a href="" class="menu__link  menu__link--lvl-2">
+                        Автотримачі та Аксессуари
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+              </li>
+            </ul>
+          </div>
+          <label class="page-header__search field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="search" placeholder="Шукати серед 25 000 товарів">
+              <button class="btn btn--search"><span>Пошук</span> <img src="img/search-icon.svg" alt=""></button>
+            </span>
+          </label>
+          <div class="page-header__toggler field-toggler">
+            <div class="field-toggler__input-wrap">
+              <label class="field-toggler__name">
+                <input class="field-toggler__input" type="checkbox">
+                <span class="field-toggler__name-text"></span>
+              </label>
+            </div>
+          </div>
+          <!-- <div class="page-header__lang-inner"> -->
+          <!-- <label class="page-header__region field-select">
+                <div class="field-select__name"><span>регіон</span></div>
+                  <div class="field-select__select-wrap">
+                    <select class="field-select__select">
+                       <option>UA</option>
+                       <option>EU</option>
+                    </select>
+                  </div>
+                </label> -->
+
+
+          <!-- </div> -->
+
+          <label class="page-header__region field-select">
+            <div class="field-select__name"><span>регіон</span></div>
+            <div class="field-select__select-wrap">
+              <div class="main field-select__select">
+                <span class="field-select__selected">
+                  <img src="img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
+                </span>
+              </div>
+              <div class="field-select__options">
+                <div class="field-select__option" data-value="UA">
+                  <img src="img/ua-flag-icon.svg" alt="UA Flag" class="field-select__icon"> UA
+                  <!-- <img src="img/ок-icon.svg" alt="UA Flag" class="field-select__icon"> -->
+                </div>
+                <div class="field-select__option" data-value="EU">
+                  <img src="img/eu-flag-icon.svg" alt="EU Flag" class="field-select__icon"> EU
+                </div>
+                <!-- Добавьте другие опции по мере необходимости -->
+              </div>
+            </div>
+          </label>
+
+
+          <!-- <label class="page-header__lang field-select">
+                <div class="field-select__name"><span>мова</span></div>
+                <div class="field-select__select-wrap">
+                  <select class="field-select__select">
+                    <option>Укр</option>
+                    <option>Рус</option>
+                    <option>Eng</option>
+                  </select>
+                </div>
+              </label> -->
+
+
+          <label class="page-header__lang field-select">
+            <div class="field-select__name"><span>мова</span></div>
+            <div class="field-select__select-wrap">
+              <div class="field-select__select">
+                <span class="field-select__selected">Укр</span>
+              </div>
+              <div class="field-select__options">
+                <div class="field-select__option" data-value="UA">
+                  <span>Укр</span>
+                </div>
+                <div class="field-select__option" data-value="RU">
+                  <span>Рус</span>
+                </div>
+                <div class="field-select__option" data-value="EN">
+                  <span>Eng</span>
+                </div>
+              </div>
+            </div>
+          </label>
+
+          <div class="page-header__login">
+            <img src="img/login.svg" alt="" class="user-blcok__img">
+          </div>
+          <div class="page-header__cart cart">
+            <img src="img/cart.svg" alt="" class="cart__img">
+            <span class="page-header__cart-count">12</span>
+          </div>
+        </header>
+        <main class="main-content" role="main">
+          <div class="main-content__inner">
+            @@include('blocks/breadcrumbs/breadcrumbs.html')
+            <!-- <h1 class="product__title">Мережевий фільтр-подовжувач СolorWay 3 розетки/4USB GaN3 Pro PD (2USB-A + 2 TYPE-C) (65W) 2M (CW-CHE34PDW)</h1> -->
+            <div class="order">
+              <h1 class="order__title">Оформлення замовлення</h1>
+                <form class="order__form" action="">
+                  <div class="order__inner">
+                  <div class="order__items">
+                    <h2 class="order__form-title">Ваше замовлення</h2>
+                    <div class="order__item">
+                      <img src="img/CW-CBUM002-BK.jpg" alt="" class="order__img" width="67" height="67">
+                      <a href="" class="order__link">Кабель Colorway USB МicroUSB 2.1А 1м чорний (CW-CBUM002-BK)</a>
+                      <div class="order__item-count">
+                        <div class="field-num">
+                          <!-- <span class="field-num__name"></span> -->
+                          <div class="field-num__input-wrap">
+                            <div class="field-num__input-and-btns">
+                              <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                              <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                              <input class="field-num__input" type="number" value="1" name="quantity" min="1" step="1" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__price">
+                          <!-- <span class="price-block__price-new">2&nbsp;899₴</span> -->
+                          <span class="order__price-old">3&nbsp;199₴</span>
+                          <span class="order__price-old-discount">-35%</span>
+                          <span class="order__price-new">2&nbsp;129₴</span>
+                      </div>
+                      <button class="order__delete" type="button">
+                        <img src="img/delete-icon.svg" alt="">
+                      </button>
+                    </div>
+                    <div class="order__item">
+                      <img src="img/CW-CBPDCC061-P.jpg" alt="" class="order__img" width="67" height="67">
+                      <a href="" class="order__link">Кабель Colorway Type-C - Type-C (braided cotton) (PD Fast Charging 60W) 3.0А 1м розовий (CW-CBPDCC061-P)</a>
+                      <div class="order__item-count">
+                        <div class="field-num">
+                          <!-- <span class="field-num__name"></span> -->
+                          <div class="field-num__input-wrap">
+                            <div class="field-num__input-and-btns">
+                              <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                              <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                              <input class="field-num__input" type="number" value="1" name="quantity" min="1" step="1" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__price">
+                        <!-- <span class="price-block__price-new">2&nbsp;899₴</span> -->
+                        <span class="order__price-old">3&nbsp;199₴</span>
+                        <span class="order__price-old-discount">-35%</span>
+                        <span class="order__price-new">2&nbsp;129₴</span>
+                      </div>
+                      <button class="order__delete" type="button">
+                        <img src="img/delete-icon.svg" alt="">
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                </form>
+
+            </div>
+            <div class="top-product">
+              <h2 class="top-product__title">Інші товари цієї серії</h2>
+              <div class="embla">
+                <div class="embla__viewport">
+                  <div class="top-product__inner embla__container">
+                    <article class="card card--mod">
+                      <div class="card__top">Топ продажів!</div>
+                      <div class="card__inner">
+                        <a class="card__img-wrap" href="good01">
+                          <img class="card__img" src="img/CW-PR-2K2W-01.jpg" alt="Товар1">
+                        </a>
+                        <h3 class="card__title">
+                          <a href="good01">Портативная зарядная станция ColorWay 2400Вт/2048Вт·ч / LiFePO4</a>
+                        </h3>
+                        <div class="card__price-block">
+                          <div class="card__price-old">45&nbsp;999₴</div>
+                          <p class="card__price">41&nbsp;399₴</p>
+                          <div class="card__procent">-10%</div>
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <div class="card__top">Топ продажів!</div>
+                      <div class="card__inner">
+                        <span class="card__img-wrap">
+                          <img class="card__img" src="img/CW-G-100L10NB.jpg" alt="Товар2">
+                        </span>
+                        <h3 class="card__title">Світлодіодна гірлянда-струна СolorWay LED 100 10м теплий колір 3AA Battery</h3>
+                        <div class="card__price-block">
+                          <p class="card__price">379&nbsp;₴</p>
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card card--mod">
+                      <div class="card__top">Топ продажів!</div>
+                      <div class="card__inner">
+                        <a class="card__img-wrap" href="good01">
+                          <img class="card__img" src="img/CW-X3020M.jpg" alt="Товар1">
+                        </a>
+                        <h3 class="card__title">
+                          <a href="good01">Картридж лазерний ColorWay для Xerox:106R02773</a>
+                        </h3>
+                        <div class="card__price-block">
+                          <p class="card__price">1&nbsp;099₴</p>
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <div class="card__top">Топ продажів!</div>
+                      <div class="card__inner">
+                        <span class="card__img-wrap">
+                          <img class="card__img" src="img/CW-PB088LI1WT.jpg" alt="Товар2">
+                        </span>
+                        <h3 class="card__title">Джерело безперебійного живлення ColorWay UPS для роутера 8800mAh 21W DC 5V/9V/12V/24V</h3>
+                        <div class="card__price-block">
+                          <div class="card__price-old">1&nbsp;489₴</div>
+                          <p class="card__price">1&nbsp;124₴</p>
+                          <div class="card__procent">-25%</div>
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card card--mod">
+                      <div class="card__top">Топ продажів!</div>
+                      <div class="card__inner">
+                        <a class="card__img-wrap" href="good01">
+                          <img class="card__img" src="img/CW-EP649SET01.jpg" alt="Товар1">
+                        </a>
+                        <h3 class="card__title">
+                          <a href="good01">Комплект чорнил ColorWay до Epson EP649 BK/C/M/Y Pigment 127 ml + 3 x 70 ml</a>
+                        </h3>
+                        <div class="card__price-block">
+                          <p class="card__price">899&nbsp;₴</p>
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <div class="card__top">Топ продажів!</div>
+                      <div class="card__inner">
+                        <span class="card__img-wrap">
+                          <img class="card__img" src="img/CW-CBPDCC053-BK.jpg" alt="Товар2">
+                        </span>
+                        <h3 class="card__title">Кабель Colorway Type-C - Type-C (transparent head) (PD E-Marker 100W) 5А 1.2м чорний</h3>
+                        <div class="card__price-block">
+                          <p class="card__price">359&nbsp;₴</p>
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="viewed-product">
+              <h2 class="viewed-product__title">Переглянуті товари</h2>
+              <div class="embla">
+                <div class="embla__viewport">
+                  <div class="viewed-product__inner embla__container">
+                    <article class="card card--mod">
+                      <div class="card__top">Топ продажів!</div>
+                      <div class="card__inner">
+                        <a class="card__img-wrap" href="good01">
+                          <img class="card__img" src="img/CW-PR-2K2W-01.jpg" alt="Товар1">
+                        </a>
+                        <h3 class="card__title">
+                          <a href="product.html">Портативная зарядная станция ColorWay 2400Вт/2048Вт·ч / LiFePO4</a>
+                        </h3>
+                        <div class="card__price-block">
+                          <div class="card__price-old">45&nbsp;999₴</div>
+                          <p class="card__price">41&nbsp;399₴</p>
+                          <div class="card__procent">-10%</div>
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <div class="card__top">Топ продажів!</div>
+                      <div class="card__inner">
+                        <span class="card__img-wrap">
+                          <img class="card__img" src="img/CW-G-100L10NB.jpg" alt="Товар2">
+                        </span>
+                        <h3 class="card__title">Світлодіодна гірлянда-струна СolorWay LED 100 10м теплий колір 3AA Battery</h3>
+                        <div class="card__price-block">
+                          <p class="card__price">379&nbsp;₴</p>
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card card--mod">
+                      <div class="card__top">Топ продажів!</div>
+                      <div class="card__inner">
+                        <a class="card__img-wrap" href="good01">
+                          <img class="card__img" src="img/CW-X3020M.jpg" alt="Товар1">
+                        </a>
+                        <h3 class="card__title">
+                          <a href="product.html">Картридж лазерний ColorWay для Xerox:106R02773</a>
+                        </h3>
+                        <div class="card__price-block">
+                          <p class="card__price">1&nbsp;099₴</p>
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <div class="card__top">Топ продажів!</div>
+                      <div class="card__inner">
+                        <span class="card__img-wrap">
+                          <img class="card__img" src="img/CW-PB088LI1WT.jpg" alt="Товар2">
+                        </span>
+                        <h3 class="card__title">Джерело безперебійного живлення ColorWay UPS для роутера 8800mAh 21W DC 5V/9V/12V/24V</h3>
+                        <div class="card__price-block">
+                          <div class="card__price-old">1&nbsp;489₴</div>
+                          <p class="card__price">1&nbsp;124₴</p>
+                          <div class="card__procent">-25%</div>
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card card--mod">
+                      <div class="card__top">Топ продажів!</div>
+                      <div class="card__inner">
+                        <a class="card__img-wrap" href="good01">
+                          <img class="card__img" src="img/CW-EP649SET01.jpg" alt="Товар1">
+                        </a>
+                        <h3 class="card__title">
+                          <a href="product.html">Комплект чорнил ColorWay до Epson EP649 BK/C/M/Y Pigment 127 ml + 3 x 70 ml</a>
+                        </h3>
+                        <div class="card__price-block">
+                          <p class="card__price">899&nbsp;₴</p>
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <div class="card__top">Топ продажів!</div>
+                      <div class="card__inner">
+                        <span class="card__img-wrap">
+                          <img class="card__img" src="img/CW-CBPDCC053-BK.jpg" alt="Товар2">
+                        </span>
+                        <h3 class="card__title">Кабель Colorway Type-C - Type-C (transparent head) (PD E-Marker 100W) 5А 1.2м чорний</h3>
+                        <div class="card__price-block">
+                          <p class="card__price">359&nbsp;₴</p>
+                          <img class="card__buy" src="img/cart-icon-small.svg" alt="">
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- Close main-content inner -->
+        </main>
+      </div>
+      <!-- </div> -->
+      <div class="page__footer-wrapper">
+        <footer class="page-footer" role="contentinfo">
+          <!-- Футер -->
+          @@include('blocks/footer-nav/footer-nav.html')
+          <hr>
+          <p class="page-footer__copyright">© 2024 ColorWay | All Rights Reserved</p>
+        </footer>
+      </div>
+    </div>
+    <div class="off-canvas__overlay" data-toggle="off-canvas"></div>
+  </div> <!-- Close off-canvas -->
+
+  @@include('_include/page_bottom.html')
+  </div>
+</body>
+
+</html>
