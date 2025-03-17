@@ -89,7 +89,7 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
-    width: 160px;
+    width: 120px;
   }
 
   &__price-old-discount {
@@ -147,6 +147,12 @@
 
   & .field-num__btn {
     width: 20px;
+  }
+
+  & .field-num {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
   }
 
 
