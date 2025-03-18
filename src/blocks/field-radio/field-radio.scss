@@ -34,19 +34,22 @@ $line-height:                 1.375em !default;
   &__name-text {
 
     // свой чекбокс
-    // &:before {
-    //   content: '';
-    //   position: absolute;
-    //   top: 0.1em;
-    //   left: 0;
-    //   width: 14px;
-    //   height: 14px;
-    //   background-image: svg-load('../blocks/field-radio/img_to_bg/radiobutton.svg');
-    //   background-size: 100%;
-    // }
-    // @at-root input:checked ~ &:before {
-    //   background-image: svg-load('../blocks/field-radio/img_to_bg/radiobutton--checked.svg');
-    // }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0.1em;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-image: url('../img/radio.svg');
+      // background-image: svg-load('../blocks/field-radio/img_to_bg/radiobutton.svg');
+      background-size: 100%;
+    }
+    @at-root input:checked ~ &:before {
+      background-image: url('../img/radio-checked.svg');
+      // background-image: svg-load('../blocks/field-radio/img_to_bg/radiobutton--checked.svg');
+      background-size: 100%;
+    }
   }
 
   &__input {
@@ -63,12 +66,12 @@ $line-height:                 1.375em !default;
     }
 
     // сокрытие инпута в случае использования своего чекбокса
-    // top: 0;
-    // left: 0;
-    // width: 0;
-    // height: 0;
-    // overflow: hidden;
-    // visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
   }
 
   &__help-text-wrap {
