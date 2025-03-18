@@ -183,6 +183,40 @@ $border-radius:               3px !default;
     line-height: 16px;
     border: none;
     border-radius: 25px;
-  } 
+  }
+  
+  &--promo {
+    width: 100%;
+    text-align: center;
+    padding: 14px 24px;
+    color: $black;
+    background: #fff;
+    border-radius: 25px;
+    border: 1px solid #000;
+    text-align: center;
+    font-family: $font-family--secondary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+  }
+
+  &--cart-submit {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 24px;
+    color: $white;
+    background: var(--secondary-color);
+    font-family: $font-family--secondary;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    border: none;
+    border-radius: 25px;
+  }
   
 }

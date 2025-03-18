@@ -368,7 +368,7 @@
             <!-- <h1 class="product__title">Мережевий фільтр-подовжувач СolorWay 3 розетки/4USB GaN3 Pro PD (2USB-A + 2 TYPE-C) (65W) 2M (CW-CHE34PDW)</h1> -->
             <div class="order">
               <h1 class="order__title">Оформлення замовлення</h1>
-                <form class="order__form" action="">
+                <form class="order__form form" action="" >
                   <div class="order__inner">
                   <div class="order__items">
                     <h2 class="order__form-title">Ваше замовлення</h2>
@@ -428,6 +428,192 @@
                     </div>
                     </div>
                   </div>
+                  <div class="order__items">
+                    <fieldset>
+                    <h2 class="order__form-title">1. Особисті дані</h2>
+                    <label class="field-text">
+                      <span class="field-text__name">Текстовое поле</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="Номер телефону">
+                        <span class="field-text__help-text">Введите номер телефону.</span>
+                      </span>
+                    </label>
+                    <label class="field-text field-text--error">
+                      <span class="field-text__name">Email</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="email" placeholder="Email">
+                        <span class="field-text__help-text">Введіть Ваш Email.</span>
+                      </span>
+                    </label>
+                    <label class="field-text">
+                      <span class="field-text__name">Прізвище</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="Прізвище">
+                        <span class="field-text__help-text">Введіть Ваше прізвище.</span>
+                      </span>
+                    </label>
+                    <label class="field-text">
+                      <span class="field-text__name">Ім'я</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="Ім'я">
+                        <span class="field-text__help-text">Введіть Ваше Ім'я</span>
+                      </span>
+                    </label>
+                  </fieldset>
+                  </div>
+                  <div class="order__items">
+                    <fieldset>
+                      <h2 class="order__form-title">2. Спосіб доставки</h2>
+                      <div class="field-radio">
+                        <!-- <div class="field-radio__title">Необязательный общий заголовок</div> -->
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" name="delivery-type" value="pickup" checked>
+                            <span class="field-radio__name-text">Самовивіз з офісу</span>
+                          </label>
+                          <div class="field-radio__help-text-wrap">
+                            <div class="field-radio__help-text">Пояснение не обязательно.</div>
+                          </div>
+                        </div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" name="delivery-type" value="np">
+                            <span class="field-radio__name-text">Доставка Нова пошта</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="field-radio">
+                        <div class="field-radio__title">Оберіть тип доставки</div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" name="demo-radio" checked>
+                            <span class="field-radio__name-text">Відділення</span>
+                          </label>
+                        </div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" name="demo-radio">
+                            <span class="field-radio__name-text">Поштомат</span>
+                          </label>
+                        </div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" name="demo-radio">
+                            <span class="field-radio__name-text">Адреса</span>
+                          </label>
+                        </div>
+                      </div>
+                      <label class="field-select">
+                        <span class="field-select__name">Оберіть відділення</span>
+                        <span class="field-select__select-wrap">
+                          <span class="field-select__help-text">Місто</span>
+                          <select class="field-select__select">
+                            <optgroup label="Группа">
+                              <option>Дніпро</option>
+                              <option>Київ</option>
+                              <option>Львів</option>
+                            </optgroup>
+                            <option>Вишгород</option>
+                          </select>
+                          <!-- <span class="field-select__help-text">Обёртка — <code><label></code>.</span> -->
+                        </span>
+                      </label>
+                      <label class="field-select">
+                        <!-- <span class="field-select__name">Оберіть відділення</span> -->
+                        <span class="field-select__select-wrap">
+                          <span class="field-select__help-text">Відділення</span>
+                          <select class="field-select__select">
+                            <optgroup label="Группа">
+                              <option>№1</option>
+                              <option>№2</option>
+                              <option>№3</option>
+                              <option>№4</option> <!-- Added new option -->
+                            </optgroup>
+                            <option>№11</option>
+                          </select>
+                          <!-- <span class="field-select__help-text">Обёртка — <code><label></code>.</span> -->
+                        </span>
+                      </label>
+                    </fieldset>
+                  </div>    
+                  <div class="order__items">
+                    <fieldset>
+                      <h2 class="order__form-title">3. Спосіб оплати</h2>
+                      <div class="field-radio">
+                        <!-- <div class="field-radio__title">Необязательный общий заголовок</div> -->
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" name="payment" value="card" checked>
+                            <span class="field-radio__name-text">Карткою Visa/MasterCard</span>
+                          </label>
+                          <div class="field-radio__help-text-wrap">
+                            <div class="field-radio__help-text">Пояснение не обязательно.</div>
+                          </div>
+                        </div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" name="payment" value="cash">
+                            <span class="field-radio__name-text">Накладний платіж</span>
+                          </label>
+                        </div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" name="payment" value="non-cash">
+                            <span class="field-radio__name-text">Платіж за реквізитами ФОП</span>
+                          </label>
+                        </div>
+                      </div>
+                      <!-- <label class="field-radio">
+                        <input class="field-radio__input" type="radio" name="payment" value="card">
+                        <span class="field-radio__name">Оплата карткою</span>
+                      </label>
+                      <label class="field-radio">
+                        <input class="field-radio__input" type="radio" name="payment" value="cash">
+                        <span class="field-radio__name">Оплата готівкою</span>
+                      </label> -->
+                    </fieldset>
+                  </div>
+                  <div class="order__items">
+                    <fieldset>
+                      <h2 class="order__form-title">4. Додати коментар до замовлення</h2>
+                      <label class="field-text">
+                        <!-- <span class="field-text__name">4. Додати коментар до замовлення</span> -->
+                        <span class="field-text__input-wrap">
+                          <textarea class="field-text__input" placeholder=""></textarea>
+                          <span class="field-text__help-text">Введіть ваш коментар тут...</span>
+                        </span>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div class="order__items">
+                    <fieldset>
+                      <div class="field-actions">
+                        <label class="field-text">
+                          <span class="field-text__name">Введіть промокод</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="Введіть промокод">
+                            <span class="field-text__help-text">Введіть ваш промокод тут...</span>
+                          </span>
+                        </label>
+                        <button class="btn btn--promo" aria-label="Застосувати промокод">
+                          <span>Застосувати</span>
+                          <!-- <img src="/img/cross-black-icon.svg" alt=""> -->
+                        </button>                       
+                      </div>
+                      <div class="field-actions">
+                        <button class="btn btn--cart-submit" aria-label="Підтвердити замовлення">
+                          <span>Оплатити</span>
+                          <img src="img/submit-card-icon.svg" alt="">
+                        </button>
+                      </div>
+                      <div class="field-checkbox__input-wrap field-checkbox__input-wrap--cw">
+                        <label class="field-checkbox__name">
+                          <input class="field-checkbox__input " type="checkbox" checked>
+                          <span class="field-checkbox__name-text">Підтверджую замовлення, я приймаю <a href="#">користувацькі домовленості</a></span>
+                        </label>
+                      </div>
+                    </fieldset>
+                  </div>    
                 </div>
                 </form>
 
