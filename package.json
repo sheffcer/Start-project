@@ -9,16 +9,9 @@
   },
   "scripts": {
     "test:style": "stylelint \"src/**/*.scss\" --syntax=scss",
-    "test:orpho": "yaspeller -e \".md,.html\" ./src/",
     "start": "gulp",
     "deploy": "cross-env NODE_ENV=production npx gulp deploy",
-    "build": "cross-env NODE_ENV=production npm start build",
-    "lint-staged": "lint-staged",
-    "precommit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.scss": "stylelint --syntax=scss",
-    "*.{html,md}": "yaspeller -e \".md,.html\""
+    "build": "cross-env NODE_ENV=production npm start build"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",

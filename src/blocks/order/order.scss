@@ -1,0 +1,159 @@
+.order {
+  $block-name:                &;
+
+  &__items {
+    padding: 20px;
+    border: 1px solid var( --arrow-slider-color);
+    border-radius: 22px;
+  }
+
+  &__item {
+    @include row;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // padding: 20px;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var( --background-tab-color);
+  }
+
+  &__img {
+    @include col(xs, 1, 4, 30px);
+    width: 67px;
+    // height: 67px;
+  }
+
+  &__item-content {
+    @include col(xs, 3, 4, 30px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__delete {
+    border: none;
+    background-color: transparent;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+    color: $black;
+    font-family: $font-family--secondary;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__form-title {
+    margin: 0;
+    padding: 0;
+    color: $black;
+    font-family: $font-family;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 150% */
+  }
+
+  &__link {
+    // max-width: 200px;
+    color: var(--Primary-dark, #0D1B0F);
+    font-family: $font-family;;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+
+    // @media (min-width: 480px) {
+    //   max-width: 250px;
+    // }
+
+    // @media (min-width: 768px) {
+    //   max-width: 310px;
+    // }
+
+    // @media (min-width: 1400px) {
+    //   max-width: 535px;
+    // }
+  }
+
+  &__price {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 120px;
+  }
+
+  &__price-old-discount {
+    color: #fff;
+    background: var(--discount-color);
+    padding: 2px 4px;
+    border-radius: 25px;
+    font-family: $font-family;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__price-old {
+    color: var(--light-text-color);
+    font-family: $font-family;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    text-decoration-line: line-through;
+  }
+
+  &__price-new {
+    margin-right: 10px;
+    color: #000;
+    font-family: $font-family;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  & .field-num__input {
+    width: 60px;
+    padding: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+
+  & .field-num__btn--minus {
+    background-size: 7px 7px;
+  }
+
+  & .field-num__btn--plus {
+    background-size: 7px 7px;
+  }
+
+  & .field-num__input-and-btns {
+    width: 60px;
+  }
+
+  & .field-num__btn {
+    width: 20px;
+  }
+
+  & .field-num {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+  }
+
+
+}
