@@ -190,7 +190,7 @@ $border-radius:               3px !default;
     text-align: center;
     padding: 14px 24px;
     color: $black;
-    background: #fff;
+    background: var(--background-tab-color);
     border-radius: 25px;
     border: 1px solid #000;
     text-align: center;
