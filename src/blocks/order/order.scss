@@ -30,18 +30,37 @@
     @include col(xs, 1, 4, 30px);
     width: 67px;
     // height: 67px;
+    @media(min-width: 768px) {
+      @include col(md, 2, 12, 30px);
+    }
   }
 
   &__item-content {
     @include col(xs, 3, 4, 30px);
     display: flex;
+    padding: 0;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
+
+    @media (min-width: 480px) {
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      @include col(md, 10, 12, 30px);
+      flex-wrap: nowrap;
+    }
   }
 
   &__delete {
+    
     border: none;
     background-color: transparent;
+
+    & img {
+      width: 28px!important;
+      height: 28px!important;
+    }
   }
 
   &__title {
@@ -123,9 +142,13 @@
     margin-right: 10px;
     color: #000;
     font-family: $font-family;
-    font-size: 30px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 700;
+
+    @media (min-width: 480px) {
+      font-size: 30px;
+    }
   }
 
   & .field-num__input {
