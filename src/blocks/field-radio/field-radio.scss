@@ -105,6 +105,10 @@ $line-height:                 1.375em !default;
       padding: 12px 20px;
       border-radius: 10px;
       border: 1px solid var(--arrow-slider-color);
+
+      &.checked {
+        border: 1px solid var(--secondary-color);
+      }
     }
 
     // Когда радиокнопка выбрана (checked), меняем бордер
@@ -125,6 +129,6 @@ $line-height:                 1.375em !default;
 }
 
 
-.field-radio__input-wrap.checked {
-  border: 1px solid var(--secondary-color);
-}
+// .field-radio__input-wrap.checked {
+//   border: 1px solid var(--secondary-color);
+// }
