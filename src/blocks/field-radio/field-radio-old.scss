@@ -13,6 +13,7 @@ $line-height:                 1.375em !default;
     font-weight: 700;
     line-height: $line-height;
     margin-bottom: 26px;
+    // margin-bottom: 0.4em;
     font-family: $font-family--secondary;
     font-size: 16px;
     font-weight: 700;
@@ -21,6 +22,7 @@ $line-height:                 1.375em !default;
   }
 
   &__input-wrap {
+
     & + & {
       margin-top: math.div($line-height, 2);
     }
@@ -46,12 +48,15 @@ $line-height:                 1.375em !default;
       left: 0;
       width: 24px;
       height: 24px;
+      // width: 16px;
+      // height: 16px;
       background-image: url('../img/radio.svg');
+      // background-image: svg-load('../blocks/field-radio/img_to_bg/radiobutton.svg');
       background-size: 100%;
     }
-
     @at-root input:checked ~ &:before {
       background-image: url('../img/radio-checked.svg');
+      // background-image: svg-load('../blocks/field-radio/img_to_bg/radiobutton--checked.svg');
       background-size: 100%;
     }
   }
@@ -100,20 +105,18 @@ $line-height:                 1.375em !default;
     gap: 30px;
     margin-bottom: 20px;
 
-    & .field-radio__input-wrap {
+    & .field-radio__input-wrap{
       padding: 12px 20px;
       border-radius: 10px;
       border: 1px solid var(--arrow-slider-color);
     }
 
-    // Когда радиокнопка выбрана (checked), меняем бордер
-    &__input:checked ~ &__name .field-radio__input-wrap {
-      border: 1px solid var(--secondary-color) !important;
+    & .field-radio__input:checked ~ .field-radio__input-wrap {
+      border: 1px solid var(--secondary-color); // Когда радиокнопка активна (checked), меняем бордер
     }
 
-    // Когда радиокнопка активна (active), меняем бордер в родительском элементе
-    &__input:active ~ &__name .field-radio__input-wrap {
-      border: 1px solid var(--secondary-color) !important;
+    & .field-radio__input:active ~ .field-radio__input-wrap {
+      border: 1px solid var(--secondary-color); // Когда радиокнопка активна (в процессе нажатия), тоже меняем бордер
     }
   }
 
@@ -122,18 +125,3 @@ $line-height:                 1.375em !default;
     margin-bottom: 26px;
   }
 }
-
-// .field-radio--delivery  .field-radio__input:checked + .field-radio__input-wrap {
-//   border: 1px solid var(--secondary-color)!important;
-// }
-
-
-
-// .field-radio--delivery  .field-radio__input:checked ~ .field-radio__name .field-radio__input-wrap {
-//   border: 1px solid var(--secondary-color) !important;
-// }
-
-// // Для активного состояния радиокнопки
-// .field-radio--delivery  .field-radio__input:active ~ .field-radio__name .field-radio__input-wrap {
-//   border: 1px solid var(--secondary-color) !important;
-// }
