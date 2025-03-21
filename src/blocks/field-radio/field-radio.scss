@@ -24,6 +24,7 @@ $line-height:                 1.375em !default;
     & + & {
       margin-top: math.div($line-height, 2);
     }
+    
   }
 
   &__name {
@@ -123,17 +124,7 @@ $line-height:                 1.375em !default;
   }
 }
 
-// .field-radio--delivery  .field-radio__input:checked + .field-radio__input-wrap {
-//   border: 1px solid var(--secondary-color)!important;
-// }
 
-
-
-// .field-radio--delivery  .field-radio__input:checked ~ .field-radio__name .field-radio__input-wrap {
-//   border: 1px solid var(--secondary-color) !important;
-// }
-
-// // Для активного состояния радиокнопки
-// .field-radio--delivery  .field-radio__input:active ~ .field-radio__name .field-radio__input-wrap {
-//   border: 1px solid var(--secondary-color) !important;
-// }
+.field-radio__input-wrap.checked {
+  border: 1px solid var(--secondary-color);
+}
