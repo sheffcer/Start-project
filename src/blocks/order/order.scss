@@ -84,6 +84,7 @@
   &__form-title {
     margin: 0;
     padding: 0;
+    margin-bottom: 20px;
     color: $black;
     font-family: $font-family;
     font-size: 24px;
@@ -127,7 +128,11 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
-    width: 120px;
+    width: 80px;
+
+    @media (min-width: 768px) {
+      width: 120px;
+    }
   }
 
   &__price-old-discount {
@@ -164,6 +169,26 @@
     }
   }
 
+  &__delivery .field-radio__input-wrap--np {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  
+  &__delivery .field-radio__name-text {
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+
+  &__delivery .field-radio__help-text {
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
   & .field-num__input {
     width: 60px;
     padding: 0;
@@ -172,7 +197,16 @@
     padding-left: 4px;
     padding-right: 4px;
     font-size: 16px;
+    font-weight: 700;
     border-radius: 6px;
+  }
+
+  & .field-text__input {
+    font-size: 14px;
+    padding-left: 18px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 10px;
   }
 
   & .field-num__btn--minus {

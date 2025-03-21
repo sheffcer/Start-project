@@ -27,14 +27,22 @@ $border-radius:               3px !default;
     vertical-align: middle;
     width: 100%;
     line-height: $line-height;
-    padding: $field-padding-vertical $field-padding-horizontal;
+    padding-left: 18px;
+    padding-right: 12px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    // padding: $field-padding-vertical $field-padding-horizontal;
     font-size: inherit;
     font-family: inherit;
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
+    border: 1px solid var(--arrow-slider-color);
+    // border: 1px solid $border-color;
+    border-radius: 10px;
+    // border-radius: $border-radius;
     appearance: none;
     background-color: #fff;
-    background-image: svg-load('../blocks/field-select/img_to_bg/select-down.svg');
+    // background-image: url('../img/sel-down.svg');
+    // background-image: url('../img/select-down.svg');
+    // background-image: svg-load('../blocks/field-select/img_to_bg/select-down.svg');
     background-repeat: no-repeat;
     background-position: right 0.3em center;
     background-size: 1.063em 0.688em;
@@ -62,5 +70,22 @@ $border-radius:               3px !default;
 
   &__help-text {
     @include field-help-text;
+  }
+
+  &__name {
+    font-family: $font-family--secondary;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    color: $black;
+  }
+
+  &--np-address {
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    & .field-select__select {
+      background-image: url('../img/sel-down.svg');
+    }
   }
 }
