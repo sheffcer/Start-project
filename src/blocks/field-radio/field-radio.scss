@@ -137,7 +137,6 @@ $line-height:                 1.375em !default;
       margin-left: -1em;
       color: var(--text-color);
       background: var(--background-tab-color);
-      // background: var(--background-video-color);
       border-radius: 20px;
     }
     
@@ -153,15 +152,33 @@ $line-height:                 1.375em !default;
       flex-direction: column;
       gap: 10px;
     }
+
+    & .field-radio__name-text {
+      color: $black;
+      font-family: $font-family;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 28px;
+
+      &:before {
+        top: 0.1em;
+      }
+    }
   }
 
   &--np {
     margin-top: 40px;
     margin-bottom: 26px;
+
+    & .field-radio__name-text {
+
+      &:before {
+        top: -0.2em;
+      }
+    }
   }
+
 }
 
 
-// .field-radio__input-wrap.checked {
-//   border: 1px solid var(--secondary-color);
-// }
+
