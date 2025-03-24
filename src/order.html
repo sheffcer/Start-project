@@ -42,35 +42,35 @@
             <li class="menu__item"><a class="menu__link" href="#">Фотопапір</a>
             <li class="menu__item">
               <a class="menu__link" href="#">Аксессуари</a>
-                <div class="menu__lvl  menu__lvl--2">
-                  <ul class="menu__list  menu__list--lvl-2">
-                    <li class="menu__item  menu__item--lvl-2">
-                      <a href="" class="menu__link  menu__link--lvl-2">
-                        Контакты
-                      </a>
-                    </li>
-                    <li class="menu__item  menu__item--lvl-2">
-                      <a href="" class="menu__link  menu__link--lvl-2">
-                        Услуги
-                      </a>
-                    </li>
-                    <li class="menu__item  menu__item--lvl-2">
-                      <a href="" class="menu__link  menu__link--lvl-2">
-                        Повербанки
-                      </a>
-                    </li>
-                    <li class="menu__item  menu__item--lvl-2">
-                      <a href="" class="menu__link  menu__link--lvl-2">
-                        Чистячі засоби
-                      </a>
-                    </li>
-                    <li class="menu__item  menu__item--lvl-2">
-                      <a href="" class="menu__link  menu__link--lvl-2">
-                        Нові товари
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+              <div class="menu__lvl  menu__lvl--2">
+                <ul class="menu__list  menu__list--lvl-2">
+                  <li class="menu__item  menu__item--lvl-2">
+                    <a href="" class="menu__link  menu__link--lvl-2">
+                      Контакты
+                    </a>
+                  </li>
+                  <li class="menu__item  menu__item--lvl-2">
+                    <a href="" class="menu__link  menu__link--lvl-2">
+                      Услуги
+                    </a>
+                  </li>
+                  <li class="menu__item  menu__item--lvl-2">
+                    <a href="" class="menu__link  menu__link--lvl-2">
+                      Повербанки
+                    </a>
+                  </li>
+                  <li class="menu__item  menu__item--lvl-2">
+                    <a href="" class="menu__link  menu__link--lvl-2">
+                      Чистячі засоби
+                    </a>
+                  </li>
+                  <li class="menu__item  menu__item--lvl-2">
+                    <a href="" class="menu__link  menu__link--lvl-2">
+                      Нові товари
+                    </a>
+                  </li>
+                </ul>
+              </div>
               </a>
             </li>
           </ul>
@@ -111,8 +111,7 @@
             </picture>
           </a>
           <div class="page-header__catalog dropdown">
-            <a href="#" class="btn dropdown__toggler" role="button"
-              aria-haspopup="true" aria-expanded="false">
+            <a href="#" class="btn dropdown__toggler" role="button" aria-haspopup="true" aria-expanded="false">
               <img src="img/catalog-icon.svg" alt="">
               <span>Каталог</span>
             </a>
@@ -267,8 +266,8 @@
                     </li>
                   </ul>
                 </div>
-              </a>
-            </li>
+                </a>
+              </li>
               </li>
             </ul>
           </div>
@@ -365,101 +364,104 @@
         <main class="main-content" role="main">
           <div class="main-content__inner">
             @@include('blocks/breadcrumbs/breadcrumbs.html')
-            <!-- <h1 class="product__title">Мережевий фільтр-подовжувач СolorWay 3 розетки/4USB GaN3 Pro PD (2USB-A + 2 TYPE-C) (65W) 2M (CW-CHE34PDW)</h1> -->
             <div class="order">
               <h1 class="order__title">Оформлення замовлення</h1>
-                <form class="order__form form" action="" >
-                  <div class="order__inner">
+              <form class="order__form form" action="">
+                <div class="order__inner">
                   <div class="order__items">
                     <h2 class="order__form-title">Ваше замовлення</h2>
                     <div class="order__item">
                       <img src="img/CW-CBUM002-BK.jpg" alt="" class="order__img" width="67" height="67">
                       <div class="order__item-content">
-                      <a href="" class="order__link">Кабель Colorway USB МicroUSB 2.1А 1м чорний (CW-CBUM002-BK)</a>
-                        <div class="order__item-count">
-                          <div class="field-num">
-                            <!-- <span class="field-num__name"></span> -->
-                            <div class="field-num__input-wrap">
-                              <div class="field-num__input-and-btns">
-                                <button class="field-num__btn field-num__btn--minus" type="button">-</button>
-                                <button class="field-num__btn field-num__btn--plus" type="button">+</button>
-                                <input class="field-num__input" type="number" value="1" name="quantity" min="1" step="1" />
+                        <a href="" class="order__link">Кабель Colorway USB МicroUSB 2.1А 1м чорний (CW-CBUM002-BK)</a>
+                        <div class="order__item-subcontent">
+                          <div class="order__item-count">
+                            <div class="field-num">
+                              <div class="field-num__input-wrap">
+                                <div class="field-num__input-and-btns">
+                                  <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                  <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                  <input class="field-num__input" type="number" value="1" name="quantity" min="1"
+                                    step="1" />
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="order__price">
-                            <!-- <span class="price-block__price-new">2&nbsp;899₴</span> -->
+                          <div class="order__price">
                             <span class="order__price-old">199₴</span>
                             <span class="order__price-old-discount">-35%</span>
                             <span class="order__price-new">129₴</span>
+                          </div>
+                          <button class="order__delete" type="button">
+                            <img src="img/delete-icon.svg" alt="" width="28" height="28">
+                          </button>
                         </div>
-                        <button class="order__delete" type="button">
-                          <img src="img/delete-icon.svg" alt="" width="28" height="28">
-                        </button>
                       </div>
                     </div>
                     <div class="order__item">
                       <img src="img/CW-CBPDCC061-P.jpg" alt="" class="order__img" width="67" height="67">
                       <div class="order__item-content">
-                      <a href="" class="order__link">Кабель Colorway Type-C - Type-C (braided cotton) (PD Fast Charging 60W) 3.0А 1м розовий (CW-CBPDCC061-P)</a>
-                      <div class="order__item-count">
-                        <div class="field-num">
-                          <!-- <span class="field-num__name"></span> -->
-                          <div class="field-num__input-wrap">
-                            <div class="field-num__input-and-btns">
-                              <button class="field-num__btn field-num__btn--minus" type="button">-</button>
-                              <button class="field-num__btn field-num__btn--plus" type="button">+</button>
-                              <input class="field-num__input" type="number" value="1" name="quantity" min="1" step="1" />
+                        <a href="" class="order__link">Кабель Colorway Type-C - Type-C (braided cotton) (PD Fast
+                          Charging 60W) 3.0А 1м розовий (CW-CBPDCC061-P)</a>
+                        <div class="order__item-subcontent">
+                          <div class="order__item-count">
+                            <div class="field-num">
+                              <div class="field-num__input-wrap">
+                                <div class="field-num__input-and-btns">
+                                  <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                  <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                  <input class="field-num__input" type="number" value="1" name="quantity" min="1"
+                                    step="1" />
+                                </div>
+                              </div>
                             </div>
                           </div>
+
+                          <div class="order__price">
+                            <!-- <span class="price-block__price-new">2&nbsp;899₴</span> -->
+                            <!-- <span class="order__price-old">199₴</span>
+                        <span class="order__price-old-discount">-35%</span> -->
+                            <span class="order__price-new">199₴</span>
+                          </div>
+                          <button class="order__delete" type="button">
+                            <img src="img/delete-icon.svg" alt="" width="28" height="28">
+                          </button>
                         </div>
                       </div>
-
-                      <div class="order__price">
-                        <!-- <span class="price-block__price-new">2&nbsp;899₴</span> -->
-                        <!-- <span class="order__price-old">199₴</span>
-                        <span class="order__price-old-discount">-35%</span> -->
-                        <span class="order__price-new">199₴</span>
-                      </div>
-                      <button class="order__delete" type="button">
-                        <img src="img/delete-icon.svg" alt="" width="28" height="28">
-                      </button>
-                    </div>
                     </div>
                   </div>
                   <div class="order__items">
                     <fieldset>
-                    <h2 class="order__form-title">1. Особисті дані</h2>
-                    <label class="field-text">
-                      <span class="field-text__name">Текстовое поле</span>
-                      <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="text" placeholder="Номер телефону">
-                        <span class="field-text__help-text">Введите номер телефону.</span>
-                      </span>
-                    </label>
-                    <label class="field-text field-text--error">
-                      <span class="field-text__name">Email</span>
-                      <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="email" placeholder="Email">
-                        <span class="field-text__help-text">Введіть Ваш Email.</span>
-                      </span>
-                    </label>
-                    <label class="field-text">
-                      <span class="field-text__name">Прізвище</span>
-                      <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="text" placeholder="Прізвище">
-                        <span class="field-text__help-text">Введіть Ваше прізвище.</span>
-                      </span>
-                    </label>
-                    <label class="field-text">
-                      <span class="field-text__name">Ім'я</span>
-                      <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="text" placeholder="Ім'я">
-                        <span class="field-text__help-text">Введіть Ваше Ім'я</span>
-                      </span>
-                    </label>
-                  </fieldset>
+                      <h2 class="order__form-title">1. Особисті дані</h2>
+                      <label class="field-text">
+                        <span class="field-text__name">Текстовое поле</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Номер телефону">
+                          <span class="field-text__help-text">Введите номер телефону.</span>
+                        </span>
+                      </label>
+                      <label class="field-text field-text--error">
+                        <span class="field-text__name">Email</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="email" placeholder="Email">
+                          <span class="field-text__help-text">Введіть Ваш Email.</span>
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Прізвище</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Прізвище">
+                          <span class="field-text__help-text">Введіть Ваше прізвище.</span>
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Ім'я</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Ім'я">
+                          <span class="field-text__help-text">Введіть Ваше Ім'я</span>
+                        </span>
+                      </label>
+                    </fieldset>
                   </div>
                   <div class="order__items">
                     <fieldset class="order__delivery">
@@ -470,7 +472,7 @@
                           <label class="field-radio__name">
                             <input class="field-radio__input" type="radio" name="delivery-type" value="pickup" checked>
                             <img class="field-radio__img" src="img/map-icon.svg" alt="">
-                              <span class="field-radio__name-text">Самовивіз з офісу</span>
+                            <span class="field-radio__name-text">Самовивіз з офісу</span>
                           </label>
                           <div class="field-radio__help-text-wrap">
                             <div class="field-radio__help-text">Безкоштовно</div>
@@ -480,12 +482,12 @@
                           <label class="field-radio__name">
                             <input class="field-radio__input" type="radio" name="delivery-type" value="np">
                             <img class="field-radio__img" src="img/np-icon.svg" alt="">
-                              <div class="field-radio__name-text">Доставка Нова пошта
-                                <div class="order__delivery">
-                                  <div class="order__delivery-title">Відправимо:</div>
-                                  <div class="order__delivery-date">30 квітня</div>
-                                </div>
+                            <div class="field-radio__name-text">Доставка Нова пошта
+                              <div class="order__delivery">
+                                <div class="order__delivery-title">Відправимо:</div>
+                                <div class="order__delivery-date">30 квітня</div>
                               </div>
+                            </div>
                           </label>
                           <div class="field-radio__help-text-wrap">
                             <div class="field-radio__help-text">За тарифом Нової Пошти</div>
@@ -549,7 +551,7 @@
                         </label>
                       </div>
                     </fieldset>
-                  </div>    
+                  </div>
                   <div class="order__items">
                     <fieldset>
                       <h2 class="order__form-title">3. Спосіб оплати</h2>
@@ -593,7 +595,8 @@
                       <label class="field-text">
                         <!-- <span class="field-text__name">4. Додати коментар до замовлення</span> -->
                         <span class="field-text__input-wrap">
-                          <textarea class="field-text__input" placeholder="Введіть ваш коментар тут..." rows="3"></textarea>
+                          <textarea class="field-text__input" placeholder="Введіть ваш коментар тут..."
+                            rows="3"></textarea>
                           <!-- <span class="field-text__help-text">Введіть ваш коментар тут...</span> -->
                         </span>
                       </label>
@@ -612,7 +615,7 @@
                         <button class="btn btn--promo" aria-label="Застосувати промокод">
                           <span>Застосувати</span>
                           <!-- <img src="/img/cross-black-icon.svg" alt=""> -->
-                        </button>                       
+                        </button>
                       </div>
                       <div class="order__delivery">
                         <div class="order__delivery-title">Доставка:</div>
@@ -638,13 +641,14 @@
                       <div class="field-checkbox__input-wrap field-checkbox__input-wrap--cw">
                         <label class="field-checkbox__name">
                           <input class="field-checkbox__input " type="checkbox" checked>
-                          <span class="field-checkbox__name-text">Підтверджую замовлення, я приймаю <a href="#">користувацькі домовленості</a></span>
+                          <span class="field-checkbox__name-text">Підтверджую замовлення, я приймаю <a
+                              href="#">користувацькі домовленості</a></span>
                         </label>
                       </div>
                     </fieldset>
-                  </div>    
+                  </div>
                 </div>
-                </form>
+              </form>
 
             </div>
             <div class="top-product">
@@ -675,7 +679,8 @@
                         <span class="card__img-wrap">
                           <img class="card__img" src="img/CW-G-100L10NB.jpg" alt="Товар2">
                         </span>
-                        <h3 class="card__title">Світлодіодна гірлянда-струна СolorWay LED 100 10м теплий колір 3AA Battery</h3>
+                        <h3 class="card__title">Світлодіодна гірлянда-струна СolorWay LED 100 10м теплий колір 3AA
+                          Battery</h3>
                         <div class="card__price-block">
                           <p class="card__price">379&nbsp;₴</p>
                           <img class="card__buy" src="img/cart-icon-small.svg" alt="">
@@ -703,7 +708,8 @@
                         <span class="card__img-wrap">
                           <img class="card__img" src="img/CW-PB088LI1WT.jpg" alt="Товар2">
                         </span>
-                        <h3 class="card__title">Джерело безперебійного живлення ColorWay UPS для роутера 8800mAh 21W DC 5V/9V/12V/24V</h3>
+                        <h3 class="card__title">Джерело безперебійного живлення ColorWay UPS для роутера 8800mAh 21W DC
+                          5V/9V/12V/24V</h3>
                         <div class="card__price-block">
                           <div class="card__price-old">1&nbsp;489₴</div>
                           <p class="card__price">1&nbsp;124₴</p>
@@ -719,7 +725,8 @@
                           <img class="card__img" src="img/CW-EP649SET01.jpg" alt="Товар1">
                         </a>
                         <h3 class="card__title">
-                          <a href="good01">Комплект чорнил ColorWay до Epson EP649 BK/C/M/Y Pigment 127 ml + 3 x 70 ml</a>
+                          <a href="good01">Комплект чорнил ColorWay до Epson EP649 BK/C/M/Y Pigment 127 ml + 3 x 70
+                            ml</a>
                         </h3>
                         <div class="card__price-block">
                           <p class="card__price">899&nbsp;₴</p>
@@ -733,7 +740,8 @@
                         <span class="card__img-wrap">
                           <img class="card__img" src="img/CW-CBPDCC053-BK.jpg" alt="Товар2">
                         </span>
-                        <h3 class="card__title">Кабель Colorway Type-C - Type-C (transparent head) (PD E-Marker 100W) 5А 1.2м чорний</h3>
+                        <h3 class="card__title">Кабель Colorway Type-C - Type-C (transparent head) (PD E-Marker 100W) 5А
+                          1.2м чорний</h3>
                         <div class="card__price-block">
                           <p class="card__price">359&nbsp;₴</p>
                           <img class="card__buy" src="img/cart-icon-small.svg" alt="">
@@ -772,7 +780,8 @@
                         <span class="card__img-wrap">
                           <img class="card__img" src="img/CW-G-100L10NB.jpg" alt="Товар2">
                         </span>
-                        <h3 class="card__title">Світлодіодна гірлянда-струна СolorWay LED 100 10м теплий колір 3AA Battery</h3>
+                        <h3 class="card__title">Світлодіодна гірлянда-струна СolorWay LED 100 10м теплий колір 3AA
+                          Battery</h3>
                         <div class="card__price-block">
                           <p class="card__price">379&nbsp;₴</p>
                           <img class="card__buy" src="img/cart-icon-small.svg" alt="">
@@ -800,7 +809,8 @@
                         <span class="card__img-wrap">
                           <img class="card__img" src="img/CW-PB088LI1WT.jpg" alt="Товар2">
                         </span>
-                        <h3 class="card__title">Джерело безперебійного живлення ColorWay UPS для роутера 8800mAh 21W DC 5V/9V/12V/24V</h3>
+                        <h3 class="card__title">Джерело безперебійного живлення ColorWay UPS для роутера 8800mAh 21W DC
+                          5V/9V/12V/24V</h3>
                         <div class="card__price-block">
                           <div class="card__price-old">1&nbsp;489₴</div>
                           <p class="card__price">1&nbsp;124₴</p>
@@ -816,7 +826,8 @@
                           <img class="card__img" src="img/CW-EP649SET01.jpg" alt="Товар1">
                         </a>
                         <h3 class="card__title">
-                          <a href="product.html">Комплект чорнил ColorWay до Epson EP649 BK/C/M/Y Pigment 127 ml + 3 x 70 ml</a>
+                          <a href="product.html">Комплект чорнил ColorWay до Epson EP649 BK/C/M/Y Pigment 127 ml + 3 x
+                            70 ml</a>
                         </h3>
                         <div class="card__price-block">
                           <p class="card__price">899&nbsp;₴</p>
@@ -830,7 +841,8 @@
                         <span class="card__img-wrap">
                           <img class="card__img" src="img/CW-CBPDCC053-BK.jpg" alt="Товар2">
                         </span>
-                        <h3 class="card__title">Кабель Colorway Type-C - Type-C (transparent head) (PD E-Marker 100W) 5А 1.2м чорний</h3>
+                        <h3 class="card__title">Кабель Colorway Type-C - Type-C (transparent head) (PD E-Marker 100W) 5А
+                          1.2м чорний</h3>
                         <div class="card__price-block">
                           <p class="card__price">359&nbsp;₴</p>
                           <img class="card__buy" src="img/cart-icon-small.svg" alt="">
