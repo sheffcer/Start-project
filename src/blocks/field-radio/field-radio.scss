@@ -99,6 +99,18 @@ $line-height:                 1.375em !default;
     flex-direction: column;
     gap: 30px;
     margin-bottom: 20px;
+
+    @media(min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 40px;
+      align-items: center;
+
+      & .field-radio__name-text:before  {
+        top: 0.5em;
+      }
+    }
+   
   }
 
   &--delivery {
