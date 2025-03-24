@@ -120,6 +120,8 @@ $line-height:                 1.375em !default;
           background: var(--background-video-color);
         }
       }
+
+      
     }
 
     // Когда радиокнопка выбрана (checked), меняем бордер
@@ -157,6 +159,13 @@ $line-height:                 1.375em !default;
       display: flex;
       flex-direction: column;
       gap: 10px;
+
+      @media(min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+      }
     }
 
     & .field-radio__name-text {

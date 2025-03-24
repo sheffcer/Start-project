@@ -431,36 +431,38 @@
                     </div>
                   </div>
                   <div class="order__items">
-                    <fieldset>
+                    <fieldset class="order__personal">
                       <h2 class="order__form-title">1. Особисті дані</h2>
-                      <label class="field-text">
-                        <span class="field-text__name">Текстовое поле</span>
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input" type="text" placeholder="Номер телефону">
-                          <span class="field-text__help-text">Введите номер телефону.</span>
-                        </span>
-                      </label>
-                      <label class="field-text field-text--error">
-                        <span class="field-text__name">Email</span>
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input" type="email" placeholder="Email">
-                          <span class="field-text__help-text">Введіть Ваш Email.</span>
-                        </span>
-                      </label>
-                      <label class="field-text">
-                        <span class="field-text__name">Прізвище</span>
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input" type="text" placeholder="Прізвище">
-                          <span class="field-text__help-text">Введіть Ваше прізвище.</span>
-                        </span>
-                      </label>
-                      <label class="field-text">
-                        <span class="field-text__name">Ім'я</span>
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input" type="text" placeholder="Ім'я">
-                          <span class="field-text__help-text">Введіть Ваше Ім'я</span>
-                        </span>
-                      </label>
+                      <div class="order__personal-wrap">
+                        <label class="field-text">
+                          <span class="field-text__name">Номер телефону</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="Номер телефону">
+                            <span class="field-text__help-text">Введите номер телефону.</span>
+                          </span>
+                        </label>
+                        <label class="field-text field-text--error">
+                          <span class="field-text__name">Email</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="email" placeholder="Email">
+                            <span class="field-text__help-text">Введіть Ваш Email.</span>
+                          </span>
+                        </label>
+                        <label class="field-text">
+                          <span class="field-text__name">Прізвище</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="Прізвище">
+                            <span class="field-text__help-text">Введіть Ваше прізвище.</span>
+                          </span>
+                        </label>
+                        <label class="field-text">
+                          <span class="field-text__name">Ім'я</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="Ім'я">
+                            <span class="field-text__help-text">Введіть Ваше Ім'я</span>
+                          </span>
+                        </label>
+                      </div>
                     </fieldset>
                   </div>
                   <div class="order__items">
@@ -518,34 +520,37 @@
                         </div>
                       </div>
                       <div class="field-select--np-address">
-                        <label class="field-select">
-                          <span class="field-select__name">Оберіть відділення</span>
-                          <span class="field-select__select-wrap">
-                            <span class="field-select__help-text">Місто</span>
-                            <select class="field-select__select">
-                              <optgroup label="Группа">
-                                <option>Дніпро</option>
-                                <option>Київ</option>
-                                <option>Львів</option>
-                              </optgroup>
-                              <option>Вишгород</option>
-                            </select>
-                            <!-- <span class="field-select__help-text">Обёртка — <code><label></code>.</span> -->
-                          </span>
-                        </label>
-                        <label class="field-select">
-                          <!-- <span class="field-select__name">Оберіть відділення</span> -->
-                          <span class="field-select__select-wrap">
-                            <span class="field-select__help-text">Відділення</span>
-                            <select class="field-select__select">
-                              <optgroup label="Группа">
-                                <option>№1</option>
-                                <option>№2</option>
-                                <option>№3</option>
-                                <option>№4</option> <!-- Added new option -->
-                              </optgroup>
-                              <option>№11</option>
-                            </select>
+                        <span class="field-select__name">Оберіть відділення</span>
+                        <fieldset class="field-select__inner">
+                          <label class="field-select">
+                            <!-- <span class="field-select__name">Оберіть відділення</span> -->
+                            <span class="field-select__select-wrap">
+                              <span class="field-select__help-text">Місто</span>
+                              <select class="field-select__select">
+                                <optgroup label="Группа">
+                                  <option>Дніпро</option>
+                                  <option>Київ</option>
+                                  <option>Львів</option>
+                                </optgroup>
+                                <option>Вишгород</option>
+                              </select>
+                              <!-- <span class="field-select__help-text">Обёртка — <code><label></code>.</span> -->
+                            </span>
+                          </label>
+                          <label class="field-select">
+                            <!-- <span class="field-select__name">Оберіть відділення</span> -->
+                            <span class="field-select__select-wrap">
+                              <span class="field-select__help-text">Відділення</span>
+                              <select class="field-select__select">
+                                <optgroup label="Группа">
+                                  <option>№1</option>
+                                  <option>№2</option>
+                                  <option>№3</option>
+                                  <option>№4</option> <!-- Added new option -->
+                                </optgroup>
+                                <option>№11</option>
+                              </select>
+                        </fieldset>
                             <!-- <span class="field-select__help-text">Обёртка — <code><label></code>.</span> -->
                           </span>
                         </label>

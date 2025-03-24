@@ -87,5 +87,21 @@ $border-radius:               3px !default;
     & .field-select__select {
       background-image: url('../img/sel-down.svg');
     }
+
+    & .field-select {
+      @media( min-width: 767px ) {
+        @include col(md, 1, 2, 20px);
+      }
+    }
+  }
+
+  &__inner {
+    display: block;
+
+    @media(min-width: 768px) {
+      @include row;
+      gap: 20px;
+      flex-wrap: nowrap;
+    }
   }
 }

@@ -120,7 +120,7 @@
     // }
 
     @media (min-width: 768px) {
-      max-width: 305px;
+      max-width: 260px;
     }
     @media (min-width: 992px) {
       max-width: 490px;
@@ -187,6 +187,11 @@
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
+
+    @media(min-width: 768px) {
+      justify-content: flex-start;
+      gap: 36px;
+    }
   }
   
   &__delivery .field-radio__name-text {
@@ -327,6 +332,36 @@
       color: $black;
       font-size: 24px;
       font-weight: 700;
+    }
+  }
+
+  &__personal-wrap {
+
+    @media(min-width: 768px) {
+      @include row;
+      // gap: 20px;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      & .field-text {
+        @include col(md, 1, 2, 20px);
+      }
+
+      & label:nth-of-type(3) {
+        order: 2;
+      }
+
+      & label:nth-of-type(2) {
+        order: 3;
+      }
+
+      & label:nth-of-type(4) {
+        order: 3;
+      }
+
+      & label:nth-of-type(1) {
+        order: 1;
+      }
     }
   }
 }
