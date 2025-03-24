@@ -171,14 +171,29 @@ $line-height:                 1.375em !default;
     margin-bottom: 26px;
 
     & .field-radio__name-text {
+      color: var(--light-text-color);
+      font-family: $font-family;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
 
       &:before {
         top: -0.2em;
       }
     }
+
+  //   & .field-radio__input:checked ~ .field-radio__name .field-radio__name-text {
+  //     line-height: 700;
+  //     color: $black;
+  // }
   }
 
 }
 
 
+// .field-radio__input:checked + .field-radio__name .field-radio__name-text {
+//   line-height: 700;
+//   color: red;
+// }
 
