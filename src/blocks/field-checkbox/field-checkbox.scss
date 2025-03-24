@@ -25,6 +25,7 @@ $line-height:                 1.375em !default;
 
   &__input-wrap--cw {
     // custom properties
+    margin-top: 36px;
     display: flex;
     justify-content: space-between;
   }
@@ -76,6 +77,11 @@ $line-height:                 1.375em !default;
     }
     @at-root input:checked ~ &:before {
       background-image: url('../img/checkbox--checked.svg');
+    }
+
+    & a {
+      color: var(--secondary-color);
+      text-decoration: none;
     }
   }
 

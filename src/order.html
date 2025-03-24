@@ -586,8 +586,8 @@
                       <label class="field-text">
                         <!-- <span class="field-text__name">4. Додати коментар до замовлення</span> -->
                         <span class="field-text__input-wrap">
-                          <textarea class="field-text__input" placeholder=""></textarea>
-                          <span class="field-text__help-text">Введіть ваш коментар тут...</span>
+                          <textarea class="field-text__input" placeholder="Введіть ваш коментар тут..." rows="3"></textarea>
+                          <!-- <span class="field-text__help-text">Введіть ваш коментар тут...</span> -->
                         </span>
                       </label>
                     </fieldset>
@@ -599,13 +599,28 @@
                           <span class="field-text__name">Введіть промокод</span>
                           <span class="field-text__input-wrap">
                             <input class="field-text__input" type="text" placeholder="Введіть промокод">
-                            <span class="field-text__help-text">Введіть ваш промокод тут...</span>
+                            <!-- <span class="field-text__help-text">Введіть ваш промокод тут...</span> -->
                           </span>
                         </label>
                         <button class="btn btn--promo" aria-label="Застосувати промокод">
                           <span>Застосувати</span>
                           <!-- <img src="/img/cross-black-icon.svg" alt=""> -->
                         </button>                       
+                      </div>
+                      <div class="order__delivery">
+                        <div class="order__delivery-title">Доставка:</div>
+                        <div class="order__delivery-date">30 квітня</div>
+                        <div class="order__delivery-price">Безкоштовно</div>
+                      </div>
+                      <div class="order__price-total">
+                        <div class="order__price-item">
+                          <div class="order__price-title">Всього:</div>
+                          <div class="order__price-sum  order__price-sum--total">398<span>₴</span></div>
+                        </div>
+                        <div class="order__price-item">
+                          <div class="order__price-title"><span>2</span> товари на суму:</div>
+                          <div class="order__price-sum order__price-sum--total-discount">328<span>₴</span></div>
+                        </div>
                       </div>
                       <div class="field-actions">
                         <button class="btn btn--cart-submit" aria-label="Підтвердити замовлення">
