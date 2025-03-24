@@ -29,7 +29,9 @@ $line-height:                 1.375em !default;
 
   &__name {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    // display: inline-block;
     padding-left: 1.5em;
     margin-right: 0.6em;
     font-weight: 400;
@@ -54,6 +56,10 @@ $line-height:                 1.375em !default;
     @at-root input:checked ~ &:before {
       background-image: url('../img/radio-checked.svg');
       background-size: 100%;
+    }
+
+    & input:checked ~ &::before {
+      background-image: url('../img/radio-checked.svg');
     }
   }
 
@@ -164,6 +170,13 @@ $line-height:                 1.375em !default;
         top: 0.1em;
       }
     }
+
+    & .order__delivery {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+    }
   }
 
   &--np {
@@ -187,6 +200,40 @@ $line-height:                 1.375em !default;
   //     line-height: 700;
   //     color: $black;
   // }
+  }
+
+  &__img {
+    margin-left: 30px;
+  }
+
+  &--delivery {
+    &  .field-radio__name-text {
+      margin: 0;
+      margin-left: 10px;
+    }
+
+    & .order__delivery {
+      margin: 0;
+      // margin-left: 10px;
+    }
+
+    & .order__delivery-date {
+      font-family: $font-family;
+      font-size: 12px;
+      color: $black;
+      font-weight: 700;
+    } 
+    
+    & .order__delivery-title {
+      font-family: $font-family;
+      font-size: 12px;
+      color: var(--light-text-color);
+      font-weight: 500;
+    }
+
+    & .field-radio__input-wrap:last-child .field-radio__name-text::before {
+      top: 0.5em;
+    }
   }
 
 }
