@@ -1,11 +1,29 @@
 .order {
   $block-name:                &;
 
+  &__inner {
+    
+    @media (min-width: 992px) {
+      @include row;
+      gap: 26px;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+    }
+  }
+
+  &__main-items {
+    @media (min-width: 992px) {
+      @include col(lg, 8, 12, 26px);
+    }
+  }
+
   &__items {
     padding: 20px;
     border: 1px solid var( --arrow-slider-color);
     border-radius: 22px;
     margin-bottom: 16px;
+    margin-left: 0;
+    margin-right: 0;
 
     &--checkout {
       padding: 26px;
@@ -123,15 +141,15 @@
       max-width: 260px;
     }
     @media (min-width: 992px) {
-      max-width: 490px;
+      max-width: 250px;
     }
 
     @media (min-width: 1200px) {
-      max-width: 540px;
+      max-width: 260px;
     }
 
     @media (min-width: 1400px) {
-      max-width: 535px;
+      max-width: 260px;
     }
   }
 
@@ -144,7 +162,7 @@
     width: 80px;
 
     @media (min-width: 768px) {
-      width: 120px;
+      // width: 120px;
     }
   }
 
