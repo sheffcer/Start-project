@@ -42,7 +42,16 @@ $line-height:                 1.375em !default;
       gap: 0;
       flex-wrap: nowrap;
     }
+
+    @media (min-width: 992px) {
+      flex-wrap: wrap;
   }
+   
+    @media (min-width: 1200px) {
+      flex-wrap: nowrap;
+  }
+
+}
 
   &__name-text {
     padding-left: 0.8em;
