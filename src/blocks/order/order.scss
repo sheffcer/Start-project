@@ -15,6 +15,10 @@
     @media (min-width: 992px) {
       @include col(lg, 8, 12, 26px);
     }
+
+    @media (min-width: 1200px) {
+      @include col(xl, 9, 12, 26px);
+    }
   }
 
   &__items {
